@@ -7,6 +7,30 @@
     --color-fondo: #fefcfb;
 }
 
+html{       
+
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+    
+    
+ }
+
+
+    
+ *, *:before, *:after {
+        box-sizing: inherit;
+            }
+
+
+    body{
+        max-width: 130rem;
+        margin: auto;
+        font-size: medium;
+        background-color: var(--color-fondo);
+        
+    }
+
 -------------------------------------------------------------------------------------------------
 
 #titulo2-1, #titulo3-1{
