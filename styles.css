@@ -1,0 +1,7 @@
+:root{
+    --color-primario:rgb(255, 123, 0);
+}
+
+h1{
+    color:var(--color-primario);
+}
