@@ -3,6 +3,39 @@
     --color-secundario:black;
 }
 
-h1{
+-------------------------------------------------------------------------------------------------
+
+#titulo2-1, #titulo3-1{
+    color:var(--color-secundario);
+}
+#titulo2-2, #titulo3-2{
     color:var(--color-primario);
+}
+#titulo2{
+    text-align: center;
+}
+#parrafo2, #parrafo3{
+    width:400px;
+}
+#img-card2{
+    width: 3vh;
+    height: 3vh;
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+    margin-left: 1.5rem;
+}
+#card2{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 20vh;
+    height: 18vh;
+}
+#col2{
+    width: 20px;
+}
+
+#card2title{
+    font-size: 1.8vh;
+}
+#card2par{
+    font-size: 1vh;
 }
