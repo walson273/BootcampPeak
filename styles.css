@@ -1,6 +1,3 @@
-
-
-
 :root{
     --color-primario:rgb(255, 123, 0);
     --color-secundario:black;
@@ -217,6 +214,7 @@ h3{
 }
 #col2{
     width: 20px;
+    margin: auto;
 }
 
 #card2title{
