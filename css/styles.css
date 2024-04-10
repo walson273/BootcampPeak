@@ -275,4 +275,39 @@ h3{
 }
 .tarjetas3{
     margin-bottom: 5rem;
+    max-width: 1170px;
+}
+#botones-card3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width:6.5rem;
+    max-height: 2.5rem;
+    margin-bottom: 20rem;
+    button{
+        box-sizing: inherit;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        border: 0;
+        background-color: var(--color-fondo);
+    }
+}
+#boton1-card3{
+    margin-left: -48px;
+    svg{
+        display: flex;
+        justify-content: center;
+        color: #999999;
+        background-color: var(--color-fondo);
+        margin-left: -6px; 
+    }
+}
+#boton2-card3{
+    margin-right: -18px;
+    svg{
+        display: flex;
+        justify-content: center;
+        color: var(--color-primario);
+        margin-left: -5px;
+        border-radius: 60% 60% 60% 60%; 
+    }
 }
