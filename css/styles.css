@@ -370,3 +370,15 @@ h3{
         border-radius: 60% 60% 60% 60%; 
     }
 }
+
+#card4{
+    width: 370px;
+    height: 447px;
+    img{
+        height: 327px;
+    }
+}
+#divcard4{
+    width: 370px;
+    height: 447px;
+}
