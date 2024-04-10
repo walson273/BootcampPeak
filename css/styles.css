@@ -135,7 +135,9 @@ box-shadow: 0px 10px 21px 0px rgba(250,116,54,0.7);
 
     grid-area: imagen;
     overflow: hidden;
-    
+    position: relative;
+    top: 0;
+    right: 0;    
 
 
 }
@@ -187,16 +189,17 @@ svg{grid-area: icono;}
 
 position: absolute;
 
-top: 22rem;
-right: 76rem;
+top: 14rem;
+right: 45rem;
+
 
 }
 
 .FloatingBox2{
 
 position: absolute;
-top: 30rem;
-right: 45rem;
+top: 22rem;
+right: 10rem;
 
 
 }
@@ -205,8 +208,8 @@ right: 45rem;
 .FloatingBox3{
 
 position: absolute;
-top: 48rem;
-right: 69rem;
+top: 36rem;
+right: 39rem;
 
 
 }
