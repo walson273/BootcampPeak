@@ -130,7 +130,6 @@ box-shadow: 0px 10px 21px 0px rgba(250,116,54,0.7);
     background-color: white;
     color: var(--color-primario);
 }
-
 .imagenStarted{
 
     grid-area: imagen;
@@ -148,7 +147,6 @@ box-shadow: 0px 10px 21px 0px rgba(250,116,54,0.7);
 
 
 }
-
 .semi-circle {
     position: absolute;
     z-index: 1;
@@ -162,23 +160,23 @@ box-shadow: 0px 10px 21px 0px rgba(250,116,54,0.7);
 
 .FloatingBox1, .FloatingBox2, .FloatingBox3{
 
-display: grid;
-border-radius: 1rem;
-background-color: white;
-z-index: 3;
+    display: grid;
+    border-radius: 1rem;
+    background-color: white;
+    z-index: 3;
 
-width: 20rem;
-padding: 1rem;
+    width: 20rem;
+    padding: 1rem;
 
--webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
-    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
-    
-grid-template-areas: "icono titulo"
-                     "icono texto";
-grid-template-columns: 1fr 3fr;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
+        -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.04);
+        
+    grid-template-areas: "icono titulo"
+                        "icono texto";
+    grid-template-columns: 1fr 3fr;
 
-svg{grid-area: icono;}
+    svg{grid-area: icono;}
 
 
 
@@ -205,19 +203,19 @@ svg{grid-area: icono;}
 
 .FloatingBox1{
 
-position: absolute;
+    position: absolute;
 
-top: 14rem;
-right: 45rem;
+    top: 14rem;
+    right: 45rem;
 
 
 }
 
 .FloatingBox2{
 
-position: absolute;
-top: 22rem;
-right: 10rem;
+    position: absolute;
+    top: 22rem;
+    right: 10rem;
 
 
 }
@@ -225,9 +223,9 @@ right: 10rem;
 
 .FloatingBox3{
 
-position: absolute;
-top: 36rem;
-right: 39rem;
+    position: absolute;
+    top: 36rem;
+    right: 39rem;
 
 
 }
@@ -238,11 +236,11 @@ right: 39rem;
 
 .TituloExplore{
 
-h3{
+    h3{
 
-    font-weight: 700;
+        font-weight: 700;
 
-}
+    }
 
 }
 
@@ -305,11 +303,12 @@ h3{
 #card3{
     width: 28vh;
     height: 45vh;
+    border-radius:  1.6rem 1.6rem 0 0;
     img{
         height: 290px;
     }
 }
-#titulocard3{
+#titulocard3, #titulocard4{
     font-size: 24px;
 }
 #estrella-card3{
@@ -394,11 +393,172 @@ h3{
         border-radius: 60% 60% 60% 60%; 
     }
 }
-
-#card4{
-    width: 370px;
-    height: 447px;
-    img{
-        height: 327px;
+#botones-card4{
+    width: 15rem;
+    margin-left: 84%;
+    margin-bottom: 2rem;
+    margin-top:-8rem;
+    button{
+        border: none;
+        background-color: var(--color-fondo);
     }
+}
+#boton1-card4{
+    svg{
+        color: #999999;
+    }
+}
+#boton2-card4{
+    svg{
+        color: var(--color-primario);
+    }
+}
+
+.tarjetas4{
+    width: 120rem;
+    margin: 0 auto;
+    padding-bottom: 20rem;
+}
+#card4{
+    width: 37rem;
+    height: 44.7rem;
+    margin: auto;
+    border-radius:  1.6rem 1.6rem 0 0;
+    img{
+        margin-bottom: 1rem;
+        height: 32.7rem;
+    }
+}
+#estrella-card4{
+    text-align: right;
+    margin-right: -2px;
+    padding-left: 3rem;
+    margin-top: -0.4rem;
+    svg{
+        color:rgba(253, 198, 16, 0.945);
+    }
+}
+#price-card4{
+    text-align: right;
+    font-size: 2.4rem;
+    color: var(--color-primario);
+    padding-right: 1.5rem;
+}
+#send-card4{
+    color: var(--color-primario);
+}
+#trip-card4{
+    color: #666666;
+}
+#bottomtext-card4{
+    font-size: 16px;
+    margin:auto;
+}
+#calificacion-card4{
+    text-align: right;
+    margin-left: 1.2rem;
+    width: 3.6rem;
+}
+
+#container5{
+    width: 110.3rem;
+    height: 35.6rem;
+    margin: auto;
+}
+#col51{
+    height: 26.8rem;
+}
+#titulo5div{
+    text-align: left;
+    margin: auto;
+    margin-left: -0.8rem;
+    width: 38.8rem;
+}
+#parrafo5{
+    margin-top: 4rem;
+    margin-left: -0.8rem;
+    width: 39.4rem;
+}
+#botones-card5{
+    width: 15rem;
+    margin-top: 4rem;
+    margin-left: -2.5rem;
+    button{
+        border: none;
+        background-color: var(--color-fondo);
+    }
+}
+#boton1-card5{
+    svg{
+        color: #999999;
+    }
+}
+#boton2-card5{
+    svg{
+        color: var(--color-primario);
+    }
+}
+#foto5{
+    border-radius: 6.8rem;
+    width: 6.8rem;
+    height: 6.8rem;
+    margin-left: 6rem;
+    img{
+        padding: 0;
+        margin: 0;
+        width: 6.8rem;
+        height: 6.8rem;
+        border-radius: 6.8rem;
+    }
+}
+#superiorcard5{
+    background-color: #f5caca;
+    width: 50.4rem;
+    height: 24.5rem;
+    border-radius: 1rem;
+    margin-top: -6rem;
+    margin-left: 8.5rem;
+}
+#inferiorcard5{
+    border: 2px solid #66666614;
+    background-color: #66666614;
+    width: 50.2rem;
+    height: 23.2rem;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1rem;
+    margin-top: -16.3rem;
+    margin-left: 13.5rem;
+}
+#texto51{
+    font-size: 1.6rem;
+    width: 40.2rem;
+    height: 9.6;
+    padding-top: 3rem;
+    padding-left: 4rem;
+}
+#texto52, #texto54{
+    font-size: 1.8rem;
+    height: 2.7rem;
+    padding-left: 4rem;
+}
+#texto53, #texto55{
+    font-size: 1.4rem;
+    height: 2.1rem;
+    padding-left: 4rem;
+}
+#texto54, #texto55{
+    opacity: 50%;
+}
+#texto52{
+    padding-top: 8rem;
+}
+#texto53{
+    padding-top: 1.5rem;
+}
+#texto54{
+    padding-top: 1.5rem;
+}
+#texto55{
+    padding-top: 1.5rem;
 }
