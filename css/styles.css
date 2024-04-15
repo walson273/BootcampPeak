@@ -240,7 +240,7 @@ body{
     }
 }
 #card4:hover{
-    img{
+    img:hover{
         opacity: 50%;
     }
     .Booknow1{
