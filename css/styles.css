@@ -695,5 +695,20 @@ body{
 
 }
 
+#divIcono{
+    width: 6.5rem;
+    height: 6.8rem;
+    position: absolute;
+    margin-left: 26.05rem;
+    padding-left: 0rem;
+    align-items: left;
+    padding-top: 2rem;
+    border-radius: 0.8rem;
+    color: grey;
+    background-color: white;
+}
+.CorreoCA{
+    outline: none;
+}
 
 /* Css Foolder */
