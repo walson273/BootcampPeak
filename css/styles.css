@@ -683,7 +683,7 @@ body{
 
 .CorreoCAbutton{
 
-   
+    background-color : var(--color-primario);
     position: absolute;
     top: 1rem;
     right: -30rem;
