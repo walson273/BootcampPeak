@@ -3,7 +3,7 @@ function calcularCalorias() {
  //Formula hombres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) + 5
  //Formula mujeres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) - 161
 }
-
+ 
 function mostrarMensajeDeError(msg) {
     const calculo = document.querySelector('#calculo');
     if (calculo) {
