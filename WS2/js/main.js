@@ -4,80 +4,55 @@ let generoM = document.getElementById('masculino');
 let generoF = document.getElementById('femenino');
 let resultadoD = document.getElementById('resultado');
 
-
-
- //Formula hombres: valor actividad x (10 x peso en kg) + (6,25 × altsura en cm) - (5 × edad en años) + 5
-  //Formula mujeres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) - 161
- 
-
-    formularioCalc.addEventListener('submit', (evento) => {
-
+formularioCalc.addEventListener('submit', (evento) => {
     evento.preventDefault();
     calcularCalorias();
-
-    })
+})
 
 
 
 function calcularCalorias() {
-
-     
     const edad = formularioCalc.edad.value;
     const peso = formularioCalc.peso.value;
     const altura = formularioCalc.altura.value;
     const actividad = formularioCalc.actividad.value;
+    const tipoDoc = formularioCalc.tipodoc.value;
+    const docu = formularioCalc.docu.value;
+    const nombre = formularioCalc.nombre.value;
     let resultadoC;
-   
-    if (generoM.checked)
-    { resultadoC = formulaHombres(edad,peso,altura,actividad);}
-    
-    if(generoF.checked)
-    {resultadoC = formulaMujeres(edad, peso, altura, actividad);}
-    
+    let gp;
+
+    if (generoM.checked) { resultadoC = formulaHombres(edad, peso, altura, actividad); }
+
+    if (generoF.checked) { resultadoC = formulaMujeres(edad, peso, altura, actividad); }
+
     aparecerResultado();
-
-    resultadoD.innerHTML = `<p class="alert alert-danger text-center">El resultado es ${resultadoC}</p>`;
-}
-
-
-function formulaHombres(edad,peso,altura,actividad){
-
-    return  actividad*10*peso + 6.25*altura - 5*edad + 5; 
-
-}
-
-function formulaMujeres(edad,peso,altura,actividad){
-
-return actividad*10*peso + 6.25*altura- 5*edad - 16;
-
-}
-
-
-
-function mostrarMensajeDeError(msg) {
-    const calculo = document.querySelector('#calculo');
-    if (calculo) {
-        calculo.remove();
+    if (edad >= 15 && edad <= 29) {
+        gp = "jovenes";
+    } else if (edad >= 30 && edad <= 59) {
+        gp = "adultos"
+    } if (edad >= 60) {
+        gp = "adultos mayores";
     }
-
-    const divError = document.createElement('div');
-    divError.className = 'd-flex justify-content-center align-items-center h-100';
-    divError.innerHTML = `<span class="alert alert-danger text-center">${msg}</span>`;
-
-    resultado.appendChild(divError);
-
-    setTimeout(() => {
-        divError.remove();
-        desvanecerResultado();
-    }, 5000);
+    resultadoD.innerHTML = `<p class="alert alert-success text-center" style="border-radius:8px">El paciente ${nombre} identificado con ${tipoDoc}
+    No. ${docu} perteneciente al grupo poblacional de los ${gp}, requiere un total de ${resultadoC} kcal
+    para el sostenimiento de su TBM.</p>`;
 }
 
+
+function formulaHombres(edad, peso, altura, actividad) {
+    return actividad * 10 * peso + 6.25 * altura - 5 * edad + 5;
+}
+
+function formulaMujeres(edad, peso, altura, actividad) {
+    return actividad * 10 * peso + 6.25 * altura - 5 * edad - 16;
+}
 
 // Animaciones
 function aparecerResultado() {
     resultado.style.top = '100vh';
     resultado.style.display = 'block';
-    
+
     let distancia = 100;
     let resta = 0.3;
     let id = setInterval(() => {

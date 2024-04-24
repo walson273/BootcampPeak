@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-content {
-    background-image: linear-gradient(#000000c7,#00000054), url('/img/cover.png');
+    background-image: url('../img/cover.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -41,6 +41,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #resultado {
+    align-items: center;
+    padding-top: 22rem;
     display: none;
 }
 
