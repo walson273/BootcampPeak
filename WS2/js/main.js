@@ -4,19 +4,30 @@ let generoM = document.getElementById('masculino');
 let generoF = document.getElementById('femenino');
 let resultadoD = document.getElementById('resultado');
 
+
+
  //Formula hombres: valor actividad x (10 x peso en kg) + (6,25 × altsura en cm) - (5 × edad en años) + 5
   //Formula mujeres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) - 161
  
 
+    formularioCalc.addEventListener('submit', (evento) => {
+
+    evento.preventDefault();
+    calcularCalorias();
+
+    })
+
+
 
 function calcularCalorias() {
 
+     
     const edad = formularioCalc.edad.value;
     const peso = formularioCalc.peso.value;
     const altura = formularioCalc.altura.value;
     const actividad = formularioCalc.actividad.value;
     let resultadoC;
-    desvanecerResultado();
+   
     if (generoM.checked)
     { resultadoC = formulaHombres(edad,peso,altura,actividad);}
     
@@ -24,6 +35,7 @@ function calcularCalorias() {
     {resultadoC = formulaMujeres(edad, peso, altura, actividad);}
     
     aparecerResultado();
+
     resultadoD.innerHTML = `<p class="alert alert-danger text-center">El resultado es ${resultadoC}</p>`;
 }
 
