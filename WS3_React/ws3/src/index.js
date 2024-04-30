@@ -14,8 +14,8 @@ const ComponenteDesign = (argumento) =>{
         {
           argumento.jsonsito.map((iteracion)=>
             <React.Fragment>
-              <h1>{iteracion.nombre}</h1>
-              <h5>{iteracion.edad}</h5>
+              <h2>{iteracion.nombre}</h2>
+              <p>{iteracion.edad}</p>
               {
                 iteracion.logo.map((loguito)=>
                   <CompoLogo loguisimo={loguito}/>
@@ -33,7 +33,7 @@ const ComponenteDesign = (argumento) =>{
 const CompoLogo = (loguisimont)=>{
   return(
     <React.Fragment>
-      <button type="button" className="btn btn-light">{loguisimont.loguisimo}</button>
+      <button type="button" className="btn btn-success">{loguisimont.loguisimo}</button>
     </React.Fragment>
   );
 }
