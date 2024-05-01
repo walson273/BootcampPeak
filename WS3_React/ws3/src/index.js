@@ -22,7 +22,7 @@ const ComponenteDesign = (argumento) =>{
                   /*<button type="button" className="btn btn-light">{loguito}</button>*/
                 )
               }
-              <img className="imagensita" src={iteracion.img} />
+              <img className="imagen-prueba" src={iteracion.img} />
             </React.Fragment>
           )
         }
