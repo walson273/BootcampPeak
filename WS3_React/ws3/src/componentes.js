@@ -28,11 +28,32 @@ export const ComponenteDesign = (argumento) =>{
       </React.Fragment>
     );
   }
+
+export const bSlide = (prop) => {
+  return (
+    <React.Fragment>
+      
+      <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
+      <div>
+      {/*
+        prop.slide_json.map((iter) => 
+        <React.Fragment>
+
+              <h1>{iter.name}</h1> 
+
+      </React.Fragment>
+      )*/}
+      </div>
+    </React.Fragment>
+  );
+}
+
 export const Componente1 = () =>{
   
     return(
       <React.Fragment>
-        <ComponenteDesign jsonsito={data.funcionJson} />
+        <bSlide slide_json = {data.slideBar} />
+       {/*} <ComponenteDesign jsonsito={data.funcionJson} />*/}
       </React.Fragment>
     );
   }
