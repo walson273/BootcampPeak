@@ -7,7 +7,7 @@ import * as data from './Data.js'
 export const Logo = (info)=>{
   return(
     <React.Fragment>
-      
+      {<img src={info.logo} alt='logo'/>}
     </React.Fragment>
   );
 }
@@ -53,28 +53,40 @@ export const BotonHabilidad = (info) =>{
 export const EmpresaNombre = (info)=>{
   return(
     <React.Fragment>
-      
+      <div className='nombreCSS'>
+      <data.IconoEmpresa />
+      {<span>{info.nombre}</span>}
+      </div>
     </React.Fragment>
   );
 }
 export const Ubicacion = (info)=>{
   return(
     <React.Fragment>
-      
+      <div className='ubicacionCSS'>
+      <data.IconoUbicacion />
+      {<span>{info.ubicacion}</span>}
+      </div>
     </React.Fragment>
   );
 }
 export const Salario = (info)=>{
   return(
     <React.Fragment>
-      
+      <div className='salarioCSS'>
+      <data.IconoDinero />
+      {<span>$ {info.salario} COP</span>}
+      </div>
     </React.Fragment>
   );
 }
 export const Disponibles = (info)=>{
   return(
     <React.Fragment>
-      
+      <div className='disponibleCSS'>
+      <data.IconoDisponibles />
+      {<span>{info.disponible}</span>}
+      </div>
     </React.Fragment>
   );
 }
@@ -82,17 +94,59 @@ export const Disponibles = (info)=>{
 export const Beneficios = (info)=>{
   return(
     <React.Fragment>
+
+      <div className='beneficiosCSS'>
+        {info.beneficios?.map( (beneficioC) =>
+           <React.Fragment>
+           <IconosBeneficios b = {beneficioC} />
+           </React.Fragment>
+        )}      
+      </div> 
       
     </React.Fragment>
   );
 }
+
+export const IconosBeneficios = (info) =>{
+
+const seleccion = () => {
+
+  switch(info.b){
+    case 'ca':
+      return <data.IconoCapacitaciones />
+    case 'ce':
+      return <data.IconoCertificaciones />
+    case 'fiesta':
+      return <data.IconoFiesta />
+    case 'flex':
+      return <data.IconoFlexibilidad />
+    case 'ami':
+      return <data.IconoAmigable />
+    default:
+      return <data.IconoFiesta />
+  }
+
+
+}
+  
+  return(
+    <React.Fragment>
+      
+      {<button type="button" className="btn btn-light">
+        {seleccion()}</button>}
+
+    </React.Fragment>
+
+  )
+}
+
 
 export const ComponenteLista = (argumento) =>{
     return(
       <React.Fragment>
         <div class="all-content">
           {
-            argumento.datos.map((iteracion)=>
+            argumento.datos?.map((iteracion)=>
               <React.Fragment>
                  
                  <section className='contenedor'>
