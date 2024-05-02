@@ -1,10 +1,15 @@
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  font-family: "Montserrat","Roboto",sans-serif;
-  font-weight: 400;
+
+html {
+  box-sizing: border-box;
+  
+  scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 code {
@@ -12,17 +17,92 @@ code {
     monospace;
 }
 
-.greeting{
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-color: red;
+  font-family: "Montserrat","Roboto",sans-serif;
+  font-weight: 400;
+  
+}
+
+.logoCSS{
+
+    grid-area: logo;
+    width: 5rem;
+    height: 5rem;
+
+}
+
+.tituloPuestoCSS{
+
+  grid-area: titulo;
+  font-size: 1.3rem;
+  display: inline-block;
+
+}
+
+.habilidadesCSS{
+
+  grid-area: habilidades;
+
+}
+
+.nombreCSS{
+
+  grid-area: nombre;
+
+}
+
+.ubicacionCSS{
+
+  grid-area: ubicacion;
+
+}
+
+.salarioCSS{
+
+  grid-area: salario;
+
+}
+
+.disponibleCSS{
+
+  grid-area: disponible;
+}
+
+.beneficiosCSS{
+
+  grid-area: beneficio;
+}
+
+
+.contenedor{
+
+  display: grid;
+  grid-template-areas: 
+  
+        "logo titulo habilidades habilidades vacio vacio"
+        "logo nombre ubicacion salario disponible beneficio";
+  ;
+
+  grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  margin: 2rem 2rem;
+
+  padding: 1.5rem;
+
+  border-radius: 0.5rem;
+  border: 0.1rem;
+  border-color: grey;
+  background-color: white;
 
 
 }
 
-.imagen-prueba{
-  width:20rem; height: 20rem
-}
+.all-content{
 
-#holita{
-  color: skyblue;
+  background-color: #eef1f3;
 }

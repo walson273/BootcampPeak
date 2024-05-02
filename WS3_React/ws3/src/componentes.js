@@ -7,7 +7,7 @@ import * as data from './Data.js'
 export const Logo = (info)=>{
   return(
     <React.Fragment>
-      {<img src={info.logo} alt='logo'/>}
+      {<img className='logoCSS' src={info.logo} alt='logo'/>}
     </React.Fragment>
   );
 }
@@ -148,6 +148,7 @@ export const ComponenteLista = (argumento) =>{
           {
             argumento.datos?.map((iteracion)=>
               <React.Fragment>
+                
                  
                  <section className='contenedor'>
                     <Logo logo = {iteracion.logo}/>
@@ -159,6 +160,8 @@ export const ComponenteLista = (argumento) =>{
                     <Disponibles disponible = {iteracion.disponible}/>
                     <Beneficios beneficios = {iteracion.beneficios} />
                  </section>
+                
+                 
               </React.Fragment>
             )
           }
