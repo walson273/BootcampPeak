@@ -2,25 +2,164 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import * as data from './Data.js'
 
-export function HelloWorld() {
-    return <h1 className="greeting">REACT PRUEBA!</h1>;
+
+
+export const Logo = (info)=>{
+  return(
+    <React.Fragment>
+      {<img className='logoCSS' src={info.logo} alt='logo'/>}
+    </React.Fragment>
+  );
+}
+
+export const TituloPuesto = (info)=>{
+  return(
+    <React.Fragment>
+      <h2 className='tituloPuestoCSS'>{info.titulo}</h2>
+    </React.Fragment>
+  );
+}
+
+export const Habilidades = (info) => {
+  return(
+    <React.Fragment>
+        
+        <div className='habilidadesCSS'>
+        {info.habilidad?.map( (habilidadC) =>
+           <React.Fragment>
+           <BotonHabilidad h = {habilidadC} />
+           </React.Fragment>
+        )}      
+        </div> 
+        
+            
+    </React.Fragment>
+  );
+}
+
+export const BotonHabilidad = (info) =>{
+
+  return(
+    <React.Fragment>
+      
+      {<button type="button" className="btn btn-light">{info.h}</button>}
+
+    </React.Fragment>
+
+  )
+
+
+}
+export const EmpresaNombre = (info)=>{
+  return(
+    <React.Fragment>
+      <div className='nombreCSS'>
+      <data.IconoEmpresa />
+      {<span>{info.nombre}</span>}
+      </div>
+    </React.Fragment>
+  );
+}
+export const Ubicacion = (info)=>{
+  return(
+    <React.Fragment>
+      <div className='ubicacionCSS'>
+      <data.IconoUbicacion />
+      {<span>{info.ubicacion}</span>}
+      </div>
+    </React.Fragment>
+  );
+}
+export const Salario = (info)=>{
+  return(
+    <React.Fragment>
+      <div className='salarioCSS'>
+      <data.IconoDinero />
+      {<span>$ {info.salario} COP</span>}
+      </div>
+    </React.Fragment>
+  );
+}
+export const Disponibles = (info)=>{
+  return(
+    <React.Fragment>
+      <div className='disponibleCSS'>
+      <data.IconoDisponibles />
+      {<span>{info.disponible}</span>}
+      </div>
+    </React.Fragment>
+  );
+}
+
+export const Beneficios = (info)=>{
+  return(
+    <React.Fragment>
+
+      <div className='beneficiosCSS'>
+        {info.beneficios?.map( (beneficioC) =>
+           <React.Fragment>
+           <IconosBeneficios b = {beneficioC} />
+           </React.Fragment>
+        )}      
+      </div> 
+      
+    </React.Fragment>
+  );
+}
+
+export const IconosBeneficios = (info) =>{
+
+const seleccion = () => {
+
+  switch(info.b){
+    case 'ca':
+      return <data.IconoCapacitaciones />
+    case 'ce':
+      return <data.IconoCertificaciones />
+    case 'fiesta':
+      return <data.IconoFiesta />
+    case 'flex':
+      return <data.IconoFlexibilidad />
+    case 'ami':
+      return <data.IconoAmigable />
+    default:
+      return <data.IconoFiesta />
   }
-export const ComponenteDesign = (argumento) =>{
+
+
+}
+  
+  return(
+    <React.Fragment>
+      
+      {<button type="button" className="btn btn-light">
+        {seleccion()}</button>}
+
+    </React.Fragment>
+
+  )
+}
+export const ComponenteLista = (argumento) =>{
     return(
       <React.Fragment>
         <div class="all-content">
           {
-            argumento.jsonsito.map((iteracion)=>
+            argumento.datos?.map((iteracion)=>
               <React.Fragment>
-                <h2>{iteracion.nombre}</h2>
-                <p>{iteracion.edad}</p>
-                {
-                  iteracion.logo.map((loguito)=>
-                    <CompoLogo loguisimo={loguito}/>
-                    /*<button type="button" className="btn btn-light">{loguito}</button>*/
-                  )
-                }
-                <img className="imagen-prueba" src={iteracion.img} />
+                
+                 
+                 <section className='contenedor'>
+                    <Logo logo = {iteracion.logo}/>
+                    <TituloPuesto titulo = {iteracion.titulo}/>
+                    <Habilidades habilidad = {iteracion.habilidad}/>
+                    <EmpresaNombre nombre = {iteracion.nombre}/>
+                    <Ubicacion ubicacion = {iteracion.ubicacion}/>
+                    <Salario salario = {iteracion.salario}/>
+                    <Disponibles disponible = {iteracion.disponible}/>
+                    <Beneficios beneficios = {iteracion.beneficios} />
+                 </section>
+                
+                 
               </React.Fragment>
             )
           }
@@ -29,31 +168,44 @@ export const ComponenteDesign = (argumento) =>{
     );
   }
 
-export const bSlide = (prop) => {
-  return (
-    <React.Fragment>
-      
-      <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
-      <div>
-      {/*
-        prop.slide_json.map((iter) => 
-        <React.Fragment>
 
-              <h1>{iter.name}</h1> 
 
-      </React.Fragment>
-      )*/}
-      </div>
-    </React.Fragment>
-  );
+
+export const BSlide = (prop) => {
+   return (
+     <React.Fragment>
+       <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
+       <div className='lista'>
+
+       <nav>
+        
+         <ul>
+          {prop.dat.map((iter) =>
+           <li>
+
+             <div>
+
+                 <button type="button" className='btn btn-danger'><h1>{iter.name}</h1></button>
+
+             </div>
+
+           </li>
+          )
+        }
+         </ul>
+
+       </nav>
+
+       </div>
+     </React.Fragment>
+   );
 }
 
 export const Componente1 = () =>{
   
     return(
       <React.Fragment>
-        <bSlide slide_json = {data.slideBar} />
-       {/*} <ComponenteDesign jsonsito={data.funcionJson} />*/}
+        <BSlide   />
       </React.Fragment>
     );
   }
