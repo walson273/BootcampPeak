@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import * as data from './Data.js'
-import * as sli from './slide_Bar.js'
-
+import './index.css';
 
 export const Logo = (info)=>{
   return(
@@ -219,3 +218,98 @@ export const CompoLogo = (loguisimont)=>{
     </React.Fragment>
   );
 }
+
+export const Headers = () =>{
+  return(
+    <React.Fragment>
+      <WhiteHeader/>
+      <BlueHeader/>
+    </React.Fragment>
+  );
+}
+export const WhiteHeader = () =>{
+  return(
+    <React.Fragment>
+      <div className='HeaderNav'>
+        <nav id="fullNav" class="nav container">
+              <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#" class="nav__link">Empleos</a></li>
+                    <li><a href="#" class="nav__link">Bootcamp</a></li>
+                    <li><a href="#" class="nav__link">Sobre nosotros</a></li>
+                    <li class="dropdown__item">
+                      <div class="nav__link">
+                          Para profesionales <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                      </div>
+                      <ul class="dropdown__menu">
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-pie-chart-line"></i> Inicio</a>                          
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Empleos</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Cursos y retos </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Preguntas </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Profesores </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Bootcamp </a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__item">
+                      <div class="nav__link">
+                          Para empresas <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                      </div>
+                      <ul class="dropdown__menu">
+                          <li>
+                            <a href="#" class="dropdown__link"><i class="ri-pie-chart-line"></i> Inicio</a>                          
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Publicar empleo </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Nuestro proceso </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Precios </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Pruebas Online </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Nómina </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Blog </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Comercial </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Caclculadora de salario </a>
+                          </li>
+                      </ul>
+                    </li>
+                    
+                </ul>
+              </div>
+          </nav>
+        </div>
+    </React.Fragment>
+  );
+}
+export const BlueHeader = () =>{
+  return(
+    <React.Fragment>
+      
+    </React.Fragment>
+  );
+}
+
+
