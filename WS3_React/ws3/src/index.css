@@ -106,3 +106,119 @@ body {
 
   background-color: #eef1f3;
 }
+
+
+/*----------------------------HEADERS------------------------- */
+.HeaderNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(220, 24%, 12%);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: 100;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  #fullNav {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin-inline: auto;
+    }
+
+    .nav {
+      height: 3.5rem;
+      height: calc(5.5rem);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav__link {
+      color: white;
+      background-color: black;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color .3s;
+      height: 100%;
+    }
+
+    .nav__link:hover {
+      background-color: transparent;
+    }
+
+    .dropdown__item {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .dropdown__arrow {
+      font-size: 1.25rem;
+      font-weight: initial;
+      transition: transform .4s;
+    }
+
+    .dropdown__link {
+      padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+      padding-inline: 1rem 3.5rem;
+      color: white;
+      background-color: hsl(220, 24%, 15%);
+      display: flex;
+      align-items: center;
+      column-gap: .5rem;
+      font-weight: 600;
+      transition: background-color .3s;
+
+      i {
+        font-size: 1.25rem;
+        font-weight: initial;
+      }
+    }
+
+    .dropdown__sublink:hover {
+      background-color: hsl(220, 24%, 12%);
+    }
+
+    .dropdown__menu {
+      max-height: initial;
+      overflow: initial;
+      position: absolute;
+      left: 0;
+      top: 6rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, top .3s;
+    }
+
+    .dropdown__item:hover .dropdown__menu {
+      opacity: 1;
+      top: 5.5rem;
+      pointer-events: initial;
+      transition: top .3s;
+    }
+
+    .dropdown__item:hover .dropdown__arrow {
+      transform: rotate(180deg);
+    }
+
+    .nav__list {
+      height: 100%;
+      display: flex;
+      column-gap: 3rem;
+    }
+
+  }
+}

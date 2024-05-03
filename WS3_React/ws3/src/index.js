@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <compo.Headers/>
     <compo.BSlide dat = {data.slideBar}/>
     <compo.ComponenteLista datos={data.funcionJson} />
   </React.StrictMode>
