@@ -27,6 +27,14 @@ body {
   
 }
 
+.nombreCSS, .beneficiosCSS, .disponibleCSS, .habilidadesCSS, .tituloPuestoCSS, .ubicacionCSS, .salarioCSS{
+
+display: flex;
+align-items: center;
+gap: 0.5rem
+
+}
+
 .logoCSS{
 
     grid-area: logo;
@@ -38,8 +46,9 @@ body {
 .tituloPuestoCSS{
 
   grid-area: titulo;
-  font-size: 1.3rem;
-  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  
 
 }
 
@@ -83,7 +92,7 @@ body {
   display: grid;
   grid-template-areas: 
   
-        "logo titulo habilidades habilidades vacio vacio"
+        "logo titulo titulo habilidades habilidades vacio"
         "logo nombre ubicacion salario disponible beneficio";
   ;
 
@@ -91,11 +100,10 @@ body {
   grid-template-rows: 1fr 1fr;
 
   margin: 2rem 2rem;
-
-  padding: 1.5rem;
- 
+  padding: 1rem;
+  height: 8rem;
   border-radius: 0.5rem;
-  border-width: 1rem;
+  
   
   border-color: rgb(0, 0, 0);
   background-color: white;
