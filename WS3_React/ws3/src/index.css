@@ -12,6 +12,7 @@ html {
   box-sizing: inherit;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -116,6 +117,7 @@ gap: 0.5rem
   background-color: #eef1f3;
   padding: 1rem;
   margin: 1rem;
+  margin-left: 5.625rem;
 }
 
 
@@ -267,6 +269,22 @@ gap: 0.5rem
   justify-content: center;
   border-radius: 5px;
   padding: 0.313rem;
+}
+#imagencita{
+  left: 0px;
+  margin: auto;
+  text-align: center;
+  img{
+  width: 3.75rem;
+  height: 3.75rem;
+  }
+}
+#letrita{
+  color: #727272;
+  margin-top: -15px;
+  font-family: "Montserrat",bold;
+  font-weight: 500;
+  font-size: 20px;
 }
 .cont_items{
   width: 80px;
