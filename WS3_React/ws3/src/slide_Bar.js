@@ -5,7 +5,8 @@ export const BSlide = (prop) => {
     return (
       <React.Fragment>
         <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
-        <div className='lista'>
+        
+        <div className='slidebar'>
  
         <nav>
                
