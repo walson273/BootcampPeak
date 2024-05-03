@@ -113,20 +113,21 @@ body {
 
 /*----------------------------HEADERS------------------------- */
 .HeaderNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 90%;
   background-color: #f8f9fa;
   box-shadow: 0 2px 16px #f8f9fa;
   z-index: 100;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  float: right;
 
   #fullNav {
-    max-width: 1120px;
+    max-width: 1520px;
     margin-inline: 1.5rem;
+    align-content: end;
+    float: right;
+    margin: 0;
 
     ul {
       list-style: none;
@@ -175,10 +176,11 @@ body {
     }
 
     .dropdown__link {
-      padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+      padding: 0.25rem 0.25rem 0.25rem 1.5rem;
       padding-inline: 1rem 3.5rem;
       color: black;
       background-color: #f8f9fa;
+      width: 17rem;
       display: flex;
       align-items: center;
       column-gap: .5rem;
@@ -220,6 +222,22 @@ body {
       height: 100%;
       display: flex;
       column-gap: 3rem;
+    }
+    svg{
+      font-size: 120%;
+    }
+    #btn_espanol span{
+      padding-left: 0.4rem;
+      color: black;
+    }
+    svg{
+      color: black;
+    }
+    #btn_campana{
+      border-color: black;
+      border-width: 0.1rem;
+      border-style: solid;
+      border-radius: 5px;
     }
 
   }
