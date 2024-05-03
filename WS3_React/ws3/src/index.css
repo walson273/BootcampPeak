@@ -261,11 +261,12 @@ gap: 0.5rem
 .slidebar{
   float: left;
   position: fixed;
-  width: 80px;
+  width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  padding: 0.313rem;
 }
 .cont_items{
   width: 80px;
@@ -292,4 +293,5 @@ gap: 0.5rem
 .boton{
   padding: .5rem .1rem!important;
   margin: 5px;
+  width: 100%;
 }
