@@ -5,12 +5,12 @@ import * as compo from'./componentes.js';
 import * as data from './Data.js'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import * as sli from './slide_Bar.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <compo.BSlide dat = {data.slideBar}/>
+    <sli.BSlide dat = {data.slideBar}/>
     <compo.ComponenteLista datos={data.funcionJson} />
   </React.StrictMode>
 );
