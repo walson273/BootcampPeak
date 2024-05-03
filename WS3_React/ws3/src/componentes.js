@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import * as data from './Data.js'
 import './index.css';
 
-
-
 export const Logo = (info)=>{
   return(
     <React.Fragment>
@@ -172,44 +170,47 @@ export const ComponenteLista = (argumento) =>{
 
 
 
-export const BSlide = (prop) => {
-   return (
-     <React.Fragment>
-       <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
-       <div className='lista'>
+// export const BSlide = (prop) => {
+//    return (
+//      <React.Fragment>
+//        <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
+//        <div className='lista'>
 
-       <nav>
-        
-         <ul>
-          {prop.dat.map((iter) =>
-           <li>
+//        <nav>
+              
+//          <ul>
+//           {prop.dat.map((iter) =>
+//            <li className='list-group-item'>  
 
-             <div>
+//              <div>
 
-                 <button type="button" className='btn btn-danger'><h1>{iter.name}</h1></button>
+//                  <button type="button" className='btn btn-light'>
+                  
+//                    <h1> {iter.name}  </h1>
+//                  </button>
 
-             </div>
+//              </div>
 
-           </li>
-          )
-        }
-         </ul>
+//            </li>
+//           )
+//         }
+//          </ul>
 
-       </nav>
+//        </nav>
 
-       </div>
-     </React.Fragment>
-   );
-}
+//        </div>
+//      </React.Fragment>
+//    );
+// }
 
-export const Componente1 = () =>{
+// export const Componente1 = () =>{
   
-    return(
-      <React.Fragment>
-        <BSlide   />
-      </React.Fragment>
-    );
-  }
+//     return(
+//       <React.Fragment>
+//         <BSlide   />
+//       </React.Fragment>
+//     );
+//   }
 export const CompoLogo = (loguisimont)=>{
   return(
     <React.Fragment>
