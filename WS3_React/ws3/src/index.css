@@ -113,9 +113,9 @@ body {
 
 /*----------------------------HEADERS------------------------- */
 .HeaderNav {
-  position: fixed;
+  position: relative;
   top: 0;
-  left: 0;
+  left: 90px;
   width: 100%;
   background-color: hsl(220, 24%, 12%);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
@@ -229,4 +229,36 @@ body {
 
 .slidebar{
   float: left;
+  position: fixed;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.cont_items{
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.box_items{
+ 
+  align-items: center;
+  justify-content: center;  
+}
+.iconsize{
+  margin-bottom: 5px;
+  font-size: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nombreslide{
+  font-size: 0.656rem;
+}
+.boton{
+  padding: .5rem .1rem!important;
+  margin: 5px;
 }

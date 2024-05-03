@@ -3,35 +3,24 @@ import React from 'react';
 
 export const BSlide = (prop) => {
     return (
-      <React.Fragment>
-        <h1 className="greeting">AQUITOYYYYYYYYYY</h1>
-        
-        <div className='slidebar'>
- 
-        <nav>
-               
-          <ul>
-           {prop.dat.map((iter) =>
-            <li className='list-group-item'>  
- 
-              <div>
- 
-                  <button type="button" className='btn btn-light'>
-
-                    {iter.icon}
-                    <h1> {iter.name}  </h1>
-                  </button>
- 
-              </div>
- 
-            </li>
-           )
-         }
-          </ul>
- 
-        </nav>
- 
-        </div>
-      </React.Fragment>
+        <React.Fragment>
+            <div className='slidebar border'>
+                <nav>
+                    <ul className='nav'>
+                        {prop.dat.map((iter) =>
+                            <li className='box_items list-group-item nav-item '>
+                                <div className='cont_items'>
+                                    <button className='boton nav-link active btn btn-light'>
+                                            <div className='iconsize'>{iter.icon}</div>
+                                        <h6 className='nombreslide'> {iter.name}  </h6>
+                                    </button>
+                                </div>
+                            </li>
+                        )
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </React.Fragment>
     );
- }
+}
