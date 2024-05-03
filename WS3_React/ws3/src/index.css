@@ -31,6 +31,7 @@ body {
 
 display: flex;
 align-items: center;
+gap: 0.5rem
 
 }
 
@@ -45,7 +46,8 @@ align-items: center;
 .tituloPuestoCSS{
 
   grid-area: titulo;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   
 
 }

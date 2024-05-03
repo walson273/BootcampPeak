@@ -74,7 +74,7 @@ export const Salario = (info)=>{
     <React.Fragment>
       <div className='salarioCSS'>
       <data.IconoDinero />
-      {<span>$ {info.salario} COP</span>}
+      {<span> $ {info.salario} COP</span>}
       </div>
     </React.Fragment>
   );
