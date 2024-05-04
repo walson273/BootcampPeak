@@ -1,8 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+
 export const BSlide = (prop) => {
+    const [open, setOpen] = useState(true);
     return (
         <React.Fragment>
-            <div className='slidebar'>
+            <div className={'slidebar border'} style={{ width: open ? '150px' : '90px' }}>
+            {/* <div className={'slidebar border'}> */}
+                <IoIosArrowDroprightCircle id='flechita' className='arrow' style={{ margin: open ? '0px -150px 0px 0px' : '0px -90px 0px 0px' }} onClick={() => setOpen(!open)}/>
+                {/* <button className='arrow btn btn-success' id='flechita' onClick={() => setOpen(!open)}>holi</button> */}
                 <nav>
                     <ul className='nav'>
                     <div id="imagencita">
