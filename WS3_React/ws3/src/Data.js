@@ -25,7 +25,23 @@ export const slideBar = [
 
 export const funcionJson=[
     {'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-    {'logo':'logo2','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+    {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+  
+        /* copypasteado a lo guache */
+
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+        
   ]
 
 export const Icon_Empleos = () =>{
