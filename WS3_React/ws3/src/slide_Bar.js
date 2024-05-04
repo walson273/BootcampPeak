@@ -2,15 +2,15 @@ import React from 'react';
 export const BSlide = (prop) => {
     return (
         <React.Fragment>
-            <div className='slidebar border'>
+            <div className='slidebar'>
                 <nav>
                     <ul className='nav'>
-                    <div id="imagencita" className='border'>
+                    <div id="imagencita">
                             <img src="imagencitas/peaku.png" alt="Logo"/>
                             <h2 id='letrita' >PeakU</h2>
                     </div>
                         {prop.dat.map((iter) => (
-                            <li className='box_items list-group-item nav-item '>
+                            <li className='box_items list-group-item nav-item'>
                                 <div className='cont_items'>
                                     <a className='boton btn btn-light' href={iter.link}>
                                         <div className='iconsize'>{iter.icon}</div>
