@@ -10,7 +10,7 @@ import * as sli from './slide_Bar.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <compo.Headers/> 
+    <compo.Headers/>
     <sli.BSlide dat = {data.slideBar}/>
     <compo.ComponenteLista datos={data.funcionJson} />
   </React.StrictMode>

@@ -91,6 +91,7 @@ gap: 0.5rem
 .contenedor{
 
   display: grid;
+  width: 90%;
   grid-template-areas: 
   
         "logo titulo titulo habilidades habilidades vacio"
@@ -117,8 +118,7 @@ gap: 0.5rem
   background-color: #eef1f3;
   padding: 1rem;
   margin: 1rem;
-  position: relative;
-  top: 2rem;
+  top: 1rem;
   margin-left: 5.625rem;
 
   section:hover { 
@@ -136,7 +136,7 @@ gap: 0.5rem
 
 /*----------------------------HEADERS------------------------- */
 .HeaderNav {
-  width: 90%;
+  width: 95.3%;
   height: 5rem;
   background-color: #f8f9fa;
   box-shadow: 0 2px 16px #f8f9fa;
@@ -271,6 +271,13 @@ gap: 0.5rem
     }
 
   }
+}
+#azulito{
+  height: 5rem;
+  width: 95.3%;
+  background-color: aqua;
+  float: right;
+  margin-bottom: 2rem;
 }
 /*----------------------------SlideBar------------------------- */
 
