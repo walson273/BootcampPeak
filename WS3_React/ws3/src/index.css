@@ -347,4 +347,8 @@ gap: 0.5rem
   padding: .5rem .1rem!important;
   margin: 5px;
   width: 100%;
+  border: none;
+}
+.boton:hover {
+  background: rgba(111,202,255,.53333);
 }
