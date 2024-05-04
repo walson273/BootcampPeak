@@ -334,7 +334,7 @@ gap: 0.5rem
 .slidebar{
   float: left;
   position: fixed;
-  width: 90px;
+  /* width: 90px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,4 +384,17 @@ gap: 0.5rem
   padding: .5rem .1rem!important;
   margin: 5px;
   width: 100%;
+  border: none;
+}
+.boton:hover {
+  background: rgba(111,202,255,.53333);
+}
+.arrow{
+  position: absolute;
+  margin: 0px -90px 0px 0px;
+}
+
+#flechita{
+  font-size: 25px;
+  color: #3a8ced;
 }

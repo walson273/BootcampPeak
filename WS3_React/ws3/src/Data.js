@@ -24,23 +24,40 @@ export const slideBar = [
 
 
 export const funcionJson=[
-    {'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-    {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+
+  {'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+
+  {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']},
+
+    {'logo':'logo1.png','titulo':'Director comercial','habilidad': ['Business Analysis','Commercial Relationship','Commercial Strategy'], 'nombre':'Confidencial', 'ubicacion': 'Bucaramanga', 'salario': 'Confidencial', 'disponible':'1','beneficios':['ce','fiesta','ca']},
+    
+    {'logo':'logo1.png','titulo':'E-commercer & SEO Specialist','habilidad': ['Email Marketing','Wordpress','Ecommerce'], 'nombre':'Skla Consulting', 'ubicacion': 'Bogota', 'salario': '4M-6M', 'disponible':'1','beneficios':['']},
   
         /* copypasteado a lo guache */
 
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
-     ,{'logo':'logo1.png','titulo':'Ingeniero de infraestructura TL','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'offimedicas s.a', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['ce','fiesta','ca']},
-     {'logo':'logo1.png','titulo':'Tester de software','habilidad': ['Resolucion capacity','Complianece With Indicators','Liderazgo'], 'nombre':'colmedicas s.a', 'ubicacion': 'Bucaramanga(presencial)', 'salario': '5M-7M', 'disponible':'3','beneficios':['ce','fiesta','flex']}
+    {'logo':'logo1.png','titulo':'Ingeniero de datos','habilidad': ['Bi','Etl','Python'], 'nombre':'Direktio', 'ubicacion': 'Remoto Colombia', 'salario': '3.5M', 'disponible':'1','beneficios':['Trabajo remoto','flex','Leccion en programacion','Celebracion de dias especiales','ami','Dia completo o medio dia libre de cumpleaños']},
+     
+    {'logo':'logo1.png','titulo':'Grow Manager','habilidad': ['Negotiation Skill','Project Management','Lead Work Teams'], 'nombre':'Vichara Techologies/Tech Labs...', 'ubicacion': 'Hibrido-mix remoto y presencial...', 'salario': 'Confidencial', 'disponible':'1','beneficios':['Seguro medico privado','flex','Trabajo remoto parcial','Celebracion de dias especiales','ami','Ca']}
+     
+    ,{'logo':'logo1.png','titulo':'Ejecutivo comercial senior, en MetLife','habilidad': ['Commercial Aggressiveness','Negotiating Capacity.'], 'nombre':'Metlife Medellin', 'ubicacion': 'Medellin', 'salario': '2.9M-6M', 'disponible':'1','beneficios':['ami']},
+     
+    {'logo':'logo1.png','titulo':'Analista de calidad','habilidad': ['QA','Quality Audit','Process Quality'], 'nombre':'OFFIMEDICAS S.A', 'ubicacion': 'Bucaramanga', 'salario': '1.5M', 'disponible':'1','beneficios':['ami','Flex','Ca']}
+     
+    ,{'logo':'logo1.png','titulo':'Coordinador de Calidad','habilidad': ['QA','Quality Audit','Proccess Quality'], 'nombre':'OFFIMEDICAS S.A', 'ubicacion': 'Bucaramanga', 'salario': '2.5M', 'disponible':'1','beneficios':['Ce','Fiesta','Ca']},
+     
+    {'logo':'logo1.png','titulo':'Ingeniero de calidad','habilidad': ['QA','Quality Audit'], 'nombre':'OFFIMEDICAS S.A', 'ubicacion': 'Bucaramanga', 'salario': '2M', 'disponible':'1','beneficios':['Ce','Fiesta','Ca']}
+     
+    ,{'logo':'logo1.png','titulo':'Director de infraestructuras TI','habilidad': ['Project Management','Complianece With Indicators','Liderazgo'], 'nombre':'Confidencial', 'ubicacion': 'Bucaramanga', 'salario': '5M-7M', 'disponible':'1','beneficios':['Certificado','Fiesta','Ca']},
+     
+    {'logo':'logo1.png','titulo':'Director Comercial  Pasarela de Pago','habilidad': ['Negotiation Strategy','Comercial Analysis','Business Closure'], 'nombre':'Be Movil', 'ubicacion': 'Pereira(presencial)', 'salario': '3.7M-4M', 'disponible':'1','beneficios':['']}
+     
+    ,{'logo':'logo1.png','titulo':'Tester de Software','habilidad': ['Resolution Capacity','Complianece With Indicators','Agile Work'], 'nombre':'OFFIMEDICAS S.A', 'ubicacion': 'Presencial(Bucaramanga)', 'salario': '2.8M', 'disponible':'1','beneficios':['Ce','Fiesta','Ca']},
+     
+    {'logo':'logo1.png','titulo':'Desarollo de software','habilidad': ['Resolucion capacity','Adaptation to Changes'], 'nombre':'OFFIMEDICAS S.A', 'ubicacion': 'Bucaramanga', 'salario': '2.8M', 'disponible':'1','beneficios':['Ce','Fiesta','Ca']}
+     
+    ,{'logo':'logo1.png','titulo':'Practicante del SENA','habilidad': ['Englis','Business Skill','Excel'], 'nombre':'Asosalud Ltda', 'ubicacion': 'Presencial(Bogota)', 'salario': '975K', 'disponible':'1','beneficios':['']},
+     
+    {'logo':'logo1.png','titulo':'Quimico Farmaceutico','habilidad': ['Capacidad De Analisis','Process Improvent','Liderazgo'], 'nombre':'Confidecial', 'ubicacion': 'Bucaramanga', 'salario': '5M-7M', 'disponible':'1','beneficios':['Ce','Fiesta','Ca']}
         
   ]
 
