@@ -9,17 +9,16 @@ export const BSlide = (prop) => {
                             <img src="imagencitas/peaku.png" alt="Logo"/>
                             <h2 id='letrita' >PeakU</h2>
                     </div>
-                        {prop.dat.map((iter) =>
+                        {prop.dat.map((iter) => (
                             <li className='box_items list-group-item nav-item '>
                                 <div className='cont_items'>
-                                    <button type="button" className='boton  btn btn-light'>
-                                            <div className='iconsize'>{iter.icon}</div>
-                                        <h6 className='nombreslide'> {iter.name}  </h6>
-                                    </button>
+                                    <a className='boton btn btn-light' href={iter.link}>
+                                        <div className='iconsize'>{iter.icon}</div>
+                                        <h6 className='nombreslide'> {iter.name} </h6>
+                                    </a>
                                 </div>
                             </li>
-                        )
-                        }
+                        ))}
                     </ul>
                 </nav>
             </div>
