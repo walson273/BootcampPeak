@@ -156,6 +156,7 @@ gap: 0.5rem
   
   #icono-persona, #perfil-nombre, #icono-gema, #valor-gema{
     position: relative;
+    font-size: 0.563rem;
   }
   #perfil{
     background-color: pink;
