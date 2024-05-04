@@ -141,13 +141,13 @@ const seleccion = () => {
 export const ComponenteLista = (argumento) =>{
     return(
       <React.Fragment>
-        <div class="all-content">
+        <div  id='cajita' class="all-content">
           {
             argumento.datos?.map((iteracion)=>
               <React.Fragment>
                 
                  
-                 <section className='contenedor'>
+                 <section  className='contenedor'>
                     <Logo logo = {iteracion.logo}/>
                     <TituloPuesto titulo = {iteracion.titulo}/>
                     <Habilidades habilidad = {iteracion.habilidad}/>
