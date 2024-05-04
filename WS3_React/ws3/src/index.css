@@ -346,12 +346,14 @@ gap: 0.5rem
   float: left;
   position: fixed;
   /* width: 90px; */
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   border-radius: 5px;
   padding: 0.313rem;
   background-color: white;
+  /* margin-top: -4.375rem; */
+  background-position: top;
 }
 #imagencita{
   left: 0px;
@@ -391,6 +393,13 @@ gap: 0.5rem
 .iconsize{
   margin-bottom: 5px;
   font-size: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconsize.active{
+  margin-bottom: 5px;
+  font-size: 170%;
   display: flex;
   align-items: center;
   justify-content: center;
