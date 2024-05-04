@@ -344,7 +344,8 @@ gap: 0.5rem
 }
 #imagencita{
   left: 0px;
-  margin: auto;
+  /* margin: auto; */
+  margin-left: 5px;
   text-align: center;
   img{
   width: 3.75rem;
@@ -365,8 +366,14 @@ gap: 0.5rem
   justify-content: center;
   
 }
+.cont_items.active{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
 .box_items{
- 
   align-items: center;
   justify-content: center;  
 }
@@ -380,13 +387,32 @@ gap: 0.5rem
 .nombreslide{
   font-size: 0.656rem;
 }
+.nombreslide.active{
+  font-size: 0.656rem;
+  margin-top: 5px;
+  margin-left: 10px;
+}
 .boton{
   padding: .5rem .1rem!important;
   margin: 5px;
   width: 100%;
   border: none;
 }
+.boton.active{
+  padding: .5rem .1rem!important;
+  margin: 5px;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15pxs;
+  margin-left: 0px;
+  background: none;
+}
 .boton:hover {
+  background: rgba(111,202,255,.53333);
+}
+.boton.active:hover {
   background: rgba(111,202,255,.53333);
 }
 .arrow{
