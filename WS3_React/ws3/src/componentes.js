@@ -233,31 +233,31 @@ export const WhiteHeader = () =>{
         <nav id="fullNav" class="nav container">
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-              <li><a href="#" class="nav__link">Empleos</a></li>
-              <li><a href="#" class="nav__link">Bootcamp</a></li>
-              <li><a href="#" class="nav__link">Sobre nosotros</a></li>
+              <li><a href="https://peaku.co/es/empleos" class="nav__link">Empleos</a></li>
+              <li><a href="https://peaku.co/es/bootcamp-fullstack" class="nav__link">Bootcamp</a></li>
+              <li><a href="https://peaku.co/es/sobre-nosotros" class="nav__link">Sobre nosotros</a></li>
               <li class="dropdown__item">
                 <div class="nav__link">
                   Para profesionales <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-pie-chart-line"></i> Inicio</a>
+                    <a href="https://peaku.co/es/cursos" class="dropdown__link"> <i class="ri-pie-chart-line"></i> Inicio</a>
                   </li>
                   <li>
                     <a href="#" class="dropdown__link"> <i class="ri-user-line"></i> Empleos</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-git-repository-line"></i> Cursos y retos </a>
+                    <a href="https://peaku.co/es/cursos" class="dropdown__link"> <i class="ri-git-repository-line"></i> Cursos y retos </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-question-line"></i> Preguntas </a>
+                    <a href="https://peaku.co/es/preguntas" class="dropdown__link"> <i class="ri-question-line"></i> Preguntas </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-pencil-ruler-line"></i> Profesores </a>
+                    <a href="https://peaku.co/es/profesores" class="dropdown__link"> <i class="ri-pencil-ruler-line"></i> Profesores </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-bootstrap-line"></i> Bootcamp </a>
+                    <a href="https://peaku.co/es/bootcamp-fullstack" class="dropdown__link"> <i class="ri-bootstrap-line"></i> Bootcamp </a>
                   </li>
                 </ul>
               </li>
@@ -267,28 +267,28 @@ export const WhiteHeader = () =>{
                 </div>
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link"><i class="ri-pie-chart-line"></i> Inicio</a>
+                    <a href="https://peaku.co/es/empresas" class="dropdown__link"><i class="ri-pie-chart-line"></i> Inicio</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-account-box-line"></i> Publicar empleo </a>
+                    <a href="https://peaku.co/es/empresas/publicar" class="dropdown__link"> <i class="ri-account-box-line"></i> Publicar empleo </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-bar-chart-grouped-line"></i> Nuestro proceso </a>
+                    <a href="https://peaku.co/es/empresas/proceso" class="dropdown__link"> <i class="ri-bar-chart-grouped-line"></i> Nuestro proceso </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-money-dollar-circle-line"></i> Precios </a>
+                    <a href="https://peaku.co/es/empresas/precios" class="dropdown__link"> <i class="ri-money-dollar-circle-line"></i> Precios </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-macbook-line"></i> Pruebas Online </a>
+                    <a href="https://peaku.co/es/pruebas-tech" class="dropdown__link"> <i class="ri-macbook-line"></i> Pruebas Online </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-wallet-line"></i> Nómina </a>
+                    <a href="https://peaku.co/es/nomina" class="dropdown__link"> <i class="ri-wallet-line"></i> Nómina </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-blogger-line"></i> Blog </a>
+                    <a href="https://peaku.co/es/blog" class="dropdown__link"> <i class="ri-blogger-line"></i> Blog </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-megaphone-line"></i> Comercial </a>
+                    <a href="https://peaku.co/es/comercial" class="dropdown__link"> <i class="ri-megaphone-line"></i> Comercial </a>
                   </li>
                   <li>
                     <a href="#" class="dropdown__link"> <i class="ri-calculator-line"></i> Caclculadora de salario </a>
@@ -315,7 +315,7 @@ export const WhiteHeader = () =>{
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" /><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" /></svg>
                   </div>
                   <div id="perfil-nombre">
-                    <p>Nombre</p>
+                    <p>Joaquin</p>
                   </div>
                   <div id="icono-gema">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16"><path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" /></svg>
