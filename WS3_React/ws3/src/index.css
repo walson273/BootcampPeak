@@ -124,20 +124,22 @@ gap: 0.5rem
 /*----------------------------HEADERS------------------------- */
 .HeaderNav {
   width: 90%;
+  height: 5rem;
   background-color: #f8f9fa;
+  background-color: grey;
   box-shadow: 0 2px 16px #f8f9fa;
-  position: relative;
-  top: 0;
-  left: 90px;
-  width: 100%;
-  background-color: hsl(220, 24%, 12%);
-  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   z-index: 100;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   float: right;
-
+  
+  #icono-persona, #perfil-nombre, #icono-gema, #valor-gema{
+    position: relative;
+  }
+  #perfil{
+    background-color: pink;
+  }
   #fullNav {
     max-width: 1520px;
     margin-inline: 1.5rem;
@@ -173,7 +175,7 @@ gap: 0.5rem
       justify-content: space-between;
       align-items: center;
       transition: background-color .3s;
-      height: 100%;
+      height: 5rem;
     }
 
     .nav__link:hover {
