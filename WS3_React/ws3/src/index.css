@@ -483,4 +483,8 @@ body {
 #flechita {
   font-size: 25px;
   color: #3a8ced;
+  cursor: pointer;
+}
+#flechita:hover{
+    transform: rotate(180deg);
 }
