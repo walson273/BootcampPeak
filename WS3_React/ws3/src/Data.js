@@ -6,13 +6,13 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 
 export const slideBar = [
-  {'name' : 'Empleos', 'icon' : <BsBriefcase />,},
-  {'name' : 'Postulaciones', 'icon' : <LuFileCheck />,},
-  {'name' : 'CodeX', 'icon' : <BsController />,},
-  {'name' : 'Preguntas', 'icon': <BiMessageRoundedDetail />,},
-  {'name' : 'Bootcamp', 'icon': <PiBracketsCurly />,},
-  {'name' : 'Premios', 'icon': <IoDiamondOutline />,},
-  {'name' : 'Tu Cv', 'icon': <BsFileEarmarkPerson />,}
+  {'name' : 'Empleos', 'icon' : <BsBriefcase />, 'link' : 'https://www.google.com/webhp?hl=es-419&sa=X&ved=0ahUKEwjRnfDHjPOFAxUVRDABHdf6DgYQPAgJ'},
+  {'name' : 'Postulaciones', 'icon' : <LuFileCheck />, 'link' : 'https://www.chaturbate.com'},
+  {'name' : 'CodeX', 'icon' : <BsController />, 'link' : ''},
+  {'name' : 'Preguntas', 'icon': <BiMessageRoundedDetail />, 'link' : ''},
+  {'name' : 'Bootcamp', 'icon': <PiBracketsCurly />, 'link' : ''},
+  {'name' : 'Premios', 'icon': <IoDiamondOutline />, 'link' : 'https://www.pornhub.com'},
+  {'name' : 'Tu Cv', 'icon': <BsFileEarmarkPerson />, 'link' : ''}
 ];
 
 /*
