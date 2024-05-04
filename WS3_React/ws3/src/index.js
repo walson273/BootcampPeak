@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import * as compo from'./componentes.js';
 import * as data from './Data.js'
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as sli from './slide_Bar.js'
 
