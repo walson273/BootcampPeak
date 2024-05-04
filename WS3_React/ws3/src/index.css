@@ -322,8 +322,7 @@ gap: 0.5rem
 #search-div{
   width: 33.75rem;
   height: 2.5rem;
-  display: flex;
-  margin: auto;
+  margin-left: 10rem;
   margin-top: 1rem;
 }
 #lupa{
