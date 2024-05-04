@@ -14,6 +14,7 @@ export const slideBar = [
   {'name' : 'Premios', 'icon': <IoDiamondOutline />,},
   {'name' : 'Tu Cv', 'icon': <BsFileEarmarkPerson />,}
 ];
+
 /*
 export const slideBar = [
   {'name' : 'Empleos', 'img' : 'https://placeimg.com/640/480/arch'},
