@@ -141,7 +141,7 @@ const seleccion = () => {
 export const ComponenteLista = (argumento) =>{
     return(
       <React.Fragment>
-        <div  id='cajita' class="all-content">
+        <div class="ListaEntera">
           {
             argumento.datos?.map((iteracion)=>
               <React.Fragment>
