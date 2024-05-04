@@ -6,13 +6,13 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 
 export const slideBar = [
-  {'name' : 'Empleos', 'icon' : <BsBriefcase />, 'link' : 'https://www.google.com/webhp?hl=es-419&sa=X&ved=0ahUKEwjRnfDHjPOFAxUVRDABHdf6DgYQPAgJ'},
-  {'name' : 'Postulaciones', 'icon' : <LuFileCheck />, 'link' : 'https://www.chaturbate.com'},
-  {'name' : 'CodeX', 'icon' : <BsController />, 'link' : ''},
-  {'name' : 'Preguntas', 'icon': <BiMessageRoundedDetail />, 'link' : ''},
-  {'name' : 'Bootcamp', 'icon': <PiBracketsCurly />, 'link' : ''},
-  {'name' : 'Premios', 'icon': <IoDiamondOutline />, 'link' : 'https://www.pornhub.com'},
-  {'name' : 'Tu Cv', 'icon': <BsFileEarmarkPerson />, 'link' : ''}
+  {'name' : 'Empleos', 'icon' : <BsBriefcase />, 'link' : ''},
+  {'name' : 'Postulaciones', 'icon' : <LuFileCheck />, 'link' : 'https://peaku.co/es/postulaciones'},
+  {'name' : 'CodeX', 'icon' : <BsController />, 'link' : 'https://peaku.co/es/cursos'},
+  {'name' : 'Preguntas', 'icon': <BiMessageRoundedDetail />, 'link' : 'https://peaku.co/es/preguntas'},
+  {'name' : 'Bootcamp', 'icon': <PiBracketsCurly />, 'link' : 'https://peaku.co/es/bootcamp-fullstack'},
+  {'name' : 'Premios', 'icon': <IoDiamondOutline />, 'link' : 'https://peaku.co/es/premios'},
+  {'name' : 'Tu Cv', 'icon': <BsFileEarmarkPerson />, 'link' : 'https://peaku.co/es/cv'}
 ];
 
 /*
