@@ -245,13 +245,13 @@ export const WhiteHeader = () =>{
                     <a href="#" class="dropdown__link"> <i class="ri-pie-chart-line"></i> Inicio</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Empleos</a>
+                    <a href="#" class="dropdown__link"> <i class="ri-user-line"></i> Empleos</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Cursos y retos </a>
+                    <a href="#" class="dropdown__link"> <i class="ri-git-repository-line"></i> Cursos y retos </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Preguntas </a>
+                    <a href="#" class="dropdown__link"> <i class="ri-question-line"></i> Preguntas </a>
                   </li>
                   <li>
                     <a href="#" class="dropdown__link"> <i class="ri-arrow-up-down-line"></i> Profesores </a>
@@ -312,13 +312,13 @@ export const WhiteHeader = () =>{
               <li>
                 <div id="perfil">
                   <div id="icono-persona">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" /><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" /><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" /></svg>
                   </div>
                   <div id="perfil-nombre">
                     <p>Nombre</p>
                   </div>
                   <div id="icono-gema">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16"><path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16"><path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" /></svg>
                   </div>
                   <div id="valor-gema">
                     <p>4200</p>
@@ -337,6 +337,14 @@ export const BlueHeader = () =>{
   return(
     <React.Fragment>
       <div id="azulito">
+      <div id="search-div" class="input-group custom-input-group">
+        <div id="lupa" class="bg-light input-group-prepend">
+          <div class="input-group-text">
+            <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="search" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-search b-icon bi"><g data-v-08fb1bf6=""><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></g></svg>
+          </div>
+        </div>
+        <input id="search-bar" type="search" placeholder="Busca por cargo, salario, ubicación o empresa" class="form-control form-control-md"/>
+      </div>
 
       </div>
     </React.Fragment>
