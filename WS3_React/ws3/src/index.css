@@ -277,6 +277,7 @@ gap: 0.5rem
       top: 4rem;
       pointer-events: initial;
       transition: top .3s;
+      z-index: 1;
     }
 
     .dropdown__item:hover .dropdown__arrow {
@@ -328,6 +329,17 @@ gap: 0.5rem
 #lupa{
   display: flex;;
   padding: auto;
+  cursor: pointer;
+}
+#filtros{
+  margin-left: auto;
+  margin-right: 0;
+  width: 30rem;
+  position: relative;
+  bottom: 2rem;
+  button{
+    margin: 0 0.3rem;
+  }
 }
 /*----------------------------SlideBar------------------------- */
 
