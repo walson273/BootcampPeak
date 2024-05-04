@@ -1,7 +1,8 @@
 import React from 'react';
 import * as data from './Data.js'
 import './index.css';
-
+import open from './slide_Bar.js';
+    
 export const Logo = (info)=>{
   return(
     <React.Fragment>
