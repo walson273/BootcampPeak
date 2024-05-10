@@ -4,7 +4,7 @@ export const consultar_todo = async (req, res) => {
     const nominas = await Nomina.findAll({
         order: [
             [
-                'id', 'desc'
+                'id', 'asc'
             ]
         ],
         attributes: {
