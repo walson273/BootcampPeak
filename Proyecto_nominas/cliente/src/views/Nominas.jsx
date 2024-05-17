@@ -4,12 +4,12 @@ import axios from "axios";
 
 export async function loader(){
   //mostrar_nominas();
-  const axios = require('axios')
+  //const axios = require('axios')
   try {
     const url = `${import.meta.env.VITE_URL_POST}/usuarios`
     console.log(url);
-    const response = await axios.get(url)
-    console.log(response);
+    //const response = await axios.get(url)
+    //console.log(response);
   } catch (error) {
     console.log(error);
   }
