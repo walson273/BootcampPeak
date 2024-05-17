@@ -4,9 +4,7 @@ import db from "../config/db.js";
 const Cargos = db.define(
     'cargo',
     {
-        sede: {
-            type: DataTypes.STRING
-        },
+       
         salario_dia: {
             type: DataTypes.INTEGER
         },
