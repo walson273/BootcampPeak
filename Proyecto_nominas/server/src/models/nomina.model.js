@@ -4,11 +4,43 @@ import db from "../config/db.js";
 const Nomina = db.define(
     'nomina',
     {
-        empleado: {
-            type: DataTypes.STRING
+        dias_trabajados: { 
+            type: DataTypes.INTEGER
         },
-        cargo: {
-            type: DataTypes.STRING
+        base: {
+            type: DataTypes.INTEGER
+        },
+        bonos: {
+            type: DataTypes.INTEGER
+        },
+        eps: {
+            type: DataTypes.INTEGER
+        },
+        cesantias: {
+            type: DataTypes.INTEGER
+        },
+        pension: {
+            type: DataTypes.INTEGER
+        },
+        total_descuentos: {
+            type: DataTypes.INTEGER
+        },
+        devengado: {
+            type: DataTypes.INTEGER
+        },
+        total_neto: {
+            type: DataTypes.INTEGER
+        },
+        mes: {
+            type: DataTypes.INTEGER
+        },
+        anio: {
+            type: DataTypes.INTEGER
+        },
+        //FOREIGNNNNNN 
+        id_usuario: {
+            type: DataTypes.INTEGER
+
         },
         estado: {
             type: DataTypes.BOOLEAN,

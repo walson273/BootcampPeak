@@ -1,17 +1,17 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db.js";
 
-const Empleados = db.define(
-    'empleado',
+const Cargos = db.define(
+    'cargo',
     {
-        nombre: {
+        sede: {
             type: DataTypes.STRING
         },
-        apellido: {
-            type: DataTypes.STRING
-        },
-        numero_telefonico: {
+        salario_dia: {
             type: DataTypes.INTEGER
+        },
+        nombre_puesto: {
+            type: DataTypes.STRING
         },
         estado: {
             type: DataTypes.BOOLEAN,
@@ -19,8 +19,8 @@ const Empleados = db.define(
         }
     },
     {
-        tableName:'Empleado'
+        tableName:'Cargo'
     }
 )
 
-    export default Empleados
+    export default Cargos
