@@ -28,6 +28,7 @@ const Usuarios = db.define(
         tiempo_meses: {
             type: DataTypes.INTEGER
         },
+    
         //FOREIGNNNNNN
         id_cargo: {
             type: DataTypes.INTEGER

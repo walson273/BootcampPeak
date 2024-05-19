@@ -2,9 +2,9 @@ import { Router } from "express";
 import { consultar_todo, crear_nuevo, eliminar_nomina } from "./handlers/nomina.js";
 import { body, param } from "express-validator";
 import { Errores } from "./middleware/index.js";
-import { consultar_usuarios, crear_usuarios, eliminar_usuarios } from "./handlers/usuarios.js";
-import { consultar_cargos, crear_cargos, eliminar_cargos } from "./handlers/cargos.js";
-import { consultar_equipos, crear_equipos, eliminar_equipos } from "./handlers/equipos.js";
+import { consultar_usuarios, crear_usuarios, eliminar_usuarios, modificar_usuarios } from "./handlers/usuarios.js";
+import { consultar_cargos, crear_cargos, eliminar_cargos, modificar_cargos } from "./handlers/cargos.js";
+import { consultar_equipos, crear_equipos, eliminar_equipos, modificar_equipos } from "./handlers/equipos.js";
 
 const router = Router();
 
@@ -31,13 +31,28 @@ router.post('/usuarios/',
     Errores,
     crear_usuarios);
 
+    router.patch('/usuarios/:id',
+  
+    //Posible creacion de mas errores como "isNumeric" o ".optional" para mandar vacio
+    Errores, modificar_usuarios);
+
+
 router.post('/cargos/',
-    body('sede').notEmpty().withMessage('El nombre del cargo es obligatorio'),
+    body('nombre_puesto').notEmpty().withMessage('El nombre del cargo es obligatorio'),
     body('salario_dia').notEmpty().withMessage('El salario del cargo es obligatorio'),
     body('salario_dia').isNumeric().withMessage('El salario del cargo es un numero'),
     //Posible creacion de mas errores como "isNumeric" o ".optional" para mandar vacio
     Errores,
     crear_cargos);
+
+router.patch('/cargos/:id', 
+    body('salario_dia').isNumeric().withMessage('El salario del cargo es un numero'),
+    Errores,
+    modificar_cargos);
+
+
+
+
 
 router.post('/equipos/',
     body('nombre_equipo').notEmpty().withMessage('El nombre del equipo es obligatorio'),
@@ -45,6 +60,11 @@ router.post('/equipos/',
     Errores,
     crear_equipos);
 
+    router.patch('/equipos/:id',
+    body('nombre_equipo').notEmpty().withMessage('El nombre del equipo es obligatorio'),
+    //Posible creacion de mas errores como "isNumeric" o ".optional" para mandar vacio
+    Errores,
+    modificar_equipos);
 
 
 router.put('/', () => {
