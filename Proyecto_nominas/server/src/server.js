@@ -1,7 +1,10 @@
 import express from 'express'
-import router from './router.js';
 import db from './config/db.js';
 import cors from 'cors'
+import routerUsuarios from './routers/routerUsuarios.js';
+import routerEquipos from './routers/routerEquipos.js';
+import routerCargos from './routers/routerCargos.js';
+import routerNominas from './routers/routerNominas.js';
 
 async function db_connection(){
     try {
@@ -27,10 +30,14 @@ const corsOptions = {
     }
 }
 
-//server.use(cors(cors))
+server.use(cors(corsOptions))
 
 server.use(express.json())
 
-server.use('/', router)
+server.use('/usuarios', routerUsuarios)
+server.use('/cargos', routerCargos)
+server.use('/equipos', routerEquipos)
+server.use('/nominas', routerNominas)
+
 
 export default server
