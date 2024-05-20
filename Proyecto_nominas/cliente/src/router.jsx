@@ -9,9 +9,7 @@ import Menu from './views/Menu'
 export const router = createBrowserRouter(
 
     [
-        {
-            path: '/',
-            element: <Layout />,
+
         {   path: '/',
             element: <Layout/>,
             children: [
@@ -22,7 +20,7 @@ export const router = createBrowserRouter(
                 },
                 {
                     path: '/oscar',
-                    element: <Nominad />
+                    element: <Nominad />,
                     path: '/menu',
                     element: <Menu/>
                 }
@@ -39,10 +37,7 @@ export const router = createBrowserRouter(
             path: '/buscar',
             element: <Buscar />
 
-        }
-
         },
-
 
     ]
 )
