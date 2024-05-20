@@ -21,12 +21,14 @@ export const router = createBrowserRouter(
                 {
                     path: '/oscar',
                     element: <Nominad />,
-                    path: '/menu',
-                    element: <Menu/>
+
                 }
             ]
         },
-
+        {
+            path: '/menu',
+            element: <Menu/>,
+        },
         {
             path: '/login',
             element: <Login />
