@@ -32,7 +32,8 @@ export const router = createBrowserRouter(
 
         {
             path: '/buscar',
-            element: <Buscar />
+            element: <Buscar />,
+            loader: getLoader
 
         }
 
