@@ -41,12 +41,14 @@ router.post('/cargos/',
     body('nombre_puesto').notEmpty().withMessage('El nombre del cargo es obligatorio'),
     body('salario_dia').notEmpty().withMessage('El salario del cargo es obligatorio'),
     body('salario_dia').isNumeric().withMessage('El salario del cargo es un numero'),
+    
     //Posible creacion de mas errores como "isNumeric" o ".optional" para mandar vacio
     Errores,
     crear_cargos);
 
 router.patch('/cargos/:id', 
-    body('salario_dia').isNumeric().withMessage('El salario del cargo es un numero'),
+    //body('salario_dia').isNumeric().withMessage('El salario del cargo es un numero'),
+    body('estado').isBoolean().withMessage('Debe ser False o True'),
     Errores,
     modificar_cargos);
 
