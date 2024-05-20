@@ -3,11 +3,13 @@ import Nominass, { loader as loader_nominas } from './views/Nominas'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
 import Nominad from './components/nomina.component'
+import Menu from './views/Menu'
 
 export const router =  createBrowserRouter(
 
     [
         {   path: '/',
+            element: <Layout/>,
             children: [
                 {
                     path: '/nominas',
@@ -15,8 +17,8 @@ export const router =  createBrowserRouter(
                     loader: loader_nominas
                 },
                 {
-                    path: '/oscar',
-                    element:<Nominad/>
+                    path: '/menu',
+                    element: <Menu/>
                 }
             ]
         },
@@ -24,6 +26,8 @@ export const router =  createBrowserRouter(
             path: '/login',
             element: <Login/>
 
-        }
+        },
+
+
     ]
 )
