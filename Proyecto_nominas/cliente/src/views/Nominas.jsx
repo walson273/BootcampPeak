@@ -9,8 +9,6 @@ export async function loader() {
 }
 
 export default function Nominass() {
-  const nominasa = useLoaderData()
-  console.log(nominasa.data);
   return (
     <Nominad/>
   )

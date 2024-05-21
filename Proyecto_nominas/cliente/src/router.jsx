@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom'
 import Nominass, { loader as getLoader } from './views/Nominas'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
-import Nominad from './components/nomina.component'
 import Buscar from './views/Buscar'
 import Menu from './views/Menu'
 
@@ -29,13 +28,11 @@ export const router = createBrowserRouter(
             element: <Login />
 
         },
-
         {
             path: '/buscar',
             element: <Buscar />,
             loader: getLoader
 
         },
-
     ]
 )
