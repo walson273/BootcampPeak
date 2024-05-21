@@ -1,5 +1,7 @@
 import Cargos from "../models/cargos.model.js"
 
+//import {Cargos} from "../models/index.models.js";
+
 export const consultar_cargos = async (req, res) => {
     const cargos = await Cargos.findAll({
         order: [
