@@ -1,4 +1,5 @@
 import Nomina from "../models/nomina.model.js"
+import Usuarios from "../models/usuarios.model.js";
 
 export const consultar_todo = async (req, res) => {
     const nominas = await Nomina.findAll({
@@ -7,6 +8,7 @@ export const consultar_todo = async (req, res) => {
                 'id', 'asc'
             ]
         ],
+        include:[Usuarios],
         attributes: {
             exclude: [
                 'createdAt', 'updatedAt'

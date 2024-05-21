@@ -1,20 +1,19 @@
 import React, { useState, useMemo } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { mostrar_nominas } from '../services/ServicioNominas';
 
-const mockData = [
-  { name: 'John', lastName: 'Doe', salary: 50000, age: 30, country: 'USA' },
-  { name: 'Jane', lastName: 'Doe', salary: 60000, age: 28, country: 'Canada' },
-  { name: 'Jim', lastName: 'Beam', salary: 55000, age: 35, country: 'UK' },
-  { name: 'Jack', lastName: 'Daniels', salary: 65000, age: 40, country: 'USA' },
-  { name: 'Jill', lastName: 'Hill', salary: 70000, age: 32, country: 'New Zealand' },
-  { name: 'Joe', lastName: 'Bloggs', salary: 48000, age: 29, country: 'Australia' },
-  { name: 'Jenny', lastName: 'Jones', salary: 75000, age: 34, country: 'Ireland' },
-  { name: 'Julia', lastName: 'Roberts', salary: 82000, age: 45, country: 'USA' },
-  { name: 'Jerry', lastName: 'Seinfeld', salary: 54000, age: 55, country: 'USA' },
-  { name: 'Jessica', lastName: 'Alba', salary: 73000, age: 38, country: 'USA' },
-];
 
-const Table = () => {
-  const [data, setData] = useState(mockData);
+
+export async function loader() {
+  const nominas = await mostrar_nominas()
+  return nominas
+}
+
+const Nominad = () => {
+  const nominasa = useLoaderData();
+  const datos = nominasa.data;
+
+  const [data, setData] = useState(datos);
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedRows, setExpandedRows] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
@@ -77,8 +76,8 @@ const Table = () => {
           <tbody className="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
             {filteredAndSortedData.map((item, index) => [
               <tr key={index} className="text-gray-700 dark:text-gray-400" onClick={() => toggleRow(index)}>
-                <td className="px-4 py-3">{item.name}</td>
-                <td className="px-4 py-3">{item.lastName}</td>
+                <td className="px-4 py-3">{item.total_descuentos}</td>
+                <td className="px-4 py-3">{item.usuario.nombre}</td>
                 <td className="px-4 py-3">{item.salary}</td>
               </tr>,
               expandedRows.includes(index) && (
@@ -113,4 +112,4 @@ const Table = () => {
     </div>
   );
 }
-export default Table;
+export default Nominad;

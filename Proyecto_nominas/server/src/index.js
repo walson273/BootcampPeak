@@ -1,4 +1,5 @@
 import server from "./server.js";
+import './associations.js';
 
 
 
