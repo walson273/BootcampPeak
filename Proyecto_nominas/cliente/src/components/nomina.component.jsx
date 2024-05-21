@@ -21,7 +21,7 @@ const Nominad = () => {
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
   const filteredAndSortedData = useMemo(() => {
-    let filteredItems = searchTerm ? data.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase())) : [...data];
+    let filteredItems = searchTerm ? data.filter(item => item.nombre.toLowerCase().includes(searchTerm.toLowerCase())) : [...data];
     if (sortConfig !== null) {
       filteredItems.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
