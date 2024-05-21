@@ -1,3 +1,5 @@
+import Cargos from "../models/cargos.model.js";
+import Equipos from "../models/equipos.model.js";
 import Usuarios from "../models/usuarios.model.js"
 
 export const consultar_usuarios = async (req, res) => {
@@ -7,6 +9,7 @@ export const consultar_usuarios = async (req, res) => {
                 'id', 'desc'
             ]
         ],
+        include:[Cargos, Equipos],
         attributes: {
             exclude: [
                 'createdAt', 'updatedAt'

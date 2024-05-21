@@ -13,13 +13,9 @@ export const router = createBrowserRouter(
             element: <Layout />,
             children: [
                 {
-                    path: '/nominas',
+                    path: '/ver_nominas',
                     element: <Nominass />,
                     loader: getLoader
-                },
-                {
-                    path: '/oscar',
-                    element: <Nominad />
                 }
             ]
         },
