@@ -4,13 +4,14 @@ import Layout from './layouts/Layout'
 import Login from './views/Login'
 import Nominad from './components/nomina.component'
 import Buscar from './views/Buscar'
+import Menu from './views/Menu'
 
 export const router = createBrowserRouter(
 
     [
-        {
-            path: '/',
-            element: <Layout />,
+
+        {   path: '/',
+            element: <Layout/>,
             children: [
                 {
                     path: '/ver_nominas',
@@ -19,7 +20,10 @@ export const router = createBrowserRouter(
                 }
             ]
         },
-
+        {
+            path: '/menu',
+            element: <Menu/>,
+        },
         {
             path: '/login',
             element: <Login />
@@ -28,9 +32,10 @@ export const router = createBrowserRouter(
 
         {
             path: '/buscar',
-            element: <Buscar />
+            element: <Buscar />,
+            loader: getLoader
 
-        }
+        },
 
     ]
 )

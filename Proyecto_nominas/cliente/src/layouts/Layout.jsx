@@ -9,6 +9,10 @@ export default function Layout() {
         </h1>
         <Outlet />
       </main>
+     
+        <main>
+            <Outlet/>
+        </main>
     </>
   )
 }
