@@ -1,8 +1,8 @@
 import axios from 'axios'; //Peticiones de cliente-servidor
 
-export async function mostrar_cargos() {
+export async function mostrar_usuarios() {
     try {
-        const url = `${import.meta.env.VITE_URL_POST}/cargos`
+        const url = `${import.meta.env.VITE_URL_POST}/usuarios`
         const { data } = await axios(url)
         // const { data } = await axios.post(url)
         // const { data } = await axios.put(url)
