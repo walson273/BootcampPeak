@@ -13,10 +13,10 @@ const Usuarios = db.define(
             type: DataTypes.STRING
         },
         cedula: {
-            type: DataTypes.INTEGER
+            type: DataTypes.BIGINT
         },
         numero_telefonico: {
-            type: DataTypes.INTEGER
+            type: DataTypes.BIGINT
         },
         correo: {
             type: DataTypes.STRING
@@ -30,7 +30,11 @@ const Usuarios = db.define(
         tiempo_meses: {
             type: DataTypes.INTEGER
         },
-    
+        logo: {
+
+            type: DataTypes.STRING
+
+        },    
         //FOREIGNNNNNN
         id_cargo: {
             type: DataTypes.INTEGER

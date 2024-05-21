@@ -20,13 +20,26 @@ export async function loader() {
 
 export default function Buscar () {
 
-  const usuarios = useLoaderData();
+  const info = useLoaderData();
+
+  
+ 
+  const usuarios = info.data?.filter( function (dato) 
+    
+    { return dato.id_equipo == '1'; });
+    
+
+     
 
  
   const [users, setUsers] = useState([usuarios]); 
   const [busqueda, setSearch] = useState("");
 
-  const informacion = async () => {setUsers(usuarios);
+  console.log(users);
+
+  const informacion = async () => {
+    
+    setUsers(usuarios);
     
   }
      
@@ -36,9 +49,9 @@ export default function Buscar () {
     
   }
 
-  const resultados = !busqueda ? users.data : users.data.filter((dato)=> dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
+  const resultados = !busqueda ? users : users?.filter((dato)=> dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-  console.log(resultados);
+   
   
 
   useEffect( ()=> {
@@ -65,14 +78,14 @@ return (
           {
            
           resultados?.map( (usuario) => (
-
+             
             <section className='contenedor'>
 
           <>
-               
+              {console.log(usuario)}  
               <B_foto      foto= {usuario.foto} />
               <B_nombre   nombre = {usuario.nombre + ' ' +usuario.apellido} />
-              <B_cargo     cargo={usuario.cargo.nombre_puesto} />
+              <B_cargo     cargo={usuario.cargo?.nombre_puesto} />
               <B_cedula    cedula={usuario.cedula}/>
 
            </>
