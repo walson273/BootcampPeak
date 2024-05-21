@@ -1,6 +1,8 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db.js";
 
+
+
 const Usuarios = db.define(
     'usuario',
     {
@@ -42,7 +44,9 @@ const Usuarios = db.define(
         }
     },
     {
-        tableName:'Usuario'
+        tableName:'Usuario',
+
+
     }
 );
 

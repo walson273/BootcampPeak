@@ -30,7 +30,7 @@ const corsOptions = {
     }
 }
 
-server.use(cors(corsOptions))
+//server.use(cors(corsOptions))
 
 server.use(express.json())
 

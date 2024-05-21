@@ -29,7 +29,7 @@ return (
           <div>
           {
           cargos.data.map(cargo => (
-          <p key={cargo.id}>{cargo.nombre_puesto} {cargo.salario}</p>
+          <p key={cargo.id}>{cargo.nombre_puesto} {cargo.salario_dia}</p>
           ))
            }
          

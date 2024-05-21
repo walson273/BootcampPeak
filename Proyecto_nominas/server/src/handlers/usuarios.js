@@ -2,6 +2,8 @@ import Cargos from "../models/cargos.model.js";
 import Equipos from "../models/equipos.model.js";
 import Usuarios from "../models/usuarios.model.js"
 
+//import {Usuarios} from "../models/index.models.js";
+
 export const consultar_usuarios = async (req, res) => {
     const usuario = await Usuarios.findAll({
         order: [
