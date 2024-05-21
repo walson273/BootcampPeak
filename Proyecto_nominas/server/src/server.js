@@ -30,7 +30,7 @@ const corsOptions = {
     }
 }
 
-//server.use(cors(corsOptions))
+server.use(cors(corsOptions))
 
 server.use(express.json())
 
@@ -38,6 +38,6 @@ server.use('/usuarios', routerUsuarios)
 server.use('/cargos', routerCargos)
 server.use('/equipos', routerEquipos)
 server.use('/nominas', routerNominas)
-
+ 
 
 export default server
