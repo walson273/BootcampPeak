@@ -18,8 +18,7 @@ export async function mostrar_usuarios() {
 export async function mostrar_usuarios_id(info) {
     try {
         const url = `${import.meta.env.VITE_URL_POST}/usuarios/${info}`
-        console.log(info)
-        console.log(url)
+       
         const { data } = await axios(url)
         // const { data } = await axios.post(url)
         // const { data } = await axios.put(url)

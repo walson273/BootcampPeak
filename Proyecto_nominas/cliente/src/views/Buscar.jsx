@@ -30,8 +30,7 @@ export default function Buscar () {
     
     { return dato.id_equipo == '1'; });
     
-
-     
+   
 
  
   const [users, setUsers] = useState([usuarios]); 
@@ -53,7 +52,7 @@ export default function Buscar () {
 
    async function perfil (info)  {
 
-    const perfiles = await mostrar_usuarios_id('5');
+    const perfiles = await mostrar_usuarios_id(info);
     console.log(info);
     console.log(perfiles);
 
@@ -95,12 +94,12 @@ return (
             <section className='contenedor'>
 
           <>
-                {console.log(usuario.id)}    
+                   
               <B_foto      foto= {usuario.logo} />
               <B_nombre   nombre = {usuario.nombre + ' ' +usuario.apellido} />
               <B_cargo     cargo={usuario.cargo?.nombre_puesto} />
               <B_cedula    cedula={usuario.cedula } tipo=  {usuario.tipo_documento}/>
-              <Button  variant="contained" className="Bboton"  href="#" onClick={perfil} >Modificar</Button>
+              <Button  variant="contained" className="Bboton"  href="http://localhost:5173/ver_nominas" onClick={()=> { perfil(usuario.id)}} >Modificar</Button>
 
            </>
                      

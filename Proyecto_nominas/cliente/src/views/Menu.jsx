@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { Si1001Tracklists } from "react-icons/si";
+import { Outlet } from "react-router-dom";
 
 export default function Menu() {
   const [open_1, setOpen_1] = useState("white");
@@ -119,6 +120,8 @@ export default function Menu() {
   };  
   return (
     <>
+    <div className="contenedorMenu">
+      
       <div className="" style={{ width: "14rem", height: "100vh", borderRadius: "20px" }}>
         <div className="col" style={{ width: "14rem", height: "100vh", borderRadius: "20px" }}>
           <div className="row-2 bg-light" style={{ borderRadius: "15px 15px 0px 0px" }}>
@@ -132,7 +135,7 @@ export default function Menu() {
             </div>
           </div>
           <div className="row-6 bg-success d-flex justify-content-start" style={{ height: "50vh" }}>
-            <ul class="list-group list-group-flush">
+            <ul className="list-group list-group-flush">
               <div>
                 <h6>Menu</h6>
               </div>
@@ -151,6 +154,10 @@ export default function Menu() {
             <h6>TELEPERFUMES</h6>
           </div>
         </div>
+      </div>
+
+      <Outlet />
+
       </div>
     </>
   )

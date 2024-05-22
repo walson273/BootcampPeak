@@ -23,17 +23,22 @@ export const router = createBrowserRouter(
         {
             path: '/menu',
             element: <Menu/>,
+            children: [
+
+                {
+                    path: '/menu/buscar',
+                    element: <Buscar />,
+                    loader: getLoader2
+        
+                },
+            ]
+            
         },
         {
             path: '/login',
             element: <Login />
 
         },
-        {
-            path: '/buscar',
-            element: <Buscar />,
-            loader: getLoader2
-
-        },
+   
     ]
 )

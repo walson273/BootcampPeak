@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.contenedorMenu{
+
+  display: grid;
+
+  grid-template-columns: 10% 90%;
+
+}
+
 .Bcargo{
 
   grid-area: cargo;
