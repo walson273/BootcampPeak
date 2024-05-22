@@ -5,6 +5,7 @@ import Login from './views/Login'
 
 import Buscar, {loader as getLoader2} from './views/Buscar'
 import Menu from './views/Menu'
+import Registrar_empleado from './views/Registrar_empleado'
 
 export const router = createBrowserRouter(
 
@@ -31,6 +32,11 @@ export const router = createBrowserRouter(
                     loader: getLoader2
         
                 },
+                {
+                    path: '/menu/ver_nominas',
+                    element: <Nominass />,
+                    loader: getLoader
+                }
             ]
             
         },
