@@ -6,6 +6,9 @@ const Nomina = db.define(
     {
         dias_trabajados: { 
             type: DataTypes.INTEGER
+        }, 
+        salario_dias: { 
+            type: DataTypes.INTEGER
         },
         base: {
             type: DataTypes.INTEGER
@@ -32,7 +35,7 @@ const Nomina = db.define(
             type: DataTypes.INTEGER
         },
         mes: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         anio: {
             type: DataTypes.INTEGER

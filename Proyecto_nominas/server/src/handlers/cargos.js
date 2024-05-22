@@ -21,6 +21,20 @@ export const crear_cargos = async (req, res) => {
     res.json({ data: cargos })
 }
 
+export const modificar_cargos = async (req, res) => {
+
+    const {id} = req.params;
+
+    const cargos = await Cargos.findByPk(id);
+    if(!cargos){
+        return res.status(404).json({error:'Cargo no encontrado'});
+    }
+    await cargos.update(req.body);
+    res.json({ data: cargos});
+
+
+}
+
 export const eliminar_cargos = async (req, res) => {
     const {id} = req.params;
 

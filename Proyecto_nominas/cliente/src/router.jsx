@@ -1,25 +1,50 @@
-import {createBrowserRouter} from 'react-router-dom'
-import Nominass, { loader as loader_nominas } from './views/Nominas'
+import { createBrowserRouter } from 'react-router-dom'
+import Nominass, { loader as getLoader } from './views/Nominas'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
 
-export const router =  createBrowserRouter(
+import Buscar, {loader as getLoader2} from './views/Buscar'
+import Menu from './views/Menu'
+import Registrar_empleado from './views/Registrar_empleado'
+
+export const router = createBrowserRouter(
 
     [
+
         {   path: '/',
             element: <Layout/>,
             children: [
                 {
-                    path: '/nominas',
-                    element: <Nominass/>,
-                    loader: loader_nominas
+                    path: '/ver_nominas',
+                    element: <Nominass />,
+                    loader: getLoader
                 }
             ]
         },
         {
-            path: '/login',
-            element: <Login/>
+            path: '/menu',
+            element: <Menu/>,
+            children: [
 
-        }
+                {
+                    path: '/menu/buscar',
+                    element: <Buscar />,
+                    loader: getLoader2
+        
+                },
+                {
+                    path: '/menu/ver_nominas',
+                    element: <Nominass />,
+                    loader: getLoader
+                }
+            ]
+            
+        },
+        {
+            path: '/login',
+            element: <Login />
+
+        },
+   
     ]
 )

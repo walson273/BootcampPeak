@@ -1,6 +1,8 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db.js";
 
+
+
 const Usuarios = db.define(
     'usuario',
     {
@@ -11,10 +13,10 @@ const Usuarios = db.define(
             type: DataTypes.STRING
         },
         cedula: {
-            type: DataTypes.INTEGER
+            type: DataTypes.BIGINT
         },
         numero_telefonico: {
-            type: DataTypes.INTEGER
+            type: DataTypes.BIGINT
         },
         correo: {
             type: DataTypes.STRING
@@ -28,6 +30,11 @@ const Usuarios = db.define(
         tiempo_meses: {
             type: DataTypes.INTEGER
         },
+        logo: {
+
+            type: DataTypes.STRING
+
+        },    
         //FOREIGNNNNNN
         id_cargo: {
             type: DataTypes.INTEGER
@@ -41,7 +48,9 @@ const Usuarios = db.define(
         }
     },
     {
-        tableName:'Usuario'
+        tableName:'Usuario',
+
+
     }
 );
 

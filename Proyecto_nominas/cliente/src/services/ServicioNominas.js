@@ -1,19 +1,15 @@
 import axios from 'axios'; //Peticiones de cliente-servidor
-import React from "react";
-
 
 export async function mostrar_nominas() {
-    //const axios = require('axios').default;
-    const url = `${import.meta.env.VITE_URL_POST}/usuarios`
-    console.log(url);
+    try {
+        const url = `${import.meta.env.VITE_URL_POST}/nominas`
+        const { data } = await axios.get(url)
+        // const { data } = await axios.post(url)
+        // const { data } = await axios.put(url)
+        // const { data } = await axios.delete(url)
 
-    /*axios.get(url).then(function (response) {
-        console.log(response);
-    })*/
-    const [post, setPost] = React.useState(null);
-    React.useEffect(() => {
-        axios.get(url).then((response) => {
-            setPost(response.data);
-        });
-    }, []);
+        return data
+    } catch (error) {
+        console.log(error);
+    }
 }

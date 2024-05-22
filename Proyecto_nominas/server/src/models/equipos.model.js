@@ -7,6 +7,9 @@ const Equipos = db.define(
         nombre_equipo: {
             type: DataTypes.STRING
         },
+        sede: {
+            type: DataTypes.STRING
+        },
         estado: {
             type: DataTypes.BOOLEAN,
             defaultValue: true
