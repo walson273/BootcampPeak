@@ -94,7 +94,7 @@ const Nominad = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
   return (
-    <div className="p-5 shadow rounded-lg bg-white">
+    <div className="p-5  rounded-lg">
       <input className="border p-2 w-full mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} />
       <div>
         <table className="w-full text-left border-collapse">
