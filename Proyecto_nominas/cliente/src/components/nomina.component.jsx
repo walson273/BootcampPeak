@@ -3,13 +3,8 @@ import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import React, { useState, useMemo } from 'react';
-import { mostrar_nominas } from '../services/ServicioNominas';
 import { useLoaderData } from 'react-router-dom';
 
-export async function loader() {
-  const nominas = await mostrar_nominas()
-  return nominas
-}
 
 const Nominad = () => {
   const nominasa = useLoaderData();
@@ -69,7 +64,6 @@ const Nominad = () => {
   }, [data, sortConfig, currentPage, searchTerm]);
 
   function rotar(){
-    console.log("rrrrrrrrrrrr");
     document.getElementById("flecha").style.transform="rotate(180deg)";
   }
 
@@ -198,7 +192,7 @@ const Nominad = () => {
             ])}
             {filteredAndSortedData.length === 0 && (
               <tr>
-                <td colSpan="3" className="p-4 text-center">No results found</td>
+                <td colSpan="5" className="p-4 text-center">No results found</td>
               </tr>
             )}
           </tbody>

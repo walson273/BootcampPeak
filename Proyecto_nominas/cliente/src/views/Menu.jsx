@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { Si1001Tracklists } from "react-icons/si";
+import { Outlet } from "react-router-dom";
 
 export default function Menu() {
   const [open_1, setOpen_1] = useState("white");
@@ -152,6 +153,9 @@ export default function Menu() {
           </div>
         </div>
       </div>
+
+
+      <Outlet/>
     </>
   )
 }
