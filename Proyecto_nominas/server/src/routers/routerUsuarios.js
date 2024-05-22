@@ -1,11 +1,13 @@
 import { Router } from "express";
-import { consultar_usuarios, crear_usuarios, eliminar_usuarios, modificar_usuarios } from "../handlers/usuarios.js";
+import { consultar_usuarios, crear_usuarios, eliminar_usuarios, modificar_usuarios, consultar_usuarios_id } from "../handlers/usuarios.js";
 import { body, param } from "express-validator";
 import { Errores } from "../middleware/index.js";
 
 const routerUsuarios = Router()
 
 routerUsuarios.get('/', consultar_usuarios);
+
+routerUsuarios.get('/:id',  param('id').isInt().withMessage('El id del usuario no existe'), Errores, consultar_usuarios_id);
 
 routerUsuarios.post('/',
     body('nombre').notEmpty().withMessage('El nombre del usuario es obligatorio'),

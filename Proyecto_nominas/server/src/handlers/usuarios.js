@@ -19,6 +19,33 @@ export const consultar_usuarios = async (req, res) => {
     res.json({ data: usuario })
 }
 
+
+export const consultar_usuarios_id = async (req, res) => {
+
+    const {id} = req.params;
+
+    const usuarios = await Usuarios.findOne(
+        {where: {id: id},
+        include:[Cargos, Equipos],
+        attributes: {
+            exclude: [
+                'createdAt', 'updatedAt','contrasenia'
+            ]
+        }
+    
+    
+    });
+
+    if(!usuarios){
+        return res.status(404).json({error:'Usuario no encontrado'});
+    }
+
+    res.json({ data: usuarios});
+
+
+}
+
+
 export const crear_usuarios = async (req, res) => {
     const usuarios = await Usuarios.create(req.body);
     res.json({ data: usuarios })
