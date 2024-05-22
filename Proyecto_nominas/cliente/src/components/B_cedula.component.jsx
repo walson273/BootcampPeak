@@ -6,7 +6,7 @@ export default function B_cedula(info){
 
     return (
 
-        <p className='Bcedula'>{info.cedula}</p>
+        <p className='Bcedula'>  <span> {info.tipo}: </span> {info.cedula}</p>
     )
 
 

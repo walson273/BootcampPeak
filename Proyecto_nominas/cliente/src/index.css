@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.contenedorMenu{
+
+  display: grid;
+
+  grid-template-columns: 10% 90%;
+
+}
+
 .Bcargo{
 
   grid-area: cargo;
@@ -9,19 +18,37 @@
 
 .BFoto{
 
-  grid-area: logo;
+  
+
+    grid-area: logo;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  
+  
 
 }
 
 .Bnombre{
 
   grid-area: nombre;
+  font-weight: 800;
+  font-size: 3.6rem;
 }
 
 .Bcedula{
 
   grid-area: cedula;
+  span{
+
+    font-weight: 700;
+
+  }
 }
+
+.Bboton{grid-area: boton;}
+
+
 
 .contenedor {
 
@@ -29,17 +56,17 @@
   width: 90%;
   grid-template-areas:
 
-    "logo nombre nombre"
-    "logo cargo cedula";
+    "logo nombre nombre boton"
+    "logo cargo cedula boton";
   ;
 
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
   grid-template-rows: 1fr 1fr;
 
  
   margin: 1rem 2rem;
   padding: 1rem;
-  height: 8rem;
+  height: 10rem;
   border-radius: 0.5rem;
 
 
@@ -47,7 +74,15 @@
   border-style: solid;
   border-width: 0.1rem;
   background-color: white;
+  align-items: center;
 
+
+}
+
+.Bboton{
+
+  height: 4rem;
+  width: 8rem;
 
 }
 
@@ -60,11 +95,18 @@
 
   section:hover {
 
-    -webkit-box-shadow: 0px 1rem 1rem 0.5rem rgba(0, 0, 0, 0.36);
-    -moz-box-shadow: 0px 1rem 1rem 0.5rem rgba(0, 0, 0, 0.36);
-    box-shadow: 0px 1rem 1rem 0.5rem rgba(0, 0, 0, 0.36);
+    background-color: rgb(4, 142, 255);
+    -webkit-box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
+    -moz-box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
+    box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
 
     cursor: pointer;
+
+    .BFoto, .Bcargo, .Bnombre, .Bcedula{
+
+      color: aliceblue;
+
+    }
 
 
   }

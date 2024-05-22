@@ -6,7 +6,7 @@ export default function B_nombre(info){
 
     return (
 
-        <h2>{info.nombre}</h2>
+        <h2 className='Bnombre' >{info.nombre}</h2>
     )
 
 

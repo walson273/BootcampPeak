@@ -25,29 +25,26 @@ export const router = createBrowserRouter(
             path: '/menu',
             element: <Menu/>,
             children: [
+
+                {
+                    path: '/menu/buscar',
+                    element: <Buscar />,
+                    loader: getLoader2
+        
+                },
                 {
                     path: '/menu/ver_nominas',
                     element: <Nominass />,
                     loader: getLoader
                 }
             ]
+            
         },
         {
             path: '/login',
             element: <Login />
 
         },
-        {
-            path: '/buscar',
-            element: <Buscar />,
-            loader: getLoader2
-
-        },
-        {
-            path: '/registrar_empleado',
-            element: <Registrar_empleado />,
-            loader: getLoader2
-
-        },
+   
     ]
 )
