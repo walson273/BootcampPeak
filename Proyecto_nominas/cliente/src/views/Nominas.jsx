@@ -9,10 +9,6 @@ export async function loader() {
 
 export default function Nominass() {
   return (
-    <>
-      <div style={{zIndex:"-1"}}>
-        <Nominad/>
-      </div>
-    </>
+    <Nominad />
   )
 }
