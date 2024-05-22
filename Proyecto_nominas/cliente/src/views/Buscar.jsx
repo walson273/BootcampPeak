@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { mostrar_usuarios, mostrar_usuarios_id } from "../services/ServicioUsuarios";
 import { useLoaderData } from 'react-router-dom'
 
@@ -12,45 +12,43 @@ import TextField from '@mui/material/TextField';
 
 
 export async function loader() {
-    const usuarios = await mostrar_usuarios()
-  
-    return usuarios
-  }
+  const usuarios = await mostrar_usuarios()
 
-  
+  return usuarios
+}
 
 
-export default function Buscar () {
+
+
+export default function Buscar() {
 
   const info = useLoaderData();
 
-  
- 
-  const usuarios = info.data?.filter( function (dato) 
-    
-    { return dato.id_equipo == '1'; });
-    
-   
 
- 
-  const [users, setUsers] = useState([usuarios]); 
+
+  const usuarios = info.data?.filter(function (dato) { return dato.id_equipo == '1'; });
+
+
+
+
+  const [users, setUsers] = useState([usuarios]);
   const [busqueda, setSearch] = useState("");
 
   //console.log(users);
 
   const informacion = async () => {
-    
+
     setUsers(usuarios);
-    
+
   }
-     
+
   const buscador = (evento) => {
 
     setSearch(evento.target.value)
-    
+
   }
 
-   async function perfil (info)  {
+  async function perfil(info) {
 
     const perfiles = await mostrar_usuarios_id(info);
     console.log(info);
@@ -59,60 +57,60 @@ export default function Buscar () {
 
   }
 
-  const resultados = !busqueda ? users : users?.filter((dato)=> dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
+  const resultados = !busqueda ? users : users?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-   
-  
 
-  useEffect( ()=> {
+
+
+  useEffect(() => {
     informacion()
   }, [])
 
-  
-
-return (
-
-     <>
-    <div className="ListaEntera">
-                           
-    <Box    sx={{ '& > :not(style)': { m: 1, width: '80ch' },  }}
-      noValidate
-      autoComplete="off"
-      >
-      <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-     
-    </Box>
 
 
-          
-          {
-           
-          resultados?.map( (usuario) => (
-             
-            
+  return (
+
+    <>
+      <div className="ListaEntera">
+
+        <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
+
+        </Box>
+
+
+
+        {
+
+          resultados?.map((usuario) => (
+
+
 
             <section className='contenedor'>
 
-          <>
-                   
-              <B_foto      foto= {usuario.logo} />
-              <B_nombre   nombre = {usuario.nombre + ' ' +usuario.apellido} />
-              <B_cargo     cargo={usuario.cargo?.nombre_puesto} />
-              <B_cedula    cedula={usuario.cedula } tipo=  {usuario.tipo_documento}/>
-              <Button  variant="contained" className="Bboton"  href="http://localhost:5173/ver_nominas" onClick={()=> { perfil(usuario.id)}} >Modificar</Button>
+              <>
 
-           </>
-                     
-           </section>
-            
-          
+                <B_foto foto={usuario.logo} />
+                <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
+                <B_cargo cargo={usuario.cargo?.nombre_puesto} />
+                <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
+                <Button variant="contained" className="Bboton" href="http://localhost:5173/menu/perfil" onClick={() => { perfil(usuario.id) }} >Modificar</Button>
+
+              </>
+
+            </section>
+
+
           ))
-           }                
-    </div>     
- </>
+        }
+      </div>
+    </>
 
 
-)
+  )
 
 
 }

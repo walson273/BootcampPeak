@@ -2,12 +2,19 @@ import { createBrowserRouter } from 'react-router-dom'
 import Nominass, { loader as getLoader } from './views/Nominas'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
+import React,{useState} from 'react';
+
 
 import Buscar, {loader as getLoader2} from './views/Buscar'
+import Perfil, {loaderID as getLoaderID} from './views/Perfil'
 import Menu from './views/Menu'
 import Registrar_empleado from './views/Registrar_empleado'
 
+
+
+
 export const router = createBrowserRouter(
+
 
     [
 
@@ -25,6 +32,13 @@ export const router = createBrowserRouter(
             path: '/menu',
             element: <Menu/>,
             children: [
+
+                {
+                    path: '/menu/perfil',
+                    element: <Perfil />,
+                    loader: ()  => {return getLoaderID('5')}
+
+                },
 
                 {
                     path: '/menu/buscar',
