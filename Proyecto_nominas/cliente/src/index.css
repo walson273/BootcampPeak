@@ -1,6 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.cajaTexto{
+
+    width: 10rem;
+    
+
+}
+.PFoto{grid-area:foto; width: 5rem; height: 5rem;}
+.Pnombre{ grid-area: nombre;}
+.Papellido{grid-area: apellido;}
+.PID{ grid-area: id;}
+.Pequipo{grid-area: equipo;}
+.Psupervisor{grid-area:supervisor}
+.Pcargo{grid-area:cargo}
+.Psede{grid-area:sede}
+
+.perfil{
+
+  width: 70rem;
+  margin: 5rem 10rem;
+  row-gap: 2rem;
+  padding: 10rem;
+  align-items: center;
+  justify-items: center;
+
+  display: grid;
+
+  background-color: rgba(252, 252, 252, 0.774);
+
+  grid-template-areas:
+
+
+
+  "foto nombre apellido id"
+  "equipo sede supervisor cargo";
+  ;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
 
 .contenedorMenu{
 
@@ -112,7 +155,7 @@
     }
     .Bboton{
 
-      background-color:  rgb(0, 255, 0);
+      background-color:  rgb(44, 151, 44);
       color: darkslategrey;
       
     }
@@ -125,84 +168,150 @@
 
 /* Menu - css */
 
+
+/* .slidebar {
+
+  float: left;
+  width: 90px;
+  height: 100vh;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.313rem;
+  background-color: white;
+  background-position: top;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
+} */
 .slidebar {
 
   float: left;
-  /* width: 90px; */
-  height: 100%;
-  display: flex;
+  height: 100vh;
+  /* display: flex; */
   justify-content: center;
   border-radius: 5px;
   padding: 0.313rem;
   background-color: white;
   /* margin-top: -4.375rem; */
   background-position: top;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
 }
 
 #imagencita {
   text-align: center;
   display: flex;
   justify-content: center;
+  height: 2.5rem;
+  margin-left: 0.1rem;
 
-  img {
-    width: 1rem;
-    height: 1rem;
-  }
 }
 
-#letrita {
+#tele {
+  position: absolute;
+  border-radius: 10px;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: .75rem;
+}
+
+.letrita {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  font-size: 0rem;
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-left: 3rem;
+  margin-top: .7rem;
   color: black;
-  font-size: 16px;
+  opacity: 0%;
+  transition: all 1s;
+}
+.letrita.active {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-top: .7rem;
+  color: black;
+  opacity: 100%;
+  transition: opacity 3s;
 }
 
 .cont_items {
   width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 1s;
 
 }
 
 .cont_items.active {
-  width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  width: 190px;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 1s;
 }
 
 .box_items {
+  margin-bottom: 5px;
+  width: 8rem;
+  position: static;
   align-items: center;
   justify-content: center;
 }
 
 .iconsize {
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   font-size: 125%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
 }
 
 .iconsize.active {
-  margin-bottom: 5px;
-  font-size: 170%;
+  margin-bottom: 12px;
+  font-size: 125%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
+}
+
+.iconitos{
+  margin-left: 1.1rem;
+}
+.palabrita{
+  display: flex;
+  justify-content: start;
+  h6 { 
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  }
+}
+
+.columnitas{
+  width: 100%;
+  column-count: 2;
+  column-width: 50%;
 }
 
 .nombreslide {
-  font-size: 0.656rem;
+  font-size: 0rem;
+  transition: all 1s;
 }
 
 .nombreslide.active {
   font-size: 0.656rem;
-  margin-top: 5px;
-  margin-left: 10px;
+  /* margin-top: 5px;
+  margin-left: 10px; */
+  transition: all 1s;
 }
 
 .boton {
@@ -210,6 +319,8 @@
   margin: 5px;
   width: 100%;
   border: none;
+  margin-bottom: 15px;
+  transition: all 1s;
 }
 
 .boton.active {
@@ -219,25 +330,24 @@
   border: none;
   display: flex;
   align-items: center;
-  margin-bottom: 15pxs;
-  margin-left: 0px;
+  margin-bottom: 15px;
   background: none;
+  transition: all 1.5s;
 }
 
 .boton:hover {
   background: rgba(111, 202, 255, .53333);
+  transition: background-color 0.5s;
 }
 
 .boton.active:hover {
   background: rgba(111, 202, 255, .53333);
+  transition: background-color .5s;
 }
 
-.arrow {
-  position: absolute;
-  margin: 0px -90px 0px 0px;
-}
 
 #flechita {
+  position: fixed;
   font-size: 25px;
   color: #3a8ced;
   cursor: pointer;
