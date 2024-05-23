@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { crear_usuarios } from '../services/ServicioUsuarios';
-import Swal from 'sweetalert2'
 
 
 
@@ -12,7 +11,6 @@ export async function loader(info) {
 
 
 const EmployeeRegistrationForm = () => {
-    //let datos={};
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [id, setId] = useState('');
