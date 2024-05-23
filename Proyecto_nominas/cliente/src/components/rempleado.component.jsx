@@ -26,7 +26,7 @@ const EmployeeRegistrationForm = () => {
         e.preventDefault();
         if (firstName && lastName && id && documentType && email && phoneNumber && password && confirmPassword) {
             if (password !== confirmPassword) {
-                alert('Passwords do not match.');
+                alert('Las contraseñas no coinciden.');
                 return;
             }
             let datos={"nombre":firstName, "apellido":lastName, "cedula":id, "numero_telefonico":phoneNumber, "correo":email, "tipo_documento":documentType, "contrasenia":password};
