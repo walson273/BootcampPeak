@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { crear_usuarios } from '../services/ServicioUsuarios';
+import Swal from 'sweetalert2'
 
 
 
@@ -29,15 +30,26 @@ const EmployeeRegistrationForm = () => {
                 alert('Las contraseñas no coinciden.');
                 return;
             }
-            let datos={"nombre":firstName, "apellido":lastName, "cedula":id, "numero_telefonico":phoneNumber, "correo":email, "tipo_documento":documentType, "contrasenia":password};
+            let datos = { "nombre": firstName, "apellido": lastName, "cedula": id, "numero_telefonico": phoneNumber, "correo": email, "tipo_documento": documentType, "contrasenia": password };
             loader(datos);
+            Swal.fire({
+                position: "top",
+                icon: "success",
+                title: "Usuario registrado con exito.",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+            setTimeout(() => {
+                location.href="http://localhost:5173/menu/buscar";
+            }, 1400);
+
         } else {
             alert('Por favor llene todos los campos.');
         }
-    }; 
+    };
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded grid grid-cols-2 gap-4" style={{borderColor:"grey", borderWidth:"0.01rem", borderStyle:"solid"}}>
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded grid grid-cols-2 gap-4" style={{ borderColor: "grey", borderWidth: "0.01rem", borderStyle: "solid" }}>
             <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
                     Nombres
