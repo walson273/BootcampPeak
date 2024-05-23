@@ -127,11 +127,23 @@
 /* Menu - css */
 
 
+/* .slidebar {
+
+  float: left;
+  width: 90px;
+  height: 100vh;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.313rem;
+  background-color: white;
+  background-position: top;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
+} */
 .slidebar {
 
   float: left;
-  /* width: 90px; */
-  height: 100%;
+  height: 100vh;
   /* display: flex; */
   justify-content: center;
   border-radius: 5px;
@@ -140,6 +152,7 @@
   /* margin-top: -4.375rem; */
   background-position: top;
   border-radius: 0px 15px 15px 0px;
+  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
 }
 
 #imagencita {
@@ -147,70 +160,116 @@
   display: flex;
   justify-content: center;
   height: 2.5rem;
-  img {
-    border-radius: 10px;
-    width: 3.5rem;
-    height: 3.5rem;
-    /* margin-left: -1.4rem; */
-  }
+  margin-left: 0.1rem;
+
 }
 
-#letrita {
+#tele {
+  position: absolute;
+  border-radius: 10px;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: .75rem;
+}
+
+.letrita {
   font-family: "Poetsen One", sans-serif;
   font-weight: 100;
+  font-size: 0rem;
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-left: 0.2rem;
-  margin-top: -.1rem;
+  margin-left: 3rem;
+  margin-top: .7rem;
   color: black;
+  opacity: 0%;
+  transition: all 1s;
+}
+.letrita.active {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-top: .7rem;
+  color: black;
+  opacity: 100%;
+  transition: opacity 3s;
 }
 
 .cont_items {
   width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 1s;
 
 }
 
 .cont_items.active {
-  width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  width: 190px;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 1s;
 }
 
 .box_items {
+  margin-bottom: 5px;
+  width: 8rem;
+  position: static;
   align-items: center;
   justify-content: center;
 }
 
 .iconsize {
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   font-size: 125%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
 }
 
 .iconsize.active {
-  margin-bottom: 5px;
-  font-size: 170%;
+  margin-bottom: 12px;
+  font-size: 125%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
+}
+
+.iconitos{
+  margin-left: 1.1rem;
+}
+.palabrita{
+  display: flex;
+  justify-content: start;
+  h6 { 
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  }
+}
+
+.columnitas{
+  width: 100%;
+  column-count: 2;
+  column-width: 50%;
 }
 
 .nombreslide {
-  font-size: 0%;
+  font-size: 0rem;
+  transition: all 1s;
 }
 
 .nombreslide.active {
   font-size: 0.656rem;
-  margin-top: 5px;
-  margin-left: 10px;
+  /* margin-top: 5px;
+  margin-left: 10px; */
+  transition: all 1s;
 }
 
 .boton {
@@ -218,6 +277,8 @@
   margin: 5px;
   width: 100%;
   border: none;
+  margin-bottom: 15px;
+  transition: all 1s;
 }
 
 .boton.active {
@@ -227,9 +288,9 @@
   border: none;
   display: flex;
   align-items: center;
-  margin-bottom: 15pxs;
-  margin-left: 0px;
+  margin-bottom: 15px;
   background: none;
+  transition: all 1.5s;
 }
 
 .boton:hover {
