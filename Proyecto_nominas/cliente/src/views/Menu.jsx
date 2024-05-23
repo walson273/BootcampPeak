@@ -16,23 +16,26 @@ export default function menu() {
 }
 
 const BSlide = (prop) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <React.Fragment>
-      <div className='slidebar border' style={{ width: open ? '90px' : '210px' }}>
-        <IoIosArrowDroprightCircle id='flechita' className={`arrow ${!open && "rotate-180"}`} style={{ margin: open ? '352px -90px 0px 0px' : '352px -211px 0px 0px' }} onClick={() => setOpen(!open)} />
-        <div className='col border'>
-          <div className='row-2 border'>
-            <div className="row" >
-              <div className='col-3 border' id='imagencita'>
-                <img src="/Imagen_1.png" alt="Logo" />
-              </div>
-              <div className='col-9' id='pruebita'>
-                <h4 id="letrita" >TELEPERFUMES</h4>
-              </div>
+      <div className='slidebar border' style={{ width: open ? '90px' : '210px', transition: open ? 'width 1s' : 'width 1s' }}>
+        <IoIosArrowDroprightCircle id='flechita' className={`${!open && "rotate-180"}`}  style={{margin: open ? '15rem 4.5rem' : '15rem 11.9rem', transition: open ? 'margin 1s' : 'margin 1s'}} onClick={() => setOpen(!open)} />
+        <div className='col'>
+          <div className='row-3' style={{height: "3.2rem", borderBottom: "0.5px solid gray"}}>
+            {/* <div className="row d-flex justify-content-center align-items-center"> */}
+            <div className='row'>
+              <div className='col-12 d-flex justify-content-center align-items-center bg-info' id='imagencita' style={{ marginLeft: open ? '0.2rem' : '-.4rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s' }}>
+                <img src="/Imagen_1.png" alt="Logo"/>
+                <h3  id="letrita" style={{fontSize: open ? '0rem' : '1rem'}}>TELEPERFUMES</h3>
+              {/* </div> */}
+              {/* <div className='col-9 border bg-black'>
+                <h3  id="letrita" >TELEPERFUMES</h3> */}
+              {/* </div> */}
+            </div>
             </div>
           </div>
-          <div className='row-10 border bg-info'>
+          <div className='row-9 mt-3'>
             <nav>
               <ul className='nav'>
                 {prop.dat.map((iter) => (
