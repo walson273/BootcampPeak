@@ -1,7 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
+@tailwind utilities; */
+/* 
 #container {
   max-width: 100%;
   margin: 0 auto;
@@ -120,4 +120,129 @@
 
 #text-sm {
   font-size: 0.875rem;
+} */
+
+
+/* Menu - css */
+
+.slidebar {
+  float: left;
+  position: fixed;
+  /* width: 90px; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.313rem;
+  background-color: white;
+  /* margin-top: -4.375rem; */
+  background-position: top;
+}
+
+#imagencita {
+  left: 0px;
+  /* margin: auto; */
+  margin-left: 5px;
+  text-align: center;
+
+  img {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
+#letrita {
+  color: #727272;
+  margin-top: -15px;
+  font-family: "Montserrat", bold;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.cont_items {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cont_items.active {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.box_items {
+  align-items: center;
+  justify-content: center;
+}
+
+.iconsize {
+  margin-bottom: 5px;
+  font-size: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconsize.active {
+  margin-bottom: 5px;
+  font-size: 170%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nombreslide {
+  font-size: 0.656rem;
+}
+
+.nombreslide.active {
+  font-size: 0.656rem;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.boton {
+  padding: .5rem .1rem !important;
+  margin: 5px;
+  width: 100%;
+  border: none;
+}
+
+.boton.active {
+  padding: .5rem .1rem !important;
+  margin: 5px;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15pxs;
+  margin-left: 0px;
+  background: none;
+}
+
+.boton:hover {
+  background: rgba(111, 202, 255, .53333);
+}
+
+.boton.active:hover {
+  background: rgba(111, 202, 255, .53333);
+}
+
+.arrow {
+  position: absolute;
+  margin: 0px -90px 0px 0px;
+}
+
+#flechita {
+  font-size: 25px;
+  color: #3a8ced;
+  cursor: pointer;
+}
+#flechita:hover{
+    transform: rotate(180deg);
 }
