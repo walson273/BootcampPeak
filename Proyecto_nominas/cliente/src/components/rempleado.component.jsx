@@ -24,153 +24,133 @@ const EmployeeRegistrationForm = () => {
         } else {
             alert('Please fill out all fields.');
         }
-    };
+    }; 
 
     return (
-        <div style={{ margin: "0 auto", marginTop: "2%", padding: "0" }}>
-            <div style={{ opacity:"0.85", padding:"0 20px"}}>
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded grid grid-cols-2 gap-4">
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
-                            First Name
-                        </label>
-                        <input
-                            type="text"
-                            id="firstName"
-                            placeholder="Enter first name"
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
-                            Last Name
-                        </label>
-                        <input
-                            type="text"
-                            id="lastName"
-                            placeholder="Enter last name"
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id">
-                            ID
-                        </label>
-                        <input
-                            type="text"
-                            id="id"
-                            placeholder="Enter ID"
-                            value={id}
-                            onChange={(e) => setId(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="documentType">
-                            Type of Document
-                        </label>
-                        <input
-                            type="text"
-                            id="documentType"
-                            placeholder="Enter type of document"
-                            value={documentType}
-                            onChange={(e) => setDocumentType(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Enter email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phoneNumber">
-                            Phone Number
-                        </label>
-                        <input
-                            type="text"
-                            id="phoneNumber"
-                            placeholder="Enter phone number"
-                            value={phoneNumber}
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="jobPosition">
-                            Job Position
-                        </label>
-                        <input
-                            type="text"
-                            id="jobPosition"
-                            placeholder="Enter job position"
-                            value={jobPosition}
-                            onChange={(e) => setJobPosition(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="startDate">
-                            Start Date
-                        </label>
-                        <input
-                            type="date"
-                            id="startDate"
-                            value={startDate}
-                            onChange={(e) => setStartDate(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Enter password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
-                            Confirm Password
-                        </label>
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            placeholder="Confirm password"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        />
-                    </div>
-                    <div className="col-span-2 flex items-center justify-between">
-                        <button
-                            type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        >
-                            Register
-                        </button>
-                    </div>
-                </form>
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded grid grid-cols-2 gap-4" style={{borderColor:"grey", borderWidth:"0.01rem", borderStyle:"solid"}}>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                    Nombres
+                </label>
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Escribe tus nombres"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
             </div>
-        </div>
-
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+                    Apellidos
+                </label>
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Escribe tus apellidos"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id">
+                    Numero de identificacion
+                </label>
+                <input
+                    type="number"
+                    id="id"
+                    placeholder="Escribe tu id"
+                    value={id}
+                    onChange={(e) => setId(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="documentType">
+                    Tipo de documento
+                </label>
+                <select
+                    id="documentType"
+                    value={documentType}
+                    onChange={(e) => setDocumentType(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-select"
+                    required
+                >
+                    <option value="">Elegir...</option>
+                    <option value="cedula de ciudadania">Cedula de ciudadania</option>
+                    <option value="cedula de extranjeria">Cedula de extranjeria</option>
+                </select>
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Correo electronico
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Escribe tu correo"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phoneNumber">
+                    Numero telefonico
+                </label>
+                <input
+                    type="number"
+                    id="phoneNumber"
+                    placeholder="Escribe tu numero"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                    Contraseña
+                </label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Escribe tu contraseña"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
+                    Confirmar contraseña
+                </label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirma tu contraseña"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+            </div>
+            <div className="col-span-2 flex items-center justify-between">
+                <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                    Registrar
+                </button>
+            </div>
+        </form>
     );
 };
 export default EmployeeRegistrationForm;
