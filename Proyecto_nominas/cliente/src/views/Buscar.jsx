@@ -11,6 +11,8 @@ import B_cedula from "../components/B_cedula.component";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 
 
 export async function loader() {
@@ -82,7 +84,9 @@ export default function Buscar() {
           autoComplete="off"
         >
           <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-
+          <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/registrar_empleado">
+            <AddIcon />
+          </Fab>
         </Box>
 
 
