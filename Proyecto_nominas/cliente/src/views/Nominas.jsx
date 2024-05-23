@@ -1,6 +1,5 @@
 import Nominad from "../components/nomina.component";
 import { mostrar_nominas } from "../services/ServicioNominas";
-import { useLoaderData } from 'react-router-dom'
 
 export async function loader() {
   const nominas = await mostrar_nominas()
@@ -9,9 +8,7 @@ export async function loader() {
 }
 
 export default function Nominass() {
-  const nominasa = useLoaderData()
-  console.log(nominasa.data);
   return (
-    <Nominad/>
+    <Nominad />
   )
 }

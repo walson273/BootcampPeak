@@ -10,7 +10,7 @@ routerNominas.get('/', consultar_todo);
 
 routerNominas.post('/',
     body('dias_trabajados').notEmpty().withMessage('El nombre del empleado es obligatorio'),
-    body('base').notEmpty().withMessage('El cargo es obligatorio'),
+    body('base').notEmpty().withMessage('El salario base es obligatorio'),
     //Posible creacion de mas errores como "isNumeric" o ".optional" para mandar vacio
     Errores,
     crear_nuevo);

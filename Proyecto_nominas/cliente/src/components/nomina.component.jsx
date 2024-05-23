@@ -1,27 +1,54 @@
+
+import IconButton from '@mui/material/IconButton';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import React, { useState, useMemo } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { mostrar_nominas } from '../services/ServicioNominas';
 
-
-
-export async function loader() {
-  const nominas = await mostrar_nominas()
-  return nominas
-}
 
 const Nominad = () => {
   const nominasa = useLoaderData();
   const datos = nominasa.data;
+  for (let index = 0; index < datos.length; index++) {
+    let d = 0;
+    if (datos[index].mes.toLowerCase() == "octubre") {
+      d = 10;
+    } else if (datos[index].mes.toLowerCase() == "enero") {
+      d = 1;
+    } else if (datos[index].mes.toLowerCase() == "septiembre") {
+      d = 9;
+    } else if (datos[index].mes.toLowerCase() == "febrero") {
+      d = 2;
+    } else if (datos[index].mes.toLowerCase() == "marzo") {
+      d = 3;
+    } else if (datos[index].mes.toLowerCase() == "abril") {
+      d = 4;
+    } else if (datos[index].mes.toLowerCase() == "mayo") {
+      d = 5;
+    } else if (datos[index].mes.toLowerCase() == "junio") {
+      d = 6;
+    } else if (datos[index].mes.toLowerCase() == "julio") {
+      d = 7;
+    } else if (datos[index].mes.toLowerCase() == "agosto") {
+      d = 8;
+    } else if (datos[index].mes.toLowerCase() == "noviembre") {
+      d = 11;
+    } else if (datos[index].mes.toLowerCase() == "diciembre") {
+      d = 12;
+    }
+    datos[index].mesn = d;
 
+  }
   const [data, setData] = useState(datos);
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedRows, setExpandedRows] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [open, setOpen] = React.useState(false);
 
   const filteredAndSortedData = useMemo(() => {
-    let filteredItems = searchTerm ? data.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase())) : [...data];
+    let filteredItems = searchTerm ? data.filter(item => item.mes?.toString().toLowerCase().includes(searchTerm.toLowerCase())) : [...data];
     if (sortConfig !== null) {
       filteredItems.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -36,11 +63,17 @@ const Nominad = () => {
     return filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   }, [data, sortConfig, currentPage, searchTerm]);
 
+  function rotar(){
+    document.getElementById("flecha").style.transform="rotate(180deg)";
+  }
+
   const toggleRow = (index) => {
+    setOpen(!open);
     const newExpandedRows = expandedRows.includes(index)
       ? expandedRows.filter(id => id !== index)
       : [...expandedRows, index];
     setExpandedRows(newExpandedRows);
+    
   };
 
   const requestSort = (key) => {
@@ -60,53 +93,122 @@ const Nominad = () => {
   const prevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
-
   return (
-    <div>
-      <input type="text" placeholder="Search by Name" className="border rounded p-1" onChange={(e) => setSearchTerm(e.target.value)} />
-      <div className="container mx-auto px-4 mt-4">
-        <table className="table-auto w-full text-left whitespace-no-wrap">
+    <div className="p-5  rounded-lg">
+      <input className="border p-2 w-full mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} />
+      <div>
+        <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-xs font-semibold tracking-wide text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-              <th className="px-4 py-3 cursor-pointer" onClick={() => requestSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
-              <th className="px-4 py-3 cursor-pointer" onClick={() => requestSort('lastName')}>Last Name {sortConfig.key === 'lastName' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
-              <th className="px-4 py-3 cursor-pointer" onClick={() => requestSort('salary')}>Salary {sortConfig.key === 'salary' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
+            <tr className="bg-gray-100">
+              <th className="border-b p-4"> </th>
+              <th className="border-b p-4" onClick={() => requestSort('devengado')} style={{ cursor: "pointer" }}>Total devengado {sortConfig.key === 'devengado' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
+              <th className="border-b p-4" onClick={() => requestSort('total_descuentos')} style={{ cursor: "pointer" }}>Descuentos {sortConfig.key === 'total_descuentos' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
+              <th className="border-b p-4" onClick={() => requestSort('mesn')} style={{ cursor: "pointer" }}>Mes {sortConfig.key === 'mesn' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
+              <th className="border-b p-4" onClick={() => requestSort('anio')} style={{ cursor: "pointer" }}>Año {sortConfig.key === 'anio' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : '↕'}</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+          <tbody>
             {filteredAndSortedData.map((item, index) => [
-              <tr key={index} className="text-gray-700 dark:text-gray-400" onClick={() => toggleRow(index)}>
-                <td className="px-4 py-3">{item.total_descuentos}</td>
-                <td className="px-4 py-3">{item.usuario.nombre}</td>
-                <td className="px-4 py-3">{item.salary}</td>
+              <tr key={index} className="hover:bg-gray-50" onClick={() => toggleRow(index)}>
+                <td className="p-4 border-b"><IconButton id="flecha" aria-label="expand row" size="small">
+                  {open ? (
+                    <KeyboardArrowUpIcon />
+                  ) : (
+                    <KeyboardArrowDownIcon />
+                  )}
+                </IconButton></td>
+                <td className="p-4 border-b">${item.devengado.toLocaleString("es")}</td>
+                <td className="p-4 border-b">${item.total_descuentos.toLocaleString("es")}</td>
+                <td className="p-4 border-b">{item.mes}</td>
+                <td className="p-4 border-b">{item.anio}</td>
               </tr>,
               expandedRows.includes(index) && (
-                <tr key={`details-${index}`} className="expandable-row">
-                  <td className="px-4 py-3" colSpan="3">
-                    <div>Age: {item.age}</div>
-                    <div>Country: {item.country}</div>
+                <tr key={`detail-${index}`} className="bg-gray-100">
+                  <td colSpan="5" className="border-b">
+                    <div className="flex flex-wrap justify-content-center">
+                      <table className="flex flex-wrap pt-4">
+                        <tbody>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Sueldo base</td>
+                            <td className="border border-zinc-500 p-2" colSpan="2">${item.base.toLocaleString("es")}</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2 text-center fw-bold" colSpan="2">Concepto</td>
+                            <td className="border border-zinc-500 px-3 text-center fw-bold">Devengo</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Dias trabajados</td>
+                            <td className="border border-zinc-500 px-4">{item.dias_trabajados.toLocaleString("es")}</td>
+                            <td className="border border-zinc-500 px-3">1,2M</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Bonos</td>
+                            <td className="border border-zinc-500 px-4">2</td>
+                            <td className="border border-zinc-500 px-3">${item.bonos.toLocaleString("es")}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table className="flex flex-wrap p-4">
+                        <tbody>
+                          <tr>
+                            <td className="border border-zinc-500 p-2 text-center fw-bold" colSpan="2">Egresos</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Pension</td>
+                            <td className="border border-zinc-500 px-3">${item.pension.toLocaleString("es")}</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Cesantias</td>
+                            <td className="border border-zinc-500 px-3">${item.cesantias.toLocaleString("es")}</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2">Eps</td>
+                            <td className="border border-zinc-500 px-3">${item.eps.toLocaleString("es")}</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 pl-2 pr-3 py-2">Total descuentos</td>
+                            <td className="border border-zinc-500 px-3">${item.total_descuentos.toLocaleString("es")}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table className="flex pt-4">
+                        <tbody>
+                          <tr>
+                            <td className="border border-zinc-500 p-2 fw-bold">Neto</td>
+                            <td className="border border-zinc-500 px-3" colSpan="2">${item.total_neto.toLocaleString("es")}</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-zinc-500 p-2 fw-bold">Devengado</td>
+                            <td className="border border-zinc-500 px-3" colSpan="2">${item.devengado.toLocaleString("es")}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </td>
                 </tr>
               )
             ])}
             {filteredAndSortedData.length === 0 && (
               <tr>
-                <td colSpan="3" className="text-center py-3">No results found</td>
+                <td colSpan="5" className="p-4 text-center">No results found</td>
               </tr>
             )}
           </tbody>
         </table>
-        <div className="flex justify-between items-center mt-4">
-          <button className="px-4 py-2 text-sm text-white bg-blue-500 rounded" onClick={prevPage}>Previous</button>
-          <div>
-            <span>Page {currentPage} of {totalPages}</span>
-            <select className="ml-2 border rounded" value={itemsPerPage} onChange={(e) => { setItemsPerPage(Number(e.target.value)); setCurrentPage(1); }}>
+        <div className="mt-4 flex justify-between items-center">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={prevPage}>Anterior</button>
+          <div style={{ width: "auto" }}>
+            <span>Registros por pagina</span>
+            <select className="ml-2 border p-2" value={itemsPerPage} onChange={(e) => { setItemsPerPage(Number(e.target.value)); setCurrentPage(1); }}>
               <option value="5">5</option>
               <option value="10">10</option>
               <option value="15">15</option>
             </select>
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;Pagina {currentPage} de {totalPages}</span>
           </div>
-          <button className="px-4 py-2 text-sm text-white bg-blue-500 rounded" onClick={nextPage}>Next</button>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={nextPage}>Siguiente</button>
         </div>
       </div>
     </div>

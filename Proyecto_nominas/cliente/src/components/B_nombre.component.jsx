@@ -2,11 +2,11 @@ import * as React from 'react';
 
 
 
-export default function B_nombre(){
+export default function B_nombre(info){
 
     return (
 
-        <h2>Nombre apellido</h2>
+        <h2 className='Bnombre' >{info.nombre}</h2>
     )
 
 
