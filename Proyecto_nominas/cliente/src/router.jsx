@@ -58,6 +58,10 @@ export const router = createBrowserRouter(
                     path: '/menu/ver_nominas',
                     element: <Nominass />,
                     loader: getLoader
+                },
+                {
+                    path: '/menu/registrar_empleado',
+                    element: <Registrar_empleado />             
                 }
             ]
             
@@ -67,11 +71,5 @@ export const router = createBrowserRouter(
             element: <Login />
 
         },
-        {
-            path: '/registrar_empleado',
-            element: <Registrar_empleado />
-
-        },
-   
     ]
 )

@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
+import { crear_usuarios } from '../services/ServicioUsuarios';
+
+
+
+export async function loader(info) {
+    const usuarios = await crear_usuarios(info)
+
+    return usuarios
+}
+
 
 const EmployeeRegistrationForm = () => {
+    //let datos={};
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [id, setId] = useState('');
     const [documentType, setDocumentType] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [jobPosition, setJobPosition] = useState('');
-    const [startDate, setStartDate] = useState('');
 
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (firstName && lastName && id && documentType && email && phoneNumber && jobPosition && startDate && password && confirmPassword) {
+        if (firstName && lastName && id && documentType && email && phoneNumber && password && confirmPassword) {
             if (password !== confirmPassword) {
                 alert('Passwords do not match.');
                 return;
             }
-            console.log({ firstName, lastName, id, documentType, email, phoneNumber, jobPosition, startDate, password });
+            let datos={"nombre":firstName, "apellido":lastName, "cedula":id, "numero_telefonico":phoneNumber, "correo":email, "tipo_documento":documentType, "contrasenia":password};
+            loader(datos);
         } else {
-            alert('Please fill out all fields.');
+            alert('Por favor llene todos los campos.');
         }
     }; 
 

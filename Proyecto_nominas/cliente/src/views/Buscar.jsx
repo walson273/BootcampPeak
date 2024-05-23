@@ -88,7 +88,7 @@ export default function Buscar() {
           autoComplete="off"
         >
           <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-          <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/registrar_empleado">
+          <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/menu/registrar_empleado">
             <AddIcon />
           </Fab>
         </Box>
