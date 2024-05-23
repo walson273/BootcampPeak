@@ -3,6 +3,43 @@
 @tailwind utilities;
 
 
+.cajaTexto{
+
+    width: 10rem;
+    
+
+}
+.PFoto{grid-area:foto;}
+.Pnombre{ grid-area: nombre;}
+.Papellido{grid-area: apellido;}
+.PID{ grid-area: id;}
+.Pequipo{grid-area: equipo;}
+.Psupervisor{grid-area:supervisor}
+.Pcargo{grid-area:cargo}
+.Psede{grid-area:sede}
+
+.perfil{
+
+  width: 70rem;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+
+  display: grid;
+
+  grid-template-areas:
+
+
+
+  "foto nombre apellido id"
+  "equipo sede supervisor cargo";
+  ;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
 .contenedorMenu{
 
   display: grid;
@@ -109,7 +146,7 @@
     }
     .Bboton{
 
-      background-color:  rgb(0, 255, 0);
+      background-color:  rgb(44, 151, 44);
       color: darkslategrey;
       
     }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { mostrar_usuarios, mostrar_usuarios_id } from "../services/ServicioUsuarios";
 import { useLoaderData } from 'react-router-dom'
+//import {useUserIDContext} from "../UserIDProvider"
+
 
 import B_nombre from '../components/B_nombre.component'
 import B_foto from '../components/B_foto.component'
@@ -23,6 +25,8 @@ export async function loader() {
 export default function Buscar() {
 
   const info = useLoaderData();
+
+  
 
 
 
@@ -97,7 +101,13 @@ export default function Buscar() {
                 <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
                 <B_cargo cargo={usuario.cargo?.nombre_puesto} />
                 <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
-                <Button variant="contained" className="Bboton" href="http://localhost:5173/menu/perfil" onClick={() => { perfil(usuario.id) }} >Modificar</Button>
+                
+                <Button variant="contained" className="Bboton" href="http://localhost:5173/menu/perfil" 
+                onClick={() => { 
+                  console.log(usuario.id)
+                  props.cambiaID(usuario.id)
+
+                 }} >Modificar</Button>
 
               </>
 

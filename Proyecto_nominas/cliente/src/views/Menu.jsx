@@ -120,6 +120,9 @@ export default function Menu() {
   };  
   return (
     <>
+   
+    
+     
     <div className="contenedorMenu">
       
       <div className="" style={{ width: "14rem", height: "100vh", borderRadius: "20px" }}>
@@ -159,6 +162,7 @@ export default function Menu() {
       <Outlet />
 
       </div>
+   
     </>
   )
 }
