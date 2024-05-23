@@ -75,19 +75,13 @@ export default function Buscar() {
     <>
       <div className="ListaEntera">
 
-      <div className="flex">
-        <Box className="flex" sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
+        <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
           noValidate
           autoComplete="off"
-
         >
           <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-          
-            <Fab style={{ width: "3rem", height: "3rem"}} color="primary" aria-label="add" href="http://localhost:5173/registrar_empleado">
-              <AddIcon />
-            </Fab>
+
         </Box>
-          </div>
 
 
 
@@ -105,7 +99,7 @@ export default function Buscar() {
                 <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
                 <B_cargo cargo={usuario.cargo?.nombre_puesto} />
                 <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
-                <Button variant="contained" className="Bboton" href="http://localhost:5173/ver_nominas" onClick={() => { perfil(usuario.id) }} >Modificar</Button>
+                <Button variant="contained" className="Bboton" href="http://localhost:5173/menu/perfil" onClick={() => { perfil(usuario.id) }} >Modificar</Button>
 
               </>
 
