@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom";
 import { mostrar_usuarios_id } from "../services/ServicioUsuarios";
 import TextField from '@mui/material/TextField';
-
+import P_info from '../components/P_info'
 
 
 
@@ -71,13 +71,6 @@ export default  function Perfil() {
         
         </>
     )
-
-  
-
-        
-
-    
-
 }
 
 
@@ -88,78 +81,18 @@ const TablaBuscar = ({info}) =>
             return(
         <>
               { <section className="perfil">
+    
+            <div>
+            <img className='PFoto'  src= {'/public/avatar_'+ info.data.logo +'.png'} alt='logo' />
+            </div>
         
-
-            <div>
-            <img className='PFoto'  src= {'../public/avatar_'+ info.data.logo +'.png'} alt='logo' />
-            </div>
-            
-
-            <div>
-                    <TextField className="cajaTexto PNombre"
-                    disabled
-                    id="outlined-read-only-input"
-                    label="Nombre"
-                    defaultValue= {info.data?.nombre}
-                    />
-            </div>
-            
-            <div>
-                    <TextField className="cajaTexto PApellido"
-                    disabled
-                    id="outlined-disabled"
-                    label="apellido"
-                    defaultValue= {info.data?.apellido}
-                    />
-            </div>
-            
-            <div>
-                    <TextField className="cajaTexto PID"
-                    disabled
-                    id="outlined-disabled"
-                    label="Documento"
-                    defaultValue= {info.data?.cedula}
-                    />
-            </div>
-
-            
-            <div>
-                    <TextField className="cajaTexto Pequipo"
-                    disabled
-                    id="outlined-disabled"
-                    label="Equipo"
-                    defaultValue= {info.data.equipo.nombre_equipo}
-                    />
-            </div>
-
-                    
-            <div>
-                    <TextField className="cajaTexto Psupervisor"
-                    disabled
-                    id="outlined-disabled"
-                    label="Supervisor"
-                    defaultValue= {info.data.equipo.nombre_equipo}
-                    />
-            </div>
-
-                    
-            <div>
-                    <TextField className="cajaTexto Pcargo"
-                    disabled
-                    id="outlined-disabled"
-                    label="Cargo"
-                    defaultValue= {info.data.cargo.nombre_puesto}
-                    />
-            </div>    
-                
-            <div>
-                    <TextField className="cajaTexto Psede"
-                    disabled
-                    id="outlined-disabled"
-                    label="Sede"
-                    defaultValue= {info.data.equipo.sede}
-                    />
-            </div>     
+             <P_info clase={'PNombre'} valor = {info.data?.nombre} label={'Nombres'} />
+             <P_info clase={'Papellido'} valor = {info.data?.apellido} label={'Apellidos'} />
+             <P_info clase={'PID'} valor = {info.data?.cedula} label={'Cedula'} />
+             <P_info clase={'Pequipo'} valor = {info.data?.equipo.nombre_equipo} label={'Equipo'} />
+             <P_info clase={'Psupervisor'} valor = {info.data?.nombre} label={'supervisor'} />
+             <P_info clase={'Pcargo'} valor = {info.data?.cargo.nombre_puesto} label={'cargo'} />             
+             <P_info clase={'Psede'} valor = {info.data?.equipo.sede} label={'Sede'} />
 
         </section> } 
         </>

@@ -6,11 +6,13 @@
 
 .cajaTexto{
 
-    width: 10rem;
+    width: 15rem;
+    
+    
     
 
 }
-.PFoto{grid-area:foto; width: 5rem; height: 5rem;}
+.PFoto{grid-area:foto; width: 10rem; height: 10rem; border-radius: 25%; }
 .Pnombre{ grid-area: nombre;}
 .Papellido{grid-area: apellido;}
 .PID{ grid-area: id;}
@@ -21,8 +23,12 @@
 
 .perfil{
 
-  width: 70rem;
-  margin: 5rem 10rem;
+  width: 100rem;
+  margin: 5rem 2rem;
+  border-style: solid;
+  border-color: aqua;
+  border-width: 0.2rem;
+  border-radius: 6rem;
   row-gap: 2rem;
   padding: 10rem;
   align-items: center;
