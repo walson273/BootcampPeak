@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { mostrar_usuarios, mostrar_usuarios_id } from "../services/ServicioUsuarios";
-import { useLoaderData } from 'react-router-dom'
-//import {useUserIDContext} from "../UserIDProvider"
-
-
+import { useLoaderData, useNavigate } from 'react-router-dom'
 import B_nombre from '../components/B_nombre.component'
 import B_foto from '../components/B_foto.component'
 import B_cargo from '../components/B_cargo.component'
@@ -27,6 +24,7 @@ export async function loader() {
 export default function Buscar() {
 
   const info = useLoaderData();
+  const navigate = useNavigate();
 
   
 
@@ -73,6 +71,12 @@ export default function Buscar() {
   }, [])
 
 
+ const IrAPerfil = (userID) => {
+
+
+    navigate(`/menu/perfil/${userID}`);
+
+ }
 
   return (
 
@@ -106,12 +110,10 @@ export default function Buscar() {
                 <B_cargo cargo={usuario.cargo?.nombre_puesto} />
                 <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
                 
-                <Button variant="contained" className="Bboton" href="http://localhost:5173/menu/perfil" 
-                onClick={() => { 
-                  console.log(usuario.id)
-                  props.cambiaID(usuario.id)
-
-                 }} >Modificar</Button>
+                <Button variant="contained" className="Bboton" onClick={()=>{ IrAPerfil(usuario.id) }}
+                
+                
+                >Modificar</Button>
 
               </>
 

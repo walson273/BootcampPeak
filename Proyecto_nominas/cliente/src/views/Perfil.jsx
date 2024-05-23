@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react"
+import { useParams } from "react-router-dom";
 import { mostrar_usuarios_id } from "../services/ServicioUsuarios";
-import { useLoaderData } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
-import { useUserIDContext } from "../UserIDProvider";
- 
+
 
 
 
@@ -20,7 +19,11 @@ export async function loaderID(id) {
   
 export default  function Perfil() {
 
-    const userID = useUserIDContext();
+    //const userID = useUserIDContext();
+
+    const { userID } = useParams();
+
+    console.log(userID);
 
     //console.log(useLoaderData());
 
@@ -57,7 +60,7 @@ export default  function Perfil() {
 
     if(info){
 
-        return <Child info = {info}/>
+        return <TablaBuscar info = {info}/>
         
     }   
        else
@@ -78,7 +81,7 @@ export default  function Perfil() {
 }
 
 
-const Child = ({info}) =>
+const TablaBuscar = ({info}) =>
     
     {
 
@@ -88,7 +91,7 @@ const Child = ({info}) =>
         
 
             <div>
-            {<img className='PFoto'  src= {'../public/avatar_'+ info?.data.logo +'.png'} alt='logo' />}
+            <img className='PFoto'  src= {'../public/avatar_'+ info.data.logo +'.png'} alt='logo' />
             </div>
             
 

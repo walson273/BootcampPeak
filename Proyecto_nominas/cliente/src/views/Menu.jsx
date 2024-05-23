@@ -7,9 +7,9 @@ import {Outlet} from "react-router-dom";
 export default function menu() {
   return (
     <>
-      <div >
+      <div className='contenedorMenu'>
         <BSlide dat={data.slideBar} />
-        <Outlet></Outlet>
+        <Outlet />
       </div>
     </>
   );

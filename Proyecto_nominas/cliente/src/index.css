@@ -10,7 +10,7 @@
     
 
 }
-.PFoto{grid-area:foto;}
+.PFoto{grid-area:foto; width: 5rem; height: 5rem;}
 .Pnombre{ grid-area: nombre;}
 .Papellido{grid-area: apellido;}
 .PID{ grid-area: id;}
@@ -22,11 +22,15 @@
 .perfil{
 
   width: 70rem;
-  margin: auto;
+  margin: 5rem 10rem;
+  row-gap: 2rem;
+  padding: 10rem;
   align-items: center;
   justify-items: center;
 
   display: grid;
+
+  background-color: rgba(252, 252, 252, 0.774);
 
   grid-template-areas:
 

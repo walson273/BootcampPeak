@@ -8,10 +8,6 @@ import Perfil, {loaderID as getLoaderID} from './views/Perfil'
 
 import Menu from './views/Menu'
 import Registrar_empleado from './views/Registrar_empleado'
-import { UserIDProvider } from './UserIDProvider';
-
-
-
 
 
 export const router = createBrowserRouter(
@@ -35,11 +31,11 @@ export const router = createBrowserRouter(
             children: [
 
                 {
-                    path: '/menu/perfil/:id',
+                    path: '/menu/perfil/:userID',
                     element: 
-                              <UserIDProvider>
-                                    <Perfil id={id} />
-                              </UserIDProvider>
+                              
+                                    <Perfil  />
+                              
                               
                      ,
                     
