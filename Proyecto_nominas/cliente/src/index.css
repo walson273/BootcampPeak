@@ -240,23 +240,22 @@
 }
 
 #imagencita {
-  left: 0px;
-  /* margin: auto; */
-  margin-left: 5px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 
   img {
-    width: 3.75rem;
-    height: 3.75rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
 #letrita {
-  color: #727272;
-  margin-top: -15px;
-  font-family: "Montserrat", bold;
-  font-weight: 500;
-  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 16px;
 }
 
 .cont_items {

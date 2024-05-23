@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import * as data from '../data.jsx'
+import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 export default function menu() {
@@ -13,20 +13,20 @@ export default function menu() {
   );
 }
 
-export const BSlide = (prop) => {
-  const [open, setOpen] = useState(true);
+const BSlide = (prop) => {
+  const [open, setOpen] = useState(false);
   return (
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '210px' }}>
         <IoIosArrowDroprightCircle id='flechita' className={`arrow ${!open && "rotate-180"}`} style={{ margin: open ? '352px -90px 0px 0px' : '352px -211px 0px 0px' }} onClick={() => setOpen(!open)} />
-        <div className='col border bg-success'>
+        <div className='col border'>
           <div className='row-2 border'>
-            <div className="row" id="imagencita">
-              <div className='col-2'>
-                <img src="Imagen_1.png" alt="Logo" />
+            <div className="row" >
+              <div className='col-3 border' id='imagencita'>
+                <img src="/Imagen_1.png" alt="Logo" />
               </div>
-              <div className='col-10'>
-                <h2 id='letrita' >TELEPERFUMES</h2>
+              <div className='col-9' id='pruebita'>
+                <h4 id="letrita" >TELEPERFUMES</h4>
               </div>
             </div>
           </div>
