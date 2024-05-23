@@ -9,6 +9,8 @@ import B_cedula from "../components/B_cedula.component";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 
 
 export async function loader() {
