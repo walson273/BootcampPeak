@@ -2,12 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import {Outlet} from "react-router-dom";
 
 export default function menu() {
   return (
     <>
-      <div>
+      <div >
         <BSlide dat={data.slideBar} />
+        <Outlet></Outlet>
       </div>
     </>
   );
