@@ -3,58 +3,48 @@ import Nominass, { loader as getLoader } from './views/Nominas'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
 import React from 'react';
-import Buscar, {loader as getLoader2} from './views/Buscar'
+import Buscar, { loader as getLoader2 } from './views/Buscar'
 import Modificar from './views/Modificar'
 import Perfil from './views/Perfil'
 
 import Menu from './views/Menu'
-import Registrar_empleado, {loader as getLoaderRegistro} from './views/Registrar_empleado'
+import Registrar_empleado, { loader as getLoaderRegistro } from './views/Registrar_empleado'
 
 
 export const router = createBrowserRouter(
 
 
     [
-
-        {   path: '/',
-            element: <Layout/>,
-            children: [
-                {
-                    path: '/ver_nominas',
-                    element: <Nominass />,
-                    loader: getLoader
-                }
-            ]
-        },
         {
             path: '/menu',
-            element: <Menu/>,
+            element: <Menu />,
             children: [
 
                 {
                     path: '/menu/perfil/:userID',
-                    element: 
-                              
-                                    <Perfil  />,                   
+                    element:
+
+                        <Perfil />,
 
                 },
-                
-                { path: '/menu/perfil/modificar/:userID',
-                          element: <Modificar />
-                
-                        },
+
+                {
+                    path: '/menu/perfil/modificar/:userID',
+                    element: <Modificar />
+
+                },
 
                 {
                     path: '/menu/buscar',
-                    element: 
-                            
+                    element:
 
-                                <Buscar />
 
-                            
-              ,
+                        <Buscar />
+
+
+                    ,
                     loader: getLoader2
-        
+
                 },
                 {
                     path: '/menu/ver_nominas',
@@ -64,10 +54,10 @@ export const router = createBrowserRouter(
                 {
                     path: '/menu/registrar_empleado',
                     element: <Registrar_empleado />,
-                    loader: getLoaderRegistro          
+                    loader: getLoaderRegistro
                 }
             ]
-            
+
         },
         {
             path: '/login',
