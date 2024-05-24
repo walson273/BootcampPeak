@@ -27,6 +27,12 @@ export default function Buscar() {
   const navigate = useNavigate();
 
   
+ const IrAPerfil = (userID) => {
+
+
+  navigate(`/menu/perfil/${userID}`);
+
+}
 
 
 
@@ -71,12 +77,6 @@ export default function Buscar() {
   }, [])
 
 
- const IrAPerfil = (userID) => {
-
-
-    navigate(`/menu/perfil/${userID}`);
-
- }
 
   return (
 

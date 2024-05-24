@@ -63,8 +63,8 @@ const Nominad = () => {
     return filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   }, [data, sortConfig, currentPage, searchTerm]);
 
-  function rotar(){
-    document.getElementById("flecha").style.transform="rotate(180deg)";
+  function rotar() {
+    document.getElementById("flecha").style.transform = "rotate(180deg)";
   }
 
   const toggleRow = (index) => {
@@ -73,7 +73,7 @@ const Nominad = () => {
       ? expandedRows.filter(id => id !== index)
       : [...expandedRows, index];
     setExpandedRows(newExpandedRows);
-    
+
   };
 
   const requestSort = (key) => {
@@ -94,10 +94,10 @@ const Nominad = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
   return (
-    <div className="p-5  rounded-lg">
-      <input className="border p-2 w-full mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} />
-      <div>
-        <table className="w-full text-left border-collapse">
+    <div className="  rounded-lg" style={{ marginLeft: "5.625rem" }}>
+      <input className="border p-2 mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} />
+      <div className="">
+        <table className=" text-left border-collapse" style={{width:"85%"}}>
           <thead>
             <tr className="bg-gray-100">
               <th className="border-b p-4"> </th>
@@ -197,9 +197,9 @@ const Nominad = () => {
             )}
           </tbody>
         </table>
-        <div className="mt-4 flex justify-between items-center">
+        <div className="mt-4 flex justify-between items-center" style={{ width:"85%"}}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={prevPage}>Anterior</button>
-          <div style={{ width: "auto" }}>
+          <div>
             <span>Registros por pagina</span>
             <select className="ml-2 border p-2" value={itemsPerPage} onChange={(e) => { setItemsPerPage(Number(e.target.value)); setCurrentPage(1); }}>
               <option value="5">5</option>
