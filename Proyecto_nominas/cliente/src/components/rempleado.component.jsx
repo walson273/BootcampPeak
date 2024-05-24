@@ -12,7 +12,6 @@ export async function loader(info) {
 
 
 const EmployeeRegistrationForm = () => {
-    //let datos={};
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [id, setId] = useState('');
