@@ -14,7 +14,7 @@ export async function mostrar_usuarios() {
     }
 }
 
-
+ 
 export async function mostrar_usuarios_id(info) {
     try {
         const url = `${import.meta.env.VITE_URL_POST}/usuarios/${info}`
@@ -62,7 +62,7 @@ export async function mostrar_supervisor_usuario(info) {
     }
 }
 
-
+ 
 export async function crear_usuarios(info) {
     try {
         const url = `${import.meta.env.VITE_URL_POST}/usuarios`
