@@ -225,7 +225,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: black;
+  color: #15AAC4;
   opacity: 0%;
   transition: all 1s;
 }
@@ -238,7 +238,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: black;
+  color: #15AAC4;
   opacity: 100%;
   transition: all 1s;
 }
@@ -248,7 +248,7 @@
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
-  transition: all 1s;
+
 
 }
 
@@ -257,7 +257,7 @@
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
-  transition: all 1s;
+
 }
 
 .box_items {
@@ -274,17 +274,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 1s;
+  border: none;
+  color: gray;
 }
 
-.iconsize.active {
-  margin-bottom: 12px;
-  font-size: 125%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s;
-}
 
 .iconitos{
   margin-left: 1.1rem;
@@ -295,85 +288,42 @@
 }
 
 .nombres{ 
-  color: black;
   font-family: "Poetsen One", sans-serif;
   font-weight: 100;
-  font-size: 1rem;
-  /* opacity: 0%; */
+  font-size: 0rem;
+  opacity: 0%;
+  margin-left: 3rem;
+  margin-top: -1.2rem;
   display: flex;
   align-items: center;
   position: absolute;
-  border: solid 1px red;
+  visibility: hidden;
+  transition: all 1s;
 
 }
 .nombres.active{ 
-    color: black;
     font-family: "Poetsen One", sans-serif;
     font-weight: 100;
     font-size: 1rem;
+    margin-left: 4rem;
     opacity: 100%;
     display: flex;
     align-items: center;
+    position: absolute;
     visibility: visible;
-    transition: all 1s;
 }
+
 
 .columnitas{
   width: 100%;
   column-count: 2;
   column-width: 50%;
+  
 }
-
-.nombreslide {
-  font-size: 0rem;
-  transition: all 1s;
-}
-
-.nombreslide.active {
-  font-size: 0.656rem;
-  /* margin-top: 5px;
-  margin-left: 10px; */
-  transition: all 1s;
-}
-
-.boton {
-  padding: .5rem .1rem !important;
-  margin: 5px;
-  width: 100%;
-  border: none;
-  margin-bottom: 15px;
-  transition: all 1s;
-}
-
-.boton.active {
-  padding: .5rem .1rem !important;
-  margin: 5px;
-  width: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  background: none;
-  transition: all 1.5s;
-}
-
-.boton:hover {
-  background: rgba(111, 202, 255, .53333);
-  transition: background-color 0.5s;
-}
-
-.boton.active:hover {
-  background: rgba(111, 202, 255, .53333);
-  transition: background-color .5s;
-}
-
 
 #flechita {
   position: fixed;
   font-size: 25px;
-  color: #3a8ced;
+  color: #15AAC4;
   cursor: pointer;
-}
-#flechita:hover{
-    transform: rotate(180deg);
 }
