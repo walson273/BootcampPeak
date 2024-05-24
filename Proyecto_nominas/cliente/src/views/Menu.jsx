@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { type_user } from "../services/ServicioUsuarios";
 
 
@@ -63,7 +63,7 @@ const BSlide = (prop) => {
                 {prop.dat.map((iter) => (
                   <li className='box_items list-group-item nav-item '>
                     <div className={open ? 'cont_items' : 'cont_items active'} >
-                      <a className='btn btn-outline-primary iconsize ' href={iter.link} >
+                      <Link className='btn btn-outline-primary iconsize ' to={iter.link} >
                         <div className='columnitas'>
                           <div className='iconitos'>{iter.icon} </div>
                           {/* <div className='palabrita' style={{marginLeft: open ? '0.5rem' : '-2.5rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s'}}> */}
@@ -71,7 +71,7 @@ const BSlide = (prop) => {
                           {/* </div> */}
                           {/* className={`border {open ? 'nombreslide' : 'nombreslide active'}`} */}
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </li>
                 ))}
