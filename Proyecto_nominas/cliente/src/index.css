@@ -7,9 +7,6 @@
 .cajaTexto{
 
     width: 15rem;
-    
-    
-    
 
 }
 .PFoto{grid-area:foto; width: 10rem; height: 10rem; border-radius: 25%; }
@@ -53,9 +50,7 @@
 
 .contenedorMenu{
 
-  display: grid;
 
-  grid-template-columns: 10% 90%;
 
 }
 
@@ -191,7 +186,8 @@
 .slidebar {
 
   float: left;
-  height: 100vh;
+  height: 300vh;
+  margin-right: 2rem;  
   /* display: flex; */
   justify-content: center;
   border-radius: 5px;
@@ -200,7 +196,7 @@
   /* margin-top: -4.375rem; */
   background-position: top;
   border-radius: 0px 15px 15px 0px;
-  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
+  box-shadow: 98px 39px 158px -41px rgba(189, 189, 189, 0.45);
 }
 
 #imagencita {
@@ -244,7 +240,7 @@
   margin-top: .7rem;
   color: black;
   opacity: 100%;
-  transition: opacity 3s;
+  transition: all 1s;
 }
 
 .cont_items {
@@ -296,10 +292,30 @@
 .palabrita{
   display: flex;
   justify-content: start;
-  h6 { 
+}
+
+.nombres{ 
+  color: black;
   font-family: "Poetsen One", sans-serif;
   font-weight: 100;
-  }
+  font-size: 1rem;
+  /* opacity: 0%; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border: solid 1px red;
+
+}
+.nombres.active{ 
+    color: black;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    transition: all 1s;
 }
 
 .columnitas{

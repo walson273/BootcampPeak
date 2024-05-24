@@ -42,7 +42,7 @@ const BSlide = (prop) => {
                         <div className='columnitas'>
                           <div className='iconitos'>{iter.icon} </div>
                         <div className='palabrita' style={{marginLeft: open ? '0.5rem' : '-2.5rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s'}}>
-                        <h6 style={{fontSize: open ? '0rem' : '1rem', transition: open ? 'fontSize 1s' : 'fontSize 1s'}} > {iter.name} </h6> 
+                        <h6 className={open ? 'nombres' : 'nombres active'} > {iter.name} </h6> 
                         </div>
                         {/* className={`border {open ? 'nombreslide' : 'nombreslide active'}`} */}
                         </div>
