@@ -147,3 +147,20 @@ export const login_usuario = async (req, res) => {
         console.log('No se pudo loguear el usuario.');
     }
 }
+
+export const type_user = async (req, res) => {
+
+    try{
+        const {id} = req.body
+        const cargo = await Usuarios.findOne({where:{id}})
+        if(!cargo){
+            return res.status(222).json({error:'error_en_consulta'})
+        }
+        res.json({data: cargo})
+    }catch(error){
+    
+        console.log("aquitoy_user");
+
+    }
+
+}
