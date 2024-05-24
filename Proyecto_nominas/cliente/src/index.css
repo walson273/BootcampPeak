@@ -104,7 +104,7 @@
 
   grid-template-areas:
 
-
+ 
 
   "foto nombre apellido id"
   "foto equipo sede supervisor"
@@ -235,7 +235,6 @@
   width: 8rem;
 
 }
-
 .ListaEntera {
 
   background-color: #eef1f3;
@@ -328,7 +327,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: #15AAC4;
+  color: #048EFF;
   opacity: 0%;
   transition: all 1s;
 }
@@ -341,7 +340,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: #15AAC4;
+  color: #048EFF;
   opacity: 100%;
   transition: all 1s;
 }
@@ -427,6 +426,21 @@
 #flechita {
   position: fixed;
   font-size: 25px;
-  color: #15AAC4;
+  color: #048EFF;
   cursor: pointer;
 }
+
+
+/* Login css */
+.l_colum{
+  columns: 2;
+}
+
+
+.l_cont{
+  background-image: url("../public/bg-login.png");
+  background-size: cover;  
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+

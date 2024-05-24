@@ -120,3 +120,21 @@ export const eliminar_usuarios = async (req, res) => {
     await usuarios.destroy();
     res.json({data:'Usuario eliminado'});
 }
+
+
+export const login = async (req, res) => {
+    try {
+        const {correo} = req.body
+        const {contrasenia} = req.body
+        const usuario = await Usuarios.findOne({where:{correo}});
+        if (!usuario) {
+            return res.status(404).json({error:'El usuario no existe.'});
+        }
+    
+        const usuarios = await Usuarios.create(req.body);
+        res.json({ data: usuarios })
+        
+    } catch (error) {
+        console.log('No se pudo loguear el usuario.');
+    }
+}

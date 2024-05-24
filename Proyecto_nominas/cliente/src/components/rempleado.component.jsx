@@ -4,10 +4,29 @@ import { useLoaderData } from 'react-router-dom';
 
 
 
-
 export async function loader(info) {
     const usuarios = await crear_usuarios(info)
-
+    try {
+        if (usuarios.response.data.error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: `${usuarios.response.data.error}`,
+                footer: '<a href="#">Por favor corrige.</a>'
+            });
+        }
+    } catch (error) {
+        Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Usuario registrado con exito.",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        setTimeout(() => {
+            location.href = "http://localhost:5173/menu/buscar";
+        }, 1400);
+    }
     return usuarios
 }
 
@@ -36,26 +55,15 @@ const EmployeeRegistrationForm = () => {
                 alert('Las contraseñas no coinciden.');
                 return;
             }
-            let datos = { "nombre": firstName, "apellido": lastName, "cedula": id, "numero_telefonico": phoneNumber, "correo": email, "tipo_documento": documentType, "contrasenia": password, "id_cargo":position, "id_equipo":team};
+            let datos = { "nombre": firstName, "apellido": lastName, "cedula": id, "numero_telefonico": phoneNumber, "correo": email, "tipo_documento": documentType, "contrasenia": password, "id_cargo": position, "id_equipo": team };
             loader(datos);
-            Swal.fire({
-                position: "top",
-                icon: "success",
-                title: "Usuario registrado con exito.",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            /*setTimeout(() => {
-                location.href = "http://localhost:5173/menu/buscar";
-            }, 1400);*/
-
         } else {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: "Por favor llene todos los campos.",
                 footer: '<a href="#">Todos son todos</a>'
-              });
+            });
         }
     };
     return (
