@@ -262,7 +262,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: #15AAC4;
+  color: #048EFF;
   opacity: 0%;
   transition: all 1s;
 }
@@ -275,7 +275,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: #15AAC4;
+  color: #048EFF;
   opacity: 100%;
   transition: all 1s;
 }
@@ -361,7 +361,7 @@
 #flechita {
   position: fixed;
   font-size: 25px;
-  color: #15AAC4;
+  color: #048EFF;
   cursor: pointer;
 }
 
