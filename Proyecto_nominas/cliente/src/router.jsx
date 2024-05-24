@@ -40,7 +40,8 @@ export const router = createBrowserRouter(
                 },
                 
                 { path: '/menu/perfil/modificar/:userID',
-                          element: <Modificar />
+                          element: <Modificar />,
+                          loader: getLoaderRegistro   
                 
                         },
 

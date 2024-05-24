@@ -31,8 +31,11 @@ export async function mostrar_usuarios_id(info) {
 }
 
 export async function modificar_usuarios_id(info) {
+
+
     try {
-        const url = `${import.meta.env.VITE_URL_POST}/usuarios/${info}`
+        console.log(info);
+        const url = `${import.meta.env.VITE_URL_POST}/usuarios/${info.usuarioID.userID}`
        
         //const { data } = await axios(url)
         // const { data } = await axios.post(url)
@@ -43,6 +46,9 @@ export async function modificar_usuarios_id(info) {
         return data
     } catch (error) {
         console.log(error);
+        console.log(info);
+        console.log(id);
+        console.log("errorsito");
     }
 }
 
