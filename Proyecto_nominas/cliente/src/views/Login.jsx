@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { login_usuarios } from "../services/ServicioUsuarios";
+import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 
 
 export async function loader(info) {
@@ -27,14 +27,27 @@ export async function loader(info) {
   return usuarios
 }
 
+export async function user_correo(info) {
+  try {
+    const usuario = await userByEmail(info)
+    console.log(usuario.data.id);
+    return usuario
+
+  } catch (error) {
+    console.log("El correo no existe.");
+  }
+}
+
+
 export default function Login() {
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
   const enviar = (e) => {
     e.preventDefault();
     if (correo && contraseña) {
-      let datos = { "correo": correo, "contrasenia": contraseña};
+      let datos = { "correo": correo, "contrasenia": contraseña };
       loader(datos);
+      user_correo(datos);
     } else {
       Swal.fire({
         icon: "error",

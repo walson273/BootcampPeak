@@ -164,3 +164,20 @@ export const type_user = async (req, res) => {
     }
 
 }
+
+export const user_email = async (req, res) => {
+
+    try{
+        const {correo} = req.body
+        const usuario = await Usuarios.findOne({where:{correo}})
+        if(!usuario){
+            return res.status(404).json({error:'No se encontro usuario con ese correo.'})
+        }
+        res.json({data: usuario})
+    }catch(error){
+    
+        console.log("No se pudo encontrar un usuario.");
+
+    }
+
+}
