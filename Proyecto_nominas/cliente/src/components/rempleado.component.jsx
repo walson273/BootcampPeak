@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { crear_usuarios } from '../services/ServicioUsuarios';
-import Swal from 'sweetalert2'
+
 
 
 
