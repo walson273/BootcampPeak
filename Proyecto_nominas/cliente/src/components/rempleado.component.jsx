@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 
 
 
+
 export async function loader(info) {
     const usuarios = await crear_usuarios(info)
 

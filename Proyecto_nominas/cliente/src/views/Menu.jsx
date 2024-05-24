@@ -23,7 +23,7 @@ const BSlide = (prop) => {
         <IoIosArrowDroprightCircle id='flechita' className={`${!open && "rotate-180"}`}  style={{margin: open ? '0.9rem 4.5rem' : '0.9rem 11.9rem', transition: open ? 'margin 1s' : 'margin 1s'}} onClick={() => setOpen(!open)} />
         <div className='col'>
         <img src="/Imagen_1.png" id='tele' alt="Logo"/>
-          <div className='row-3 ' style={{height: "4rem", borderBottom: "0.5px solid gray"}}>
+          <div className='row-3 ' style={{height: "4rem", borderBottom: "0.5px solid #E7E7E7"}}>
             {/* <div className="row d-flex justify-content-center align-items-center"> */}
 
               <div className='d-flex justify-content-center align-items-center ' id='imagencita' >
@@ -37,13 +37,13 @@ const BSlide = (prop) => {
               <ul className='nav'>
                 {prop.dat.map((iter) => (
                   <li className='box_items list-group-item nav-item '>
-                    <div className={open ? 'cont_items' : 'cont_items active'}>
-                      <a className='btn btn-light iconsize' href={iter.link} >
+                    <div className={open ? 'cont_items' : 'cont_items active'} >
+                      <a className='btn btn-outline-primary iconsize' href={iter.link} >
                         <div className='columnitas'>
                           <div className='iconitos'>{iter.icon} </div>
-                        <div className='palabrita' style={{marginLeft: open ? '0.5rem' : '-2.5rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s'}}>
-                        <h6 style={{fontSize: open ? '0rem' : '1rem', transition: open ? 'fontSize 1s' : 'fontSize 1s'}} > {iter.name} </h6> 
-                        </div>
+                        {/* <div className='palabrita' style={{marginLeft: open ? '0.5rem' : '-2.5rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s'}}> */}
+                        <h6 className={open ? 'nombres' : 'nombres active'} > {iter.name} </h6> 
+                        {/* </div> */}
                         {/* className={`border {open ? 'nombreslide' : 'nombreslide active'}`} */}
                         </div>
                       </a>

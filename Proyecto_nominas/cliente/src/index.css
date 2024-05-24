@@ -7,9 +7,6 @@
 .cajaTexto{
 
     width: 15rem;
-    
-    
-    
 
 }
 .PFoto{grid-area:foto; width: 10rem; height: 10rem; border-radius: 25%; }
@@ -53,9 +50,7 @@
 
 .contenedorMenu{
 
-  display: grid;
 
-  grid-template-columns: 10% 90%;
 
 }
 
@@ -191,7 +186,8 @@
 .slidebar {
 
   float: left;
-  height: 100vh;
+  height: 300vh;
+  margin-right: 2rem;  
   /* display: flex; */
   justify-content: center;
   border-radius: 5px;
@@ -200,7 +196,7 @@
   /* margin-top: -4.375rem; */
   background-position: top;
   border-radius: 0px 15px 15px 0px;
-  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
+  box-shadow: 98px 39px 158px -41px rgba(189, 189, 189, 0.45);
 }
 
 #imagencita {
@@ -229,7 +225,7 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: black;
+  color: #15AAC4;
   opacity: 0%;
   transition: all 1s;
 }
@@ -242,9 +238,9 @@
   justify-content: center;
   margin-left: 3rem;
   margin-top: .7rem;
-  color: black;
+  color: #15AAC4;
   opacity: 100%;
-  transition: opacity 3s;
+  transition: all 1s;
 }
 
 .cont_items {
@@ -252,7 +248,7 @@
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
-  transition: all 1s;
+
 
 }
 
@@ -261,7 +257,7 @@
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
-  transition: all 1s;
+
 }
 
 .box_items {
@@ -278,17 +274,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 1s;
+  border: none;
+  color: gray;
 }
 
-.iconsize.active {
-  margin-bottom: 12px;
-  font-size: 125%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s;
-}
 
 .iconitos{
   margin-left: 1.1rem;
@@ -296,68 +285,45 @@
 .palabrita{
   display: flex;
   justify-content: start;
-  h6 { 
+}
+
+.nombres{ 
   font-family: "Poetsen One", sans-serif;
   font-weight: 100;
-  }
+  font-size: 0rem;
+  opacity: 0%;
+  margin-left: 3rem;
+  margin-top: -1.2rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  visibility: hidden;
+  transition: all 1s;
+
 }
+.nombres.active{ 
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    margin-left: 4rem;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    visibility: visible;
+}
+
 
 .columnitas{
   width: 100%;
   column-count: 2;
   column-width: 50%;
+  
 }
-
-.nombreslide {
-  font-size: 0rem;
-  transition: all 1s;
-}
-
-.nombreslide.active {
-  font-size: 0.656rem;
-  /* margin-top: 5px;
-  margin-left: 10px; */
-  transition: all 1s;
-}
-
-.boton {
-  padding: .5rem .1rem !important;
-  margin: 5px;
-  width: 100%;
-  border: none;
-  margin-bottom: 15px;
-  transition: all 1s;
-}
-
-.boton.active {
-  padding: .5rem .1rem !important;
-  margin: 5px;
-  width: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  background: none;
-  transition: all 1.5s;
-}
-
-.boton:hover {
-  background: rgba(111, 202, 255, .53333);
-  transition: background-color 0.5s;
-}
-
-.boton.active:hover {
-  background: rgba(111, 202, 255, .53333);
-  transition: background-color .5s;
-}
-
 
 #flechita {
   position: fixed;
   font-size: 25px;
-  color: #3a8ced;
+  color: #15AAC4;
   cursor: pointer;
-}
-#flechita:hover{
-    transform: rotate(180deg);
 }
