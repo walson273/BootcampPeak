@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { login_usuarios } from "../services/ServicioUsuarios";
+import { useUsuario} from '../usuarioContexto'
 
 
 export async function loader(info) {
+
+  
+  
   const usuarios = await login_usuarios(info)
   try {
     if (usuarios.response.data.error) {
@@ -13,6 +17,8 @@ export async function loader(info) {
       });
     }
   } catch (error) {
+
+   
     Swal.fire({
       position: "top",
       icon: "success",
@@ -20,6 +26,8 @@ export async function loader(info) {
       showConfirmButton: false,
       timer: 1500,
     });
+
+
     setTimeout(() => {
       location.href = "http://localhost:5173/menu";
     }, 1400);
@@ -28,6 +36,8 @@ export async function loader(info) {
 }
 
 export default function Login() {
+
+  const { login } = useUsuario()
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
   const enviar = (e) => {
@@ -35,6 +45,8 @@ export default function Login() {
     if (correo && contraseña) {
       let datos = { "correo": correo, "contrasenia": contraseña};
       loader(datos);
+      login(info)
+      console.log(info);
     } else {
       Swal.fire({
         icon: "error",
@@ -67,7 +79,7 @@ export default function Login() {
                     <div>
                       <label for="email" className="block text-sm font-medium leading-6 text-white">Correo Electronico</label>
                       <div className="mt-2">
-                        <input id="email" name="email" type="email" autocomplete="email" value={correo} onChange={(e) => setCorreo(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                        <input id="email" name="email" type="email" autoComplete="email" value={correo} onChange={(e) => setCorreo(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                       </div>
                     </div>
 
@@ -79,7 +91,7 @@ export default function Login() {
                         </div>
                       </div>
                       <div className="mt-2">
-                        <input id="password" name="password" type="password" autocomplete="current-password" value={contraseña} onChange={(e) => setContraseña(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                        <input id="password" name="password" type="password" autoComplete="current-password" value={contraseña} onChange={(e) => setContraseña(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                       </div>
                     </div>
 
