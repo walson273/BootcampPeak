@@ -8,7 +8,7 @@ export default function P_info(info){
 return( 
 <>
 
-<div>
+
     <TextField className={`cajaTexto ${info.clase}`
     }
      InputProps={{
@@ -21,7 +21,7 @@ return(
     inputProps={{style: {fontSize: 32}}} // font size of input text
   InputLabelProps={{style: {fontSize: 26}}} // font size of input label
     />
-</div>
+
 </>
 
 )

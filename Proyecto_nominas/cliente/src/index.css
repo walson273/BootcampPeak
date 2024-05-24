@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.btEnviar{
+
+
+  position: absolute;
+  top: 3rem;
+  right: -12rem;
+  width: 18rem;
+  height: 3rem;
+
+}
 
 .btModificar{
 
@@ -27,7 +37,7 @@
 
 .cajaTexto{
 
-    width: 15rem;
+    
 
     width: 16rem;
    
@@ -37,15 +47,29 @@
         border-color: aqua;
 
     }
-     .Mui-readOnly{
+     .Mui-readOnly {
 
         color: rgb(231, 17, 185);
 
      }
+
+     .MuiInputBase-formControl{
+
+
+      color: rgb(226, 22, 73);
+     }
     
 
 }
-.PFoto{grid-area:foto; width: 10rem; height: 10rem; border-radius: 25%; }
+.PFoto{
+  grid-area:foto;
+  width: 15rem;
+  height: 20rem;
+   border-radius: 25%;
+  overflow: hidden;
+  img{width: 100%;
+  height: auto;}
+}
 .Pnombre{ grid-area: nombre;}
 .Papellido{grid-area: apellido;}
 .PID{ grid-area: id;}
@@ -53,8 +77,10 @@
 .Psupervisor{grid-area:supervisor}
 .Pcargo{grid-area:cargo}
 .Psede{grid-area:sede}
+.Pnumero{grid-area: numero;}
+.Pcorreo{grid-area: correo; width: 40rem;}
 
-.perfil{
+.perfil , .modificarPerfil{
   
   position: relative;
   background-image:  linear-gradient(rgba(255, 255, 255, 0.432), rgba(211, 212, 228, 0.5)), url('/public/texturaPerfil.png');
@@ -67,7 +93,10 @@
   row-gap: 5rem;
   padding: 10rem;
   align-items: center;
-  justify-items: center;
+  justify-items: center;}
+
+
+  .perfil{
 
   display: grid;
 
@@ -78,7 +107,8 @@
  
 
   "foto nombre apellido id"
-  "equipo sede supervisor cargo";
+  "foto equipo sede supervisor"
+  "cargo numero correo correo";
   ;
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -86,11 +116,46 @@
   
 }
 
-.contenedorMenu{
+.modificarPerfil{
 
+  display: grid;
+
+  background-color: rgba(252, 252, 252, 0.774);
+
+  grid-template-areas:
+
+
+
+  "nombre apellido id"
+  "sede supervisor nada"
+  "form form form"
+  "form form form";
+  ;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 
 
 }
+
+.Mnombre{ grid-area: nombre;}
+.Mapellido{grid-area: apellido;}
+.MID{ grid-area: id;}
+.Msupervisor{grid-area:supervisor}
+.Msede{grid-area:sede}
+
+.ModForm{grid-area: form; 
+        display: grid;
+        width: 50rem;
+        height: 20rem;
+       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;}
+.Mequipo{ width: 16rem;}
+.Mcargo{ width: 16rem;}
+.Mnumero{}
+.Mcorreo{ width: 40rem;}
+
+
 
 .Bcargo{
 

@@ -27,12 +27,12 @@ export const router = createBrowserRouter(
                         <Perfil />,
 
                 },
-
-                {
-                    path: '/menu/perfil/modificar/:userID',
-                    element: <Modificar />
-
-                },
+                
+                { path: '/menu/perfil/modificar/:userID',
+                          element: <Modificar />,
+                          loader: getLoaderRegistro   
+                
+                        },
 
                 {
                     path: '/menu/buscar',
