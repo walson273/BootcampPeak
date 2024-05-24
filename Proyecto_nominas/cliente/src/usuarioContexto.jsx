@@ -5,10 +5,11 @@ import React, { createContext, useState, useContext } from 'react';
 const UsuarioContext = createContext(null);
 
 export default function UsuarioProvider ({ children }) {
+  
   const [usuario, setUsuario] = useState(null);
 
   const login = (usuarioInfo) => {
-    
+
     setUsuario(usuarioInfo);
   };
 

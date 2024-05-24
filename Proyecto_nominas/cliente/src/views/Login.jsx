@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
+
+import { useUsuario } from "../usuarioContexto";
+
 
 
 export async function loader(info) {
@@ -27,8 +30,8 @@ export async function loader(info) {
     });
 
 
-    setTimeout(() => {
-      location.href = "http://localhost:5173/menu";
+     setTimeout(() => {
+      location.href = "http://localhost:5173/menu/buscar";
     }, 1400);
   }
   return usuarios
@@ -37,26 +40,60 @@ export async function loader(info) {
 export async function user_correo(info) {
   try {
     const usuario = await userByEmail(info)
-    console.log(usuario.data.id);
-    return usuario
+   
+    
+    const texto = usuario.data.id
+    
+ 
+    
+    return texto
 
   } catch (error) {
-    console.log("El correo no existe.");
+    console.log(error);
   }
 }
 
 
 export default function Login() {
 
-  const { login } = useUsuario()
+  const { login } = useUsuario();
+ 
+  
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
-  const enviar = (e) => {
+
+   
+//   useEffect(()=>{
+
+//     const init = async () => {
+
+//             const insfo_id = await user_correo({"correo":correo})
+//             console.losg(info_id)
+//             login(info_id)      
+
+            
+
+//     };
+//         init();
+// },[login]   
+// )
+
+
+  const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
       let datos = { "correo": correo, "contrasenia": contraseña };
       loader(datos);
-      user_correo(datos);
+      const IDUser = await user_correo(datos);
+      console.log(IDUser);
+
+      login({IDUser});
+
+        
+ 
+  
+      
+
     } else {
       Swal.fire({
         icon: "error",
@@ -68,6 +105,7 @@ export default function Login() {
   }
   return (
     <>
+   
       <div className="l_cont">
         <div className="w-full h-screen flex items-start">
           <div className="relative w-1/2 h-full flex flex-col">
