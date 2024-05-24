@@ -31,7 +31,7 @@ export default function Login() {
 
                   <div>
                     <div className="flex items-center justify-between">
-                      <label for="password" className="block text-sm font-medium leading-6 text-white">Contraseñ<a href=""></a></label>
+                      <label for="password" className="block text-sm font-medium leading-6 text-white">Contraseña<a href=""></a></label>
                       <div className="text-sm">
                         <a href="#" className="font-semibold text-[#000000] hover:text-[#048EFF]">Has olvidado tu contraseña?</a>
                       </div>
