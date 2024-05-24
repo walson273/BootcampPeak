@@ -9,6 +9,7 @@ import { type_user } from "../services/ServicioUsuarios";
 export async function type_username(info) {
   const type_u = await type_user(info);
   const h = type_u.data.id_cargo;
+  console.log(h);
   return h;
 }
 
@@ -19,7 +20,7 @@ export default function menu() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const dato_r = {"id":2};
+      const dato_r = {"id":1}; //si pongo 1 debe aparecer el menu extra para el admin  se demora basrtante jajajaja
       const userRole = await type_username(dato_r); // Assuming info needs an id
       console.log(userRole)
       setH(userRole);
@@ -31,7 +32,7 @@ export default function menu() {
   return (
     <>
       <div className='contenedorMenu'>
-        <BSlide dat={h === "5" ? data.slideBar_adm : data.slideBar} />
+        <BSlide dat={h === 5 ? data.slideBar_adm : data.slideBar} />
         <Outlet />
       </div>
     </>
