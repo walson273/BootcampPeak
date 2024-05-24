@@ -203,7 +203,7 @@
 .contenedor {
 
   display: grid;
-  width: 90%;
+  width: 87%;
   grid-template-areas:
 
     "logo nombre nombre boton"
@@ -355,7 +355,7 @@
 }
 
 .cont_items.active {
-  width: 190px;
+  width: 260px;
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
@@ -365,6 +365,7 @@
 .box_items {
   margin-bottom: 5px;
   width: 8rem;
+  height: 4rem;
   position: static;
   align-items: center;
   justify-content: center;
@@ -377,6 +378,7 @@
   align-items: center;
   justify-content: center;
   border: none;
+  height: 3rem;
   color: gray;
 }
 

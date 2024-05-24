@@ -1,12 +1,18 @@
 import { Router } from "express";
-import { consultar_usuarios, crear_usuarios, eliminar_usuarios, modificar_usuarios, consultar_usuarios_id, consultar_supervisor_usuario, login_usuario } from "../handlers/usuarios.js";
+import { consultar_usuarios, crear_usuarios, eliminar_usuarios, modificar_usuarios, consultar_usuarios_id, consultar_supervisor_usuario, login_usuario, type_user, user_email } from "../handlers/usuarios.js";
 import { body, param } from "express-validator";
 import { Errores } from "../middleware/index.js";
 
 const routerUsuarios = Router()
 
-routerUsuarios.get('/', consultar_usuarios);
+routerUsuarios.get('/', consultar_usuarios); 
+
 routerUsuarios.post('/login', login_usuario);
+
+routerUsuarios.post('/user_act', type_user);
+
+routerUsuarios.post('/user_email', user_email);
+
 
 routerUsuarios.get('/:id',  param('id').isInt().withMessage('El id del usuario no existe'), Errores, consultar_usuarios_id);
 
@@ -35,3 +41,4 @@ routerUsuarios.delete('/:id',
 );
 
 export default routerUsuarios
+

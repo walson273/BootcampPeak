@@ -157,3 +157,37 @@ export const login_usuario = async (req, res) => {
         console.log('No se pudo loguear el usuario.');
     }
 }
+
+export const type_user = async (req, res) => {
+
+    try{
+        const {id} = req.body
+        const cargo = await Usuarios.findOne({where:{id}})
+        if(!cargo){
+            return res.status(222).json({error:'error_en_consulta'})
+        }
+        res.json({data: cargo})
+    }catch(error){
+    
+        console.log("aquitoy_user");
+
+    }
+
+}
+
+export const user_email = async (req, res) => {
+
+    try{
+        const {correo} = req.body
+        const usuario = await Usuarios.findOne({where:{correo}})
+        if(!usuario){
+            return res.status(404).json({error:'No se encontro usuario con ese correo.'})
+        }
+        res.json({data: usuario})
+    }catch(error){
+    
+        console.log("No se pudo encontrar un usuario.");
+
+    }
+
+}
