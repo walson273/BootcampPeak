@@ -10,7 +10,7 @@ export async function type_username(info) {
   const type_u = await type_user(info)
   const h = type_u.data.id_cargo;
   if(h == "2"){
-    document.getElementById("cosas").style.color = "red";
+    //document.getElementById("cosas").style.color = "red";
   }
   return h
 }

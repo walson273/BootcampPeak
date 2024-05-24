@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 
-import { useUsuario } from "../usuarioContexto";
+import { useUsuarioContexto } from "../usuarioContexto";
 
 
 
@@ -31,8 +31,8 @@ export async function loader(info) {
 
 
      setTimeout(() => {
-      location.href = "http://localhost:5173/menu/buscar";
-    }, 1400);
+       location.href = "http://localhost:5173/menu/buscar";
+     }, 1400);
   }
   return usuarios
 }
@@ -56,28 +56,11 @@ export async function user_correo(info) {
 
 export default function Login() {
 
-  const { login } = useUsuario();
+  const { login } = useUsuarioContexto ();
  
   
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
-
-   
-//   useEffect(()=>{
-
-//     const init = async () => {
-
-//             const insfo_id = await user_correo({"correo":correo})
-//             console.losg(info_id)
-//             login(info_id)      
-
-            
-
-//     };
-//         init();
-// },[login]   
-// )
-
 
   const enviar = async (e) => {
     e.preventDefault();

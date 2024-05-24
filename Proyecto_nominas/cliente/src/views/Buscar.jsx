@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-import { useUsuario } from "../usuarioContexto";
+import { useUsuarioContexto } from "../usuarioContexto";
 
 export async function loader() {
   const usuarios = await mostrar_usuarios()
@@ -26,9 +26,19 @@ export default function Buscar() {
   const info = useLoaderData();
   const navigate = useNavigate();
 
-  const {usuario} = useUsuario();
+  const {login} = useUsuarioContexto ();
+ 
+ 
+ const contextooo = () => {
+  
 
-  console.log(usuario)
+ 
+  console.log(login)
+  
+  login({ IDUser:"4"});
+
+
+ }
   
  const IrAPerfil = (userID) => {
 
@@ -86,6 +96,12 @@ export default function Buscar() {
     <>
       <div className="ListaEntera">
 
+      
+<Button variant="contained" className="" onClick={()=>{ contextooo()}}
+                
+                
+                >Aqui</Button>
+
         <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
           noValidate
           autoComplete="off"
@@ -102,7 +118,7 @@ export default function Buscar() {
 
           resultados?.map((usuario) => (
 
-
+            
 
             <section className='contenedor'>
 
@@ -117,6 +133,7 @@ export default function Buscar() {
                 
                 
                 >Modificar</Button>
+
 
               </>
 
