@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-
+import { useUsuario } from "../usuarioContexto";
 
 export async function loader() {
   const usuarios = await mostrar_usuarios()
@@ -26,6 +26,9 @@ export default function Buscar() {
   const info = useLoaderData();
   const navigate = useNavigate();
 
+  const {usuario} = useUsuario();
+
+  console.log(usuario)
   
  const IrAPerfil = (userID) => {
 

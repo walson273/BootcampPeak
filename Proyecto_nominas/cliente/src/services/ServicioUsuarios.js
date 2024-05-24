@@ -97,6 +97,20 @@ export async function login_usuarios(info) {
         return error;
     }
 }
+ 
+export async function userByEmail(info) {
+    try {
+        const url = `${import.meta.env.VITE_URL_POST}/usuarios/user_email`
+       
+        const { data } = await axios.post(url, info)
+        // const { data } = await axios.put(url)
+        // const { data } = await axios.delete(url)
+        return data
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
 
 
 export async function type_user(info) {

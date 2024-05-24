@@ -103,14 +103,24 @@ export const crear_usuarios = async (req, res) => {
 
 export const modificar_usuarios = async (req, res) => {
 
-    const { id } = req.params;
+    try{
 
-    const usuarios = await Usuarios.findByPk(id);
-    if (!usuarios) {
-        return res.status(404).json({ error: 'Usuario no encontrado' });
+        const { id } = req.params;
+
+        const usuarios = await Usuarios.findByPk(id);
+        if (!usuarios) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+        await usuarios.update(req.body);
+        res.json({ data: usuarios });
+
     }
-    await usuarios.update(req.body);
-    res.json({ data: usuarios });
+    catch (error){
+
+        console.log('No se pudo modificar usuario')
+    }
+
+   
 
 
 }
@@ -160,6 +170,23 @@ export const type_user = async (req, res) => {
     }catch(error){
     
         console.log("aquitoy_user");
+
+    }
+
+}
+
+export const user_email = async (req, res) => {
+
+    try{
+        const {correo} = req.body
+        const usuario = await Usuarios.findOne({where:{correo}})
+        if(!usuario){
+            return res.status(404).json({error:'No se encontro usuario con ese correo.'})
+        }
+        res.json({data: usuario})
+    }catch(error){
+    
+        console.log("No se pudo encontrar un usuario.");
 
     }
 
