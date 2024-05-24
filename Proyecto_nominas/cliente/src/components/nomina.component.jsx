@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import React, { useState, useMemo } from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+ 
 
 const Nominad = () => {
   const nominasa = useLoaderData();

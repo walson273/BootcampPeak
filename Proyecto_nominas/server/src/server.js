@@ -10,7 +10,7 @@ async function db_connection(){
     try {
         await db.authenticate();
         db.sync();
-        console.log('Coneccion exitosa a la db');
+        console.log('Conexion exitosa a la db');
     } catch (error) {
         console.log(error);
     }

@@ -8,7 +8,7 @@ import Modificar from './views/Modificar'
 import Perfil from './views/Perfil'
 
 import Menu from './views/Menu'
-import Registrar_empleado from './views/Registrar_empleado'
+import Registrar_empleado, {loader as getLoaderRegistro} from './views/Registrar_empleado'
 
 
 export const router = createBrowserRouter(
@@ -63,7 +63,8 @@ export const router = createBrowserRouter(
                 },
                 {
                     path: '/menu/registrar_empleado',
-                    element: <Registrar_empleado />             
+                    element: <Registrar_empleado />,
+                    loader: getLoaderRegistro          
                 }
             ]
             
