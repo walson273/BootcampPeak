@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Outlet } from "react-router-dom";
@@ -7,20 +7,31 @@ import { type_user } from "../services/ServicioUsuarios";
 
 
 export async function type_username(info) {
-  const type_u = await type_user(info)
+  const type_u = await type_user(info);
   const h = type_u.data.id_cargo;
-  if(h == "2"){
-    document.getElementById("cosas").style.color = "red";
-  }
-  return h
+  return h;
 }
 
 
+
 export default function menu() {
+  const [h, setH] = useState(null); // Initialize h with null for safety
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const dato_r = {"id":2};
+      const userRole = await type_username(dato_r); // Assuming info needs an id
+      console.log(userRole)
+      setH(userRole);
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures data is fetched only once
+
   return (
     <>
       <div className='contenedorMenu'>
-        <BSlide id="cosas" dat={data.slideBar} />
+        <BSlide dat={h === "5" ? data.slideBar_adm : data.slideBar} />
         <Outlet />
       </div>
     </>
@@ -29,8 +40,6 @@ export default function menu() {
 
 const BSlide = (prop) => {
   const [open, setOpen] = useState(true);
-  const dat_u = {"id" : 6};
-  const algo = type_username(dat_u);
 
   return (
     <React.Fragment>
@@ -46,7 +55,7 @@ const BSlide = (prop) => {
               <h3 className={open ? 'letrita' : 'letrita active'} >TELEPERFUMES</h3>
             </div>
 
-          </div>
+          </div>  
           <div className='row-9 mt-3'>
             <nav>
               <ul >
