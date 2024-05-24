@@ -4,11 +4,42 @@
 @tailwind utilities;
 
 
+.btModificar{
+
+  position: absolute;
+  top: 3rem;
+  right: -32rem;
+  width: 18rem;
+  height: 3rem;
+  
+
+}
+.btVolBus{
+
+  position: absolute;
+  top: 3rem;
+  right: -74rem;
+  width: 18rem;
+  height: 3rem;
+
+
+}
+
 .cajaTexto{
 
-    width: 15rem;
-    
-    
+    width: 16rem;
+   
+    .MuiInputLabel-outlined{
+
+        color: rgb(0, 0, 0);
+        border-color: aqua;
+
+    }
+     .Mui-readOnly{
+
+        color: rgb(231, 17, 185);
+
+     }
     
 
 }
@@ -22,14 +53,16 @@
 .Psede{grid-area:sede}
 
 .perfil{
-
+  
+  position: relative;
+  background-image:  linear-gradient(rgba(255, 255, 255, 0.432), rgba(211, 212, 228, 0.5)), url('/public/texturaPerfil.png');
   width: 100rem;
   margin: 5rem 2rem;
   border-style: solid;
-  border-color: aqua;
+  border-color: rgb(75, 85, 85);
   border-width: 0.2rem;
   border-radius: 6rem;
-  row-gap: 2rem;
+  row-gap: 5rem;
   padding: 10rem;
   align-items: center;
   justify-items: center;

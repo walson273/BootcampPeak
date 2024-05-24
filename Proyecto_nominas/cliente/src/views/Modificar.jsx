@@ -1,52 +1,28 @@
 import React, {useState, useEffect} from "react"
 import { useParams, useNavigate } from "react-router-dom";
-
+import P_info from "../components/P_info";
 import { mostrar_usuarios_id, mostrar_supervisor_usuario } from "../services/ServicioUsuarios";
-import P_info from '../components/P_info'
 import { Button } from "@mui/material";
 
-
-
-
-//export async function loaderPatch(info) {
-//    const usuarios = await modificar_usuarios(info)
-
-    //return usuarios}
-
-export async function loaderID(id) {
-    
-    const usuarios = await mostrar_usuarios_id(id)
-     
+export async function loaderID(id) {    
+    const usuarios = await mostrar_usuarios_id(id)     
     return usuarios
   }
   
-
-  
-export async function loaderSupervisor(id) {
-    
+ 
+export async function loaderSupervisor(id) {    
     const usuarios = await mostrar_supervisor_usuario(id)
-   
-  
     return usuarios
   }
-  
-export default  function Perfil() {
 
-    //const userID = useUserIDContext();
+
+
+export default  function Modificar() {
 
     const { userID } = useParams();
-
-
-    //console.log(useLoaderData());
-
-    //const info = useLoaderData()
-
-   
     const [info, setInfo] = useState(null);
-
     const [supervisor, setSuper] = useState(null);
-
-    
+   
     useEffect(()=>{
 
         const init = async () => {
@@ -64,16 +40,6 @@ export default  function Perfil() {
             init();
     },[]   
     )
-    
-   
-  
-    console.log(supervisor);
-    console.log(info);
-  
-    
-    console.log(userID);
-    //const info2 = loaderID(userID).then(function(result){return result});
-    
 
     if(info){
 
@@ -110,7 +76,7 @@ const TablaBuscar = ({info , supervisor}) =>
 
         const Modificar = (userID) => {
 
-            navigate(`/menu/perfil/modificar/${userID}`)
+            navigate(`/menu/perfil/${userID}`)
         }
 
             return(
@@ -126,9 +92,9 @@ const TablaBuscar = ({info , supervisor}) =>
             <div>
 
             <Button variant="contained"  className="btVolBus" onClick={()=>{Buscar()}}> Volver a buscar</Button>
-            <Button variant="contained" color="success" className="btModificar" onClick={()=>{Modificar(info.data?.id)}}> Modificar Perfil</Button>
+            <Button variant="contained" color="success" className="btModificar" onClick={()=>{Modificar(info.data?.id)}}> Volver a perfil</Button>
              
-              <section className="perfil">
+              <section className="perfil Mmodificar">
             
             <div>
             <img className='PFoto'  src= {'/public/avatar_'+ info.data.logo +'.png'} alt='logo' />

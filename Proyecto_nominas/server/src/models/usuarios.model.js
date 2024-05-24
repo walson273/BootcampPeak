@@ -28,11 +28,13 @@ const Usuarios = db.define(
             type: DataTypes.STRING
         },
         tiempo_meses: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            default: 5
         },
         logo: {
 
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: '1'
 
         },    
         //FOREIGNNNNNN
