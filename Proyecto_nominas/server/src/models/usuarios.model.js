@@ -29,7 +29,7 @@ const Usuarios = db.define(
         },
         tiempo_meses: {
             type: DataTypes.INTEGER,
-            default: 5
+            defaultValue: 5
         },
         logo: {
 
