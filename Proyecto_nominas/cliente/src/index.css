@@ -327,3 +327,18 @@
   color: #15AAC4;
   cursor: pointer;
 }
+
+
+/* Login css */
+.l_colum{
+  columns: 2;
+}
+
+
+.l_cont{
+  background-image: url("../public/bg-login.png");
+  background-size: cover;  
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
