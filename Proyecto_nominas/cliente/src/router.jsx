@@ -4,7 +4,9 @@ import Layout from './layouts/Layout'
 import Login from './views/Login'
 import React from 'react';
 import Buscar, {loader as getLoader2} from './views/Buscar'
-import Perfil, {loaderID as getLoaderID} from './views/Perfil'
+import Modificar from './views/Modificar'
+import Perfil from './views/Perfil'
+
 import Menu from './views/Menu'
 import Registrar_empleado, {loader as getLoaderRegistro} from './views/Registrar_empleado'
 
@@ -33,13 +35,14 @@ export const router = createBrowserRouter(
                     path: '/menu/perfil/:userID',
                     element: 
                               
-                                    <Perfil  />
-                              
-                              
-                     ,
-                    
+                                    <Perfil  />,                   
 
                 },
+                
+                { path: '/menu/perfil/modificar/:userID',
+                          element: <Modificar />
+                
+                        },
 
                 {
                     path: '/menu/buscar',

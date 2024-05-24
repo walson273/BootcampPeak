@@ -36,6 +36,33 @@ export const consultar_usuarios_id = async (req, res) => {
      
     });
 
+
+    if(!usuarios){
+        return res.status(404).json({error:'Usuario no encontrado'});
+    }
+
+    res.json({ data: usuarios});
+
+
+}
+
+export const consultar_supervisor_usuario = async (req, res) => {
+
+    const {id} = req.params;
+
+    const usuarios = await Usuarios.findOne(
+        {where: {id_equipo: id,
+                    id_cargo: '5'  },
+        include:[Cargos, Equipos],
+        attributes: {
+            exclude: [
+                'createdAt', 'updatedAt','contrasenia'
+            ]
+        }
+    
+    
+    });
+
     if(!usuarios){
         return res.status(404).json({error:'Usuario no encontrado'});
     }
