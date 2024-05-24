@@ -37,7 +37,7 @@
 
   grid-template-areas:
 
-
+ 
 
   "foto nombre apellido id"
   "equipo sede supervisor cargo";
@@ -132,7 +132,6 @@
   width: 8rem;
 
 }
-
 .ListaEntera {
 
   background-color: #eef1f3;
