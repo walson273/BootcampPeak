@@ -1,7 +1,8 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
+import { useNavigate } from "react-router-dom";
 
-import { useUsuario } from "../usuarioContexto";
+
 
 
 
@@ -20,7 +21,7 @@ export async function loader(info) {
     }
   } catch (error) {
 
-   
+   console.log(usuarios.data);
     Swal.fire({
       position: "top",
       icon: "success",
@@ -30,10 +31,12 @@ export async function loader(info) {
     });
 
 
-     setTimeout(() => {
-      location.href = "http://localhost:5173/menu/buscar";
-    }, 1400);
+    //  setTimeout(() => {
+    //   location.href= "http://localhost:5173/menu/buscar";
+    //  }, 1400);
   }
+
+
   return usuarios
 }
 
@@ -56,38 +59,28 @@ export async function user_correo(info) {
 
 export default function Login() {
 
-  const { login } = useUsuario();
- 
   
+  const navigate = useNavigate();
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
-
-   
-//   useEffect(()=>{
-
-//     const init = async () => {
-
-//             const insfo_id = await user_correo({"correo":correo})
-//             console.losg(info_id)
-//             login(info_id)      
-
-            
-
-//     };
-//         init();
-// },[login]   
-// )
-
+  
 
   const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
       let datos = { "correo": correo, "contrasenia": contraseña };
-      loader(datos);
-      const IDUser = await user_correo(datos);
-      console.log(IDUser);
+      
+      const respuesta = await loader(datos);
 
-      login({IDUser});
+      if(respuesta){
+        localStorage.setItem('IDEquipo', respuesta.equipos)
+        localStorage.setItem('IDUsuario',respuesta.usuario)
+        console.log(respuesta)   
+        navigate(`/menu`)
+      }
+     
+     
+    
 
         
  

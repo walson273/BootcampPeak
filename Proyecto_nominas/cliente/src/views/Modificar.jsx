@@ -3,7 +3,7 @@ import { useParams, useNavigate, useLoaderData } from "react-router-dom";
 import P_info from "../components/P_info";
 import { mostrar_usuarios_id, mostrar_supervisor_usuario, modificar_usuarios_id } from "../services/ServicioUsuarios";
 import { Button, TextField, Select, MenuItem, InputLabel, FormControl } from "@mui/material";
-
+import { useUsuarioContexto } from "../usuarioContexto";
 
 export async function loaderID(id) {    
     const usuarios = await mostrar_usuarios_id(id)     
@@ -30,7 +30,12 @@ export default  function Modificar() {
     const { userID } = useParams();
     const [info, setInfo] = useState(null);
     const [supervisor, setSuper] = useState(null);
+
     
+  const {login} = useUsuarioContexto ();
+    
+  console.log(login);
+  
     useEffect(()=>{
 
         const init = async () => {

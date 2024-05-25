@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-import { useUsuario } from "../usuarioContexto";
+
 
 export async function loader() {
   const usuarios = await mostrar_usuarios()
@@ -23,13 +23,10 @@ export async function loader() {
 
 export default function Buscar() {
 
-  const info = useLoaderData();
-  const navigate = useNavigate();
-
-  const {usuario} = useUsuario();
-
-  console.log(usuario)
   
+  const navigate = useNavigate();
+ 
+  const info = useLoaderData();
  const IrAPerfil = (userID) => {
 
 
@@ -37,23 +34,32 @@ export default function Buscar() {
 
 }
 
+const [USERID, setUSERID] = useState('')
 
+ useEffect (()=>{
 
-  const usuarios = info.data?.filter(function (dato) { return dato.id_equipo == '1'; });
+    const equipoID = localStorage.getItem('IDEquipo')
+    const usuarioID = localStorage.getItem('IDUsuario')
 
+    console.log(usuarioID);
+    console.log(equipoID);
+    
+    if(equipoID){
+    setUSERID({equipoID})
+    }
+    
 
+ },[])
 
+ 
 
-  const [users, setUsers] = useState([usuarios]);
-  const [busqueda, setSearch] = useState("");
+ const usuarios = info.data?.filter(function (dato){  
+  return dato.id_equipo == USERID.equipoID;
+ })
 
-  //console.log(users);
+ console.log(usuarios);
 
-  const informacion = async () => {
-
-    setUsers(usuarios);
-
-  }
+   const [busqueda, setSearch] = useState("");
 
   const buscador = (evento) => {
 
@@ -61,23 +67,13 @@ export default function Buscar() {
 
   }
 
-  async function perfil(info) {
-
-    const perfiles = await mostrar_usuarios_id(info);
-    console.log(info);
-    console.log(perfiles);
 
 
-  }
+  const resultados = !busqueda ? usuarios : usuarios?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-  const resultados = !busqueda ? users : users?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
-
-
+  console.log(resultados);
 
 
-  useEffect(() => {
-    informacion()
-  }, [])
 
 
 
@@ -85,6 +81,8 @@ export default function Buscar() {
 
     <>
       <div className="ListaEntera">
+
+      
 
         <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
           noValidate
@@ -102,7 +100,7 @@ export default function Buscar() {
 
           resultados?.map((usuario) => (
 
-
+            
 
             <section className='contenedor'>
 
@@ -117,6 +115,7 @@ export default function Buscar() {
                 
                 
                 >Modificar</Button>
+
 
               </>
 

@@ -3,8 +3,11 @@ import { MdOutlinePayments } from "react-icons/md";
 import { LiaReadme } from "react-icons/lia";
 import { GiPlagueDoctorProfile } from "react-icons/gi";
 
+
+
+
 export const slideBar = [
-  {'name' : 'Perfil', 'icon' : <GiPlagueDoctorProfile />, 'link' : 'http://localhost:5173/menu/perfil/14'},
+  {'name' : 'Perfil', 'icon' : <GiPlagueDoctorProfile />, 'link' : `http://localhost:5173/menu/perfil/`},
   {'name' : 'Nomina', 'icon' : <MdOutlinePayments />, 'link' : 'http://localhost:5173/menu/ver_nominas'},
 ];
 

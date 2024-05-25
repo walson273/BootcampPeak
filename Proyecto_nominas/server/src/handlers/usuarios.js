@@ -3,6 +3,8 @@ import Equipos from "../models/equipos.model.js";
 import Usuarios from "../models/usuarios.model.js"
 import { comparar, encriptar } from "./encriptadores.js";
 
+import jwt from 'jsonwebtoken'
+
 export const consultar_usuarios = async (req, res) => {
     const usuario = await Usuarios.findAll({
         order: [
@@ -151,9 +153,16 @@ export const login_usuario = async (req, res) => {
         if (!compar) {
             return res.status(411).json({ error: 'Contraseña incorrecta' });
         }
-        res.json({ data: 'Bienvenido' })
 
-    } catch (error) {
+        console.log(usuario.id);
+        
+  
+        res.json({ usuario: `${usuario.id}`, equipos: `${usuario.id_equipo}` })
+
+        
+
+    } catch (error) 
+    {   console.log(error)
         console.log('No se pudo loguear el usuario.');
     }
 }
