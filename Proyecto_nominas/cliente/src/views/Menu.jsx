@@ -73,7 +73,7 @@ const BSlide = (prop) => {
                 {prop.dat.map((iter) => (
                   <li className='box_items list-group-item nav-item '>
                     <div className={open ? 'cont_items' : 'cont_items active'} >
-                      <Link className='btn btn-outline-primary iconsize ' to={`${iter.link}/${prop.id}`} >
+                      <Link className='btn btn-outline-primary iconsize ' to={`${iter.link}`} >
                         <div className='columnitas'>
                           <div className='iconitos'>{iter.icon} </div>
                           {/* <div className='palabrita' style={{marginLeft: open ? '0.5rem' : '-2.5rem', transition: open ? 'marginLeft 1s' : 'marginLeft 1s'}}> */}
