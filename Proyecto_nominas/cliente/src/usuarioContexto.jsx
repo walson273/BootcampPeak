@@ -21,7 +21,7 @@ export default function UsuarioProvider ({ children }) {
     
   };
 
-  useEffect(()=>{console.log(usuarioActual)},[usuarioActual]);
+
 
   const logout = () => {
     setUsuario(null);

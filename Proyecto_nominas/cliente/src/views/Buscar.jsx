@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-import { useUsuarioContexto } from "../usuarioContexto";
+
 
 export async function loader() {
   const usuarios = await mostrar_usuarios()
@@ -23,23 +23,10 @@ export async function loader() {
 
 export default function Buscar() {
 
-  const info = useLoaderData();
+  
   const navigate = useNavigate();
-
-  const {login} = useUsuarioContexto ();
  
- 
- const contextooo = () => {
-  
-
- 
-  console.log(login)
-  
-  login({ IDUser:"4"});
-
-
- }
-  
+  const info = useLoaderData();
  const IrAPerfil = (userID) => {
 
 
@@ -47,23 +34,27 @@ export default function Buscar() {
 
 }
 
+const [USERID, setUSERID] = useState('')
 
+ useEffect (()=>{
 
-  const usuarios = info.data?.filter(function (dato) { return dato.id_equipo == '1'; });
+    const equipoID = localStorage.getItem('ID')
+    if(equipoID){
+    setUSERID({equipoID})
+    }
+    
 
+ },[])
 
+ console.log(USERID.equipoID);
 
+ const usuarios = info.data?.filter(function (dato){  
+  return dato.id_equipo == USERID.equipoID;
+ })
 
-  const [users, setUsers] = useState([usuarios]);
-  const [busqueda, setSearch] = useState("");
+ console.log(usuarios);
 
-  //console.log(users);
-
-  const informacion = async () => {
-
-    setUsers(usuarios);
-
-  }
+   const [busqueda, setSearch] = useState("");
 
   const buscador = (evento) => {
 
@@ -71,23 +62,13 @@ export default function Buscar() {
 
   }
 
-  async function perfil(info) {
-
-    const perfiles = await mostrar_usuarios_id(info);
-    console.log(info);
-    console.log(perfiles);
 
 
-  }
+  const resultados = !busqueda ? usuarios : usuarios?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-  const resultados = !busqueda ? users : users?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
-
-
+  console.log(resultados);
 
 
-  useEffect(() => {
-    informacion()
-  }, [])
 
 
 
@@ -97,10 +78,6 @@ export default function Buscar() {
       <div className="ListaEntera">
 
       
-<Button variant="contained" className="" onClick={()=>{ contextooo()}}
-                
-                
-                >Aqui</Button>
 
         <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
           noValidate
