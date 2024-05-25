@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 import { useNavigate } from "react-router-dom";
 
@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 export async function loader(info) {
 
-  
-  
+
+
   const usuarios = await login_usuarios(info)
   try {
     if (usuarios.response.data.error) {
@@ -21,19 +21,17 @@ export async function loader(info) {
     }
   } catch (error) {
 
-   console.log(usuarios.data);
+    console.log(usuarios.data);
     Swal.fire({
-      position: "top",
       icon: "success",
-      title: "Bienvenido",
-      showConfirmButton: false,
-      timer: 1500,
+      title: `Bienvenido`,
+      showConfirmButton: false
     });
 
 
-    //  setTimeout(() => {
-    //   location.href= "http://localhost:5173/menu/buscar";
-    //  }, 1400);
+    setTimeout(() => {
+      location.href = "http://localhost:5173/menu";
+    }, 1400);
   }
 
 
@@ -43,12 +41,12 @@ export async function loader(info) {
 export async function user_correo(info) {
   try {
     const usuario = await userByEmail(info)
-   
-    
+
+
     const texto = usuario.data.id
-    
- 
-    
+
+
+
     return texto
 
   } catch (error) {
@@ -59,33 +57,32 @@ export async function user_correo(info) {
 
 export default function Login() {
 
-  
+
   const navigate = useNavigate();
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
-  
+
 
   const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
       let datos = { "correo": correo, "contrasenia": contraseña };
-      
+
       const respuesta = await loader(datos);
 
-      if(respuesta){
+      if (respuesta) {
         localStorage.setItem('IDEquipo', respuesta.equipos)
-        localStorage.setItem('IDUsuario',respuesta.usuario)
-        console.log(respuesta)   
-        navigate(`/menu`)
+        localStorage.setItem('IDUsuario', respuesta.usuario)
+        console.log(respuesta)
       }
-     
-     
-    
 
-        
- 
-  
-      
+
+
+
+
+
+
+
 
     } else {
       Swal.fire({
@@ -98,7 +95,7 @@ export default function Login() {
   }
   return (
     <>
-   
+
       <div className="l_cont">
         <div className="w-full h-screen flex items-start">
           <div className="relative w-1/2 h-full flex flex-col">
