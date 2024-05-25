@@ -4,6 +4,7 @@ import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link, Outlet } from "react-router-dom";
 import { type_user } from "../services/ServicioUsuarios";
+import { CiLogout } from "react-icons/ci";
 
 
 export async function type_username(info) {
@@ -46,9 +47,9 @@ const BSlide = (prop) => {
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
         <IoIosArrowDroprightCircle id='flechita' className={`${!open && "rotate-180"}`} style={{ margin: open ? '0.9rem 4.5rem' : '0.9rem 16.3rem', transition: open ? 'margin 1s' : 'margin 1s' }} onClick={() => setOpen(!open)} />
-        <div className='col'>
+        <div className='col '>
           <img src="/Imagen_1.png" id='tele' alt="Logo" />
-          <div className='row-3 ' style={{ height: "4rem", borderBottom: "0.5px solid #E7E7E7" }}>
+          <div className='row-3  ' style={{ height: "4rem", borderBottom: "0.5px solid #E7E7E7" }}>
             {/* <div className="row d-flex justify-content-center align-items-center"> */}
 
             <div className='d-flex justify-content-center align-items-center ' id='imagencita' >
@@ -57,7 +58,7 @@ const BSlide = (prop) => {
             </div>
 
           </div>  
-          <div className='row-9 mt-3'>
+          <div className='row-6 mt-3 '>
             <nav>
               <ul >
                 {prop.dat.map((iter) => (
@@ -77,6 +78,17 @@ const BSlide = (prop) => {
                 ))}
               </ul>
             </nav>
+          </div>
+          <div className='row-2 ' style={{marginTop: "35rem"}}>
+            <div className={open ? 'cont_items' : 'cont_items active'} >
+                <Link  className='btn btn-outline-primary iconsize ' href="http://localhost:5173/login">
+                <div className='columnitas'>
+                <div className='iconitos'><CiLogout /></div>
+                <h6 className={open ? 'nombres' : 'nombres active'} >Cerrar sesión</h6>
+                </div>
+                </Link>
+            </div>
+
           </div>
         </div>
       </div>
