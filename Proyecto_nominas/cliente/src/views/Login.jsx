@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 import { useNavigate } from "react-router-dom";
-
+import { CgProfile } from "react-icons/cg";
 
 
 
@@ -108,7 +108,7 @@ export default function Login() {
             <div className="bg-black rounded-lg bg-opacity-25">
               <div className="flex w-[32rem] h-[40rem] flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                  <img className="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Your Company" />
+                  <CgProfile className="mx-auto h-14 w-auto text-white" /> 
                   <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Iniciar sesión en su cuenta</h2>
                 </div>
 
