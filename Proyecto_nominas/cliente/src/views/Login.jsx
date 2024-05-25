@@ -37,7 +37,7 @@ export async function loader(info) {
   }
 
 
-  return usuarios.equipos
+  return usuarios
 }
 
 export async function user_correo(info) {
@@ -73,9 +73,10 @@ export default function Login() {
       const respuesta = await loader(datos);
 
       if(respuesta){
-        localStorage.setItem('ID', respuesta)
+        localStorage.setItem('IDEquipo', respuesta.equipos)
+        localStorage.setItem('IDUsuario',respuesta.usuario)
         console.log(respuesta)   
-        navigate(`/menu/buscar`)
+        navigate(`/menu`)
       }
      
      

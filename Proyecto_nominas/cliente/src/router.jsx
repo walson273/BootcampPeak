@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Nominass, { loader as getLoader } from './views/Nominas'
 
-import Login, {user_correo as getLoaderLogin} from './views/Login'
+import Login from './views/Login'
 import React from 'react';
 import Buscar, { loader as getLoader2 } from './views/Buscar'
 import Modificar from './views/Modificar'

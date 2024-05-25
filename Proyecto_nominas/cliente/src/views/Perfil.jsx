@@ -7,12 +7,6 @@ import { Button } from "@mui/material";
 
 
 
-
-//export async function loaderPatch(info) {
-//    const usuarios = await modificar_usuarios(info)
-
-    //return usuarios}
-
 export async function loaderID(id) {
     
     const usuarios = await mostrar_usuarios_id(id)
@@ -32,18 +26,9 @@ export async function loaderSupervisor(id) {
   
 export default  function Perfil() {
 
-    //const userID = useUserIDContext();
 
     const { userID } = useParams();
-
-
-    //console.log(useLoaderData());
-
-    //const info = useLoaderData()
-
-   
     const [info, setInfo] = useState(null);
-
     const [supervisor, setSuper] = useState(null);
 
     

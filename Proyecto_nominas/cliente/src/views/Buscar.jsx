@@ -38,7 +38,12 @@ const [USERID, setUSERID] = useState('')
 
  useEffect (()=>{
 
-    const equipoID = localStorage.getItem('ID')
+    const equipoID = localStorage.getItem('IDEquipo')
+    const usuarioID = localStorage.getItem('IDUsuario')
+
+    console.log(usuarioID);
+    console.log(equipoID);
+    
     if(equipoID){
     setUSERID({equipoID})
     }
@@ -46,7 +51,7 @@ const [USERID, setUSERID] = useState('')
 
  },[])
 
- console.log(USERID.equipoID);
+ 
 
  const usuarios = info.data?.filter(function (dato){  
   return dato.id_equipo == USERID.equipoID;

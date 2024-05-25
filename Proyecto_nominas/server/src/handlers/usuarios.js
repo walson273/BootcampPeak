@@ -156,9 +156,8 @@ export const login_usuario = async (req, res) => {
 
         console.log(usuario.id);
         
-        const token = jwt.sign({id: usuario.id, id_equipo: usuario.id_equipo},'secretKey')
-
-        res.json({ token, equipos: `${usuario.id_equipo}` })
+  
+        res.json({ usuario: `${usuario.id}`, equipos: `${usuario.id_equipo}` })
 
         
 
