@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { consultar_todo, crear_nuevo, eliminar_nomina } from "../handlers/nomina.js";
+import { consultar_todo, crear_nuevo, eliminar_nomina, nomina_user } from "../handlers/nomina.js";
 import { body, param } from "express-validator";
 import { Errores } from "../middleware/index.js";
 
@@ -7,6 +7,7 @@ import { Errores } from "../middleware/index.js";
 const routerNominas = Router();
 
 routerNominas.get('/', consultar_todo);
+routerNominas.post('/', nomina_user);
 
 routerNominas.post('/',
     body('dias_trabajados').notEmpty().withMessage('El nombre del empleado es obligatorio'),

@@ -5,6 +5,12 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import React, { useState, useMemo } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+export async function nomina_user(info) {
+  const nominass = await getNominas(info);
+  console.log(nominass);
+  console.log(h);
+  return h;
+}
 
 const Nominad = () => {
   const nominasa = useLoaderData();

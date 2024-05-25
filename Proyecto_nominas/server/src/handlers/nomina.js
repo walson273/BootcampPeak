@@ -8,7 +8,7 @@ export const consultar_todo = async (req, res) => {
                 'id', 'asc'
             ]
         ],
-        include:[Usuarios],
+        include:[Usuarios], 
         attributes: {
             exclude: [
                 'createdAt', 'updatedAt'
@@ -32,4 +32,21 @@ export const eliminar_nomina = async (req, res) => {
     }
     await nominas.destroy();
     res.json({data:'Nomina eliminada'});
+}
+
+export const nomina_user = async (req, res) => {
+
+    try{
+        const {id} = req.body
+        const nominas = await Nomina.findOne({where:{id}})
+        if(!nominas){
+            return res.status(404).json({error:'No hay nominas con ese usuario'})
+        }
+        res.json({data: nominas})
+    }catch(error){
+    
+        console.log("No fue posible consultar la nomina");
+
+    }
+
 }
