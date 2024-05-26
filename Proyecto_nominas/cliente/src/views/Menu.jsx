@@ -6,6 +6,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { type_user } from "../services/ServicioUsuarios";
 import { CiLogout } from "react-icons/ci";
 import { Button } from '@mui/material';
+import ACCESO_DENEGADO from '../components/ACCESO_DENEGADO.jsx';
 
 
 export async function type_username(info) {
@@ -19,15 +20,14 @@ export async function type_username(info) {
 
 export default function menu() {
 
-  
-  const [h, setH] = useState(null); // Initialize h with null for safety
-
+ 
   const usuarioID = localStorage.getItem('IDUsuario') 
 
+  const [h, setH] = useState(null); // Initialize h with null for safety
+
+ 
+
   useEffect(() => {
-
-   
-
     const fetchData = async () => {
       const dato_r = {"id": usuarioID}; //si pongo 1 debe aparecer el menu extra para el admin  se demora basrtante jajajaja
       const userRole = await type_username(dato_r); // Assuming info needs an id
@@ -37,7 +37,8 @@ export default function menu() {
 
     fetchData();
   }, []); // Empty dependency array ensures data is fetched only once
-
+  
+  if(usuarioID){  
   return (
     <>
       <div className='contenedorMenu'>
@@ -46,6 +47,21 @@ export default function menu() {
       </div>
     </>
   );
+    }
+else{
+
+  console.log('alto ahi loca');
+  return(
+
+      <>
+      {
+          <ACCESO_DENEGADO ></ACCESO_DENEGADO>
+       }
+      </>
+ 
+
+  )
+  }
 }
 
 const BSlide = (prop) => {
@@ -65,6 +81,7 @@ const BSlide = (prop) => {
   console.log(prop);
   const [open, setOpen] = useState(true);
 
+  
   return (
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
@@ -115,5 +132,10 @@ const BSlide = (prop) => {
         </div>
       </div>
     </React.Fragment>
-  );
+     );
+ 
+        
+       
+      
+ 
 }

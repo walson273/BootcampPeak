@@ -5,11 +5,13 @@ import B_nombre from '../components/B_nombre.component'
 import B_foto from '../components/B_foto.component'
 import B_cargo from '../components/B_cargo.component'
 import B_cedula from "../components/B_cedula.component";
+import ACCESO_DENEGADO from "../components/ACCESO_DENEGADO";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+
 
 
 export async function loader() {
@@ -74,61 +76,66 @@ const [USERID, setUSERID] = useState('')
   console.log(resultados);
 
 
+  
+
+    return (
+
+      <>
+        <div className="ListaEntera">
+  
+        
+  
+          <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
+            <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/menu/registrar_empleado">
+              <AddIcon />
+            </Fab>
+          </Box>
+  
+  
+  
+          {
+  
+            resultados?.map((usuario) => (
+  
+              
+  
+              <section className='contenedor'>
+  
+                <>
+  
+                  <B_foto foto={usuario.logo} />
+                  <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
+                  <B_cargo cargo={usuario.cargo?.nombre_puesto} />
+                  <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
+                  
+                  <Button variant="contained" className="Bboton" onClick={()=>{ IrAPerfil(usuario.id) }}
+                  
+                  
+                  >Modificar</Button>
+  
+  
+                </>
+  
+              </section>
+  
+  
+            ))
+          }
+        </div>
+      </>
+  
+  
+    )
+
+  
 
 
 
-  return (
 
-    <>
-      <div className="ListaEntera">
-
-      
-
-        <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-          <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/menu/registrar_empleado">
-            <AddIcon />
-          </Fab>
-        </Box>
-
-
-
-        {
-
-          resultados?.map((usuario) => (
-
-            
-
-            <section className='contenedor'>
-
-              <>
-
-                <B_foto foto={usuario.logo} />
-                <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
-                <B_cargo cargo={usuario.cargo?.nombre_puesto} />
-                <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
-                
-                <Button variant="contained" className="Bboton" onClick={()=>{ IrAPerfil(usuario.id) }}
-                
-                
-                >Modificar</Button>
-
-
-              </>
-
-            </section>
-
-
-          ))
-        }
-      </div>
-    </>
-
-
-  )
 
 
 }
