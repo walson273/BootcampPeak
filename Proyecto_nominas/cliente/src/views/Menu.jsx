@@ -21,7 +21,8 @@ export async function type_username(info) {
 export default function menu() {
 
  
-  const usuarioID = localStorage.getItem('IDUsuario') 
+  const usuarioID = localStorage.getItem('IDUsuario')
+  
 
   const [h, setH] = useState(null); // Initialize h with null for safety
 

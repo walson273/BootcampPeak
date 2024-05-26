@@ -157,7 +157,7 @@ export const login_usuario = async (req, res) => {
         console.log(usuario.id);
         
   
-        res.json({ usuario: `${usuario.id}`, equipos: `${usuario.id_equipo}` })
+        res.json({ usuario: `${usuario.id}`, equipos: `${usuario.id_equipo}`, cargo: `${usuario.id_cargo}` })
 
         
 

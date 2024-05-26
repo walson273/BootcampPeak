@@ -73,6 +73,7 @@ export default function Login() {
       if (respuesta) {
         localStorage.setItem('IDEquipo', respuesta.equipos)
         localStorage.setItem('IDUsuario', respuesta.usuario)
+        localStorage.setItem('CargoUsuario', respuesta.cargo)
         console.log(respuesta)
       }
     } else {

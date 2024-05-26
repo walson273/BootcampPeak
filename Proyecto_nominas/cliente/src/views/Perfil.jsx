@@ -4,6 +4,7 @@ import { type_user } from "../services/ServicioUsuarios";
 import { mostrar_usuarios_id, mostrar_supervisor_usuario } from "../services/ServicioUsuarios";
 import P_info from '../components/P_info'
 import { Button } from "@mui/material";
+import ACCESO_DENEGADO from "../components/ACCESO_DENEGADO";
 
 
 
@@ -36,7 +37,10 @@ export async function type_username(info) {
 export default  function Perfil() {
 
     
-  const usuarioID = localStorage.getItem('IDUsuario') 
+  
+  const cargoIDUsuario = localStorage.getItem('CargoUsuario') 
+  const USERACTUAL = localStorage.getItem('IDUsuario')
+
     const { userID } = useParams();
     const [info, setInfo] = useState(null);
     const [supervisor, setSuper] = useState(null);
@@ -61,32 +65,12 @@ export default  function Perfil() {
     )
 
     
-  const [h, setH] = useState(null); // Initialize h with null for safety
-
- 
-
-  useEffect(() => {
-
-   
-
-    const fetchData = async () => {
-      const dato_r = {"id": usuarioID}; 
-      const userRole = await type_username(dato_r); // Assuming info needs an id
-     // console.log(userRole)
-      setH(userRole);
-    };
-
-    fetchData();
-  }, []); // Empty dependency array ensures data is fetched only once
-  
-    
-
-    if(info){
+    if(info && userID == USERACTUAL){
 
         return( 
         <>
                 
-                <TablaBuscar info = {info} supervisor = {supervisor} h={h}/>
+                <TablaBuscar info = {info} supervisor = {supervisor} cargoIDUsuario={cargoIDUsuario}/>
         </>
         )
         
@@ -102,10 +86,10 @@ export default  function Perfil() {
 }
 
 
-const TablaBuscar = ({info , supervisor, h}) =>
+const TablaBuscar = ({info , supervisor, cargoIDUsuario}) =>
     
     {
-       
+       console.log(cargoIDUsuario);
 
         const navigate = useNavigate();
 
@@ -119,10 +103,11 @@ const TablaBuscar = ({info , supervisor, h}) =>
 
             navigate(`/menu/perfil/modificar/${userID}`)
         }
-
+        
+      
             return(
         <>
-                       
+                      
               
               {           
                 
@@ -133,7 +118,7 @@ const TablaBuscar = ({info , supervisor, h}) =>
             <div>
             
                
-               { h === 5 &&  <Button variant="contained" color="success" className="btModificar" onClick={()=>{Modificar(info.data?.id)}}> Modificar Perfil</Button>
+               { cargoIDUsuario == 5 &&  <Button variant="contained" color="success" className="btModificar" onClick={()=>{Modificar(info.data?.id)}}> Modificar Perfil</Button>
                 }
                  
                          
@@ -164,6 +149,7 @@ const TablaBuscar = ({info , supervisor, h}) =>
         </>
 
             )
+           
 
 
     }
