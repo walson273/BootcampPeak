@@ -75,15 +75,6 @@ export default function Login() {
         localStorage.setItem('IDUsuario', respuesta.usuario)
         console.log(respuesta)
       }
-
-
-
-
-
-
-
-
-
     } else {
       Swal.fire({
         icon: "error",
