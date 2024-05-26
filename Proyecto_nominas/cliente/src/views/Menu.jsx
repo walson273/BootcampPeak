@@ -2,9 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import * as data from '../components/S_data.jsx'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { type_user } from "../services/ServicioUsuarios";
 import { CiLogout } from "react-icons/ci";
+import { Button } from '@mui/material';
 
 
 export async function type_username(info) {
@@ -48,6 +49,18 @@ export default function menu() {
 }
 
 const BSlide = (prop) => {
+
+  const navigate = useNavigate()
+
+  function cerrarSesion(){
+      
+      navigate(`/login`)
+      localStorage.removeItem('IDEquipo')
+      localStorage.removeItem('IDUsuario')
+      console.log('chao');
+
+
+  }
 
   console.log(prop);
   const [open, setOpen] = useState(true);
@@ -98,12 +111,13 @@ const BSlide = (prop) => {
           </div>
           <div className='row-2' style={{ marginTop: calculateMarginTop() }}>
             <div className={open ? 'cont_items' : 'cont_items active'} >
+                <Button  className='btn btn-outline-primary iconsize ' onClick={()=>{cerrarSesion()}}>
                 <Link  className='btn btn-outline-primary iconsize ' onClick={onLogout()}>
                 <div className='columnitas'>
                 <div className='iconitos'><CiLogout /></div>
                 <h6 className={open ? 'nombres' : 'nombres active'} >Cerrar sesión</h6>
                 </div>
-                </Link>
+                </Button>
             </div>
 
           </div>

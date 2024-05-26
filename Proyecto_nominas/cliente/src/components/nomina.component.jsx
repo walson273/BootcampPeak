@@ -5,6 +5,12 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import React, { useState, useMemo } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+export async function nomina_user(info) {
+  const nominass = await getNominas(info);
+  console.log(nominass);
+  console.log(h);
+  return h;
+}
 
 const Nominad = () => {
   const nominasa = useLoaderData();
@@ -108,7 +114,6 @@ const Nominad = () => {
             </tr>
           </thead>
           <tbody>
-            try 
             {filteredAndSortedData.map((item, index) => [
               <tr key={index} className="hover:bg-gray-50" onClick={() => toggleRow(index)}>
                 <td className="p-4 border-b"><IconButton id="flecha" aria-label="expand row" size="small">
@@ -190,16 +195,12 @@ const Nominad = () => {
                   </td>
                 </tr>
               )
-            ])}catch (error) {
-              <h1>No hay nominas por mostrar</h1>
-            }
+            ])}
             {filteredAndSortedData.length === 0 && (
               <tr>
                 <td colSpan="5" className="p-4 text-center">No results found</td>
               </tr>
-            )
-              
-            }
+            )}
           </tbody>
         </table>
         <div className="mt-4 flex justify-between items-center" style={{ width:"85%"}}>
