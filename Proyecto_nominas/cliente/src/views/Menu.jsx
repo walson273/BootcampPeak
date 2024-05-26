@@ -70,9 +70,6 @@ const BSlide = (prop) => {
     const b_marginTop = "39.3rem";
     return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop; // Add or subtract for different lengths
   };
-  const onLogout = () => {
-    Navigate('/',)
-  }
   return (  
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
@@ -112,7 +109,6 @@ const BSlide = (prop) => {
           <div className='row-2' style={{ marginTop: calculateMarginTop() }}>
             <div className={open ? 'cont_items' : 'cont_items active'} >
                 <Button  className='btn btn-outline-primary iconsize ' onClick={()=>{cerrarSesion()}}>
-                <Link  className='btn btn-outline-primary iconsize ' onClick={onLogout()}>
                 <div className='columnitas'>
                 <div className='iconitos'><CiLogout /></div>
                 <h6 className={open ? 'nombres' : 'nombres active'} >Cerrar sesión</h6>
