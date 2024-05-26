@@ -74,15 +74,15 @@ const BSlide = (prop) => {
       localStorage.removeItem('IDEquipo')
       localStorage.removeItem('IDUsuario')
       console.log('chao');
-
-
   }
-
-  console.log(prop);
   const [open, setOpen] = useState(true);
-
-  
-  return (
+  const calculateMarginTop = () => {
+    // Adjust the base margin based on your needs (e.g., 30rem)
+    const b_marginTop_adm = "35rem";
+    const b_marginTop = "39.3rem";
+    return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop; // Add or subtract for different lengths
+  };
+  return (  
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
         <IoIosArrowDroprightCircle id='flechita' className={`${!open && "rotate-180"}`} style={{ margin: open ? '0.9rem 4.5rem' : '0.9rem 16.3rem', transition: open ? 'margin 1s' : 'margin 1s' }} onClick={() => setOpen(!open)} />
@@ -118,14 +118,14 @@ const BSlide = (prop) => {
               </ul>
             </nav>
           </div>
-          <div className='row-2 ' style={{marginTop: "35rem"}}>
+          <div className='row-2' style={{ marginTop: calculateMarginTop() }}>
             <div className={open ? 'cont_items' : 'cont_items active'} >
-                <Button  className='btn btn-outline-primary iconsize ' onClick={()=>{cerrarSesion()}}>
+                <Link  className='btn btn-outline-primary iconsize' onClick={()=>{cerrarSesion()}}>
                 <div className='columnitas'>
                 <div className='iconitos'><CiLogout /></div>
                 <h6 className={open ? 'nombres' : 'nombres active'} >Cerrar sesión</h6>
                 </div>
-                </Button>
+                </Link>
             </div>
 
           </div>
