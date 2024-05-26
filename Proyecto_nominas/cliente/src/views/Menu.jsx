@@ -58,11 +58,7 @@ const BSlide = (prop) => {
       localStorage.removeItem('IDEquipo')
       localStorage.removeItem('IDUsuario')
       console.log('chao');
-
-
   }
-
-  console.log(prop);
   const [open, setOpen] = useState(true);
   const calculateMarginTop = () => {
     // Adjust the base margin based on your needs (e.g., 30rem)
@@ -108,12 +104,12 @@ const BSlide = (prop) => {
           </div>
           <div className='row-2' style={{ marginTop: calculateMarginTop() }}>
             <div className={open ? 'cont_items' : 'cont_items active'} >
-                <Button  className='btn btn-outline-primary iconsize ' onClick={()=>{cerrarSesion()}}>
+                <Link  className='btn btn-outline-primary iconsize' onClick={()=>{cerrarSesion()}}>
                 <div className='columnitas'>
                 <div className='iconitos'><CiLogout /></div>
                 <h6 className={open ? 'nombres' : 'nombres active'} >Cerrar sesión</h6>
                 </div>
-                </Button>
+                </Link>
             </div>
 
           </div>
