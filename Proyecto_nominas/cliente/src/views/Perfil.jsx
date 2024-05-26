@@ -65,14 +65,38 @@ export default  function Perfil() {
     )
 
     
-    if(info && userID == USERACTUAL){
+    if(info)
+        {
 
-        return( 
-        <>
-                
-                <TablaBuscar info = {info} supervisor = {supervisor} cargoIDUsuario={cargoIDUsuario}/>
-        </>
-        )
+                console.log(info.data.id_cargo);
+        if(cargoIDUsuario != 5)
+            {
+
+                console.log('No-admin');
+            if(userID == USERACTUAL)
+                {   
+                    return( 
+                <>
+                        
+                        <TablaBuscar info = {info} supervisor = {supervisor} cargoIDUsuario={cargoIDUsuario}/>
+                </>
+                )
+                }
+
+
+            }
+        else
+        {   
+            console.log('admin');
+            return( 
+            <>
+                    
+                    <TablaBuscar info = {info} supervisor = {supervisor} cargoIDUsuario={cargoIDUsuario}/>
+            </>
+            )
+        } 
+
+        
         
     }   
        else
