@@ -24,11 +24,21 @@
   
 
 }
+.btVolPer{
+
+  position: absolute;
+  top: 3rem;
+  right: -44rem;
+  width: 18rem;
+  height: 3rem;
+
+}
+
 .btVolBus{
 
   position: absolute;
   top: 3rem;
-  right: -74rem;
+  right: -40rem;
   width: 18rem;
   height: 3rem;
 

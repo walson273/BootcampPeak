@@ -151,7 +151,7 @@ const TablaBuscar = ({info , supervisor}) =>
             <div>
 
             <Button variant="contained"  className="btVolBus" onClick={()=>{Buscar()}}> Volver a buscar</Button>
-            <Button variant="contained" color="success" className="btModificar" onClick={()=>{Modificar(info.data?.id)}}> Volver a perfil</Button>
+            <Button variant="contained" color="success" className="btVolPer" onClick={()=>{Modificar(info.data?.id)}}> Volver a perfil</Button>
             
              
               <section className="modificarPerfil Mmodificar">
