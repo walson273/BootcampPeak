@@ -9,7 +9,6 @@ import { CgProfile } from "react-icons/cg";
 export async function loader(info) {
 
 
-
   const usuarios = await login_usuarios(info)
   try {
     if (usuarios.response.data.error) {
@@ -45,8 +44,6 @@ export async function user_correo(info) {
 
     const texto = usuario.data.id
 
-
-
     return texto
 
   } catch (error) {
@@ -62,7 +59,7 @@ export default function Login() {
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
 
-
+  
   const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
@@ -73,7 +70,6 @@ export default function Login() {
       if (respuesta) {
         localStorage.setItem('IDEquipo', respuesta.equipos)
         localStorage.setItem('IDUsuario', respuesta.usuario)
-        localStorage.setItem('CargoUsuario', respuesta.cargo)
         console.log(respuesta)
       }
     } else {
