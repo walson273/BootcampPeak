@@ -296,7 +296,6 @@
   box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
 } */
 .slidebar {
-
   float: left;
   height: 200vh;
   margin-right: 2rem;  
@@ -388,11 +387,9 @@
   color: gray;
 }
 
-
 .iconitos{
   margin-left: 1.1rem;
 }
-
 
 .nombres{ 
   font-family: "Poppins", sans-serif;
@@ -420,7 +417,6 @@
     visibility: visible;
 }
 
-
 .colum_opc{
   width: 100%;
   column-count: 2;
@@ -435,12 +431,10 @@
   cursor: pointer;
 }
 
-
 /* Login css */
 .l_colum{
   columns: 2;
 }
-
 
 .l_cont{
   background-image: url("../public/bg-login.png");

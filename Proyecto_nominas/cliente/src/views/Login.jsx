@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
-
 import { CgProfile } from "react-icons/cg";
-
-
 
 
 export async function loader(info) {
@@ -55,11 +52,10 @@ export async function user_correo(info) {
 export default function Login() {
 
 
-
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
 
-  
+
   const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
@@ -71,7 +67,7 @@ export default function Login() {
         localStorage.setItem('IDEquipo', respuesta.equipos)
         localStorage.setItem('IDUsuario', respuesta.usuario)
         localStorage.setItem('CargoUsuario', respuesta.cargo)
-        
+
       }
     } else {
       Swal.fire({
@@ -97,7 +93,7 @@ export default function Login() {
             <div className="bg-black rounded-lg bg-opacity-25">
               <div className="flex w-[32rem] h-[40rem] flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                  <CgProfile className="mx-auto h-14 w-auto text-white" /> 
+                  <CgProfile className="mx-auto h-14 w-auto text-white" />
                   <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Iniciar sesión en su cuenta</h2>
                 </div>
 
@@ -126,8 +122,6 @@ export default function Login() {
                       <button type="submit" className="flex w-full justify-center rounded-md bg-[#000000] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#048EFF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Iniciar sesión</button>
                     </div>
                   </form>
-
-
                 </div>
               </div>
             </div>

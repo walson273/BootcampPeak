@@ -16,8 +16,6 @@ export async function type_username(info) {
   return h;
 }
 
-
-
 export default function menu() {
 
 
@@ -35,7 +33,6 @@ export default function menu() {
       // console.log(userRole)
       setH(userRole);
     };
-
     fetchData();
   }, []); // Empty dependency array ensures data is fetched only once
 
@@ -50,7 +47,6 @@ export default function menu() {
     );
   }
   else {
-
 
     return (
 
