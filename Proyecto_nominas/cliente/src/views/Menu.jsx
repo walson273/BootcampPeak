@@ -51,7 +51,7 @@ export default function menu() {
     }
 else{
 
-  console.log('alto ahi loca');
+  
   return(
 
       <>
@@ -74,7 +74,8 @@ const BSlide = (prop) => {
       navigate(`/login`)
       localStorage.removeItem('IDEquipo')
       localStorage.removeItem('IDUsuario')
-      console.log('chao');
+      localStorage.removeItem('CargoUsuario')
+      console.log('ciao');
   }
   const [open, setOpen] = useState(true);
   const calculateMarginTop = () => {

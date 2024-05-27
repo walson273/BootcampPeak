@@ -43,11 +43,7 @@ const [USERID, setUSERID] = useState('')
  useEffect (()=>{
 
     const equipoID = localStorage.getItem('IDEquipo')
-    const usuarioID = localStorage.getItem('IDUsuario')
-    
-
-    console.log(usuarioID);
-    console.log(equipoID);
+  
     
     if(equipoID){
     setUSERID({equipoID})
@@ -62,7 +58,6 @@ const [USERID, setUSERID] = useState('')
   return dato.id_equipo == USERID.equipoID;
  })
 
- console.log(usuarios);
 
    const [busqueda, setSearch] = useState("");
 
@@ -76,7 +71,7 @@ const [USERID, setUSERID] = useState('')
 
   const resultados = !busqueda ? usuarios : usuarios?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-  console.log(resultados);
+
 
 
     if(cargoIDUsuario==5)

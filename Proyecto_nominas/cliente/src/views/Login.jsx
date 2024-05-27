@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
-import { useNavigate } from "react-router-dom";
+
 import { CgProfile } from "react-icons/cg";
 
 
 
 
 export async function loader(info) {
-
 
 
   const usuarios = await login_usuarios(info)
@@ -45,8 +44,6 @@ export async function user_correo(info) {
 
     const texto = usuario.data.id
 
-
-
     return texto
 
   } catch (error) {
@@ -58,11 +55,11 @@ export async function user_correo(info) {
 export default function Login() {
 
 
-  const navigate = useNavigate();
+
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
 
-
+  
   const enviar = async (e) => {
     e.preventDefault();
     if (correo && contraseña) {
@@ -74,7 +71,7 @@ export default function Login() {
         localStorage.setItem('IDEquipo', respuesta.equipos)
         localStorage.setItem('IDUsuario', respuesta.usuario)
         localStorage.setItem('CargoUsuario', respuesta.cargo)
-        console.log(respuesta)
+        
       }
     } else {
       Swal.fire({
