@@ -118,7 +118,9 @@ Instead a supervisor on the `Perfil` option will now have available the option t
 
 Clicking `Modificar` will allow the supervisor to update its own information, although only certain items can be modified, this includes phone number, email, assigned charge and team. Information as Name or ID are not allowed.
 
-If the `Buscar` option is selected with the path `/menu/buscar`, a list of all the employees under the supervisor's team will be shown, a search bar is given to filter employees by name. A `Modificar` button is given for each employee, clicking on it will redirect
+If the `Buscar` option is selected with the path `/menu/buscar`, a list of all the employees under the supervisor's team will be shown, a search bar is given to filter employees by name. A `Modificar` button is given for each employee, clicking on it will redirect back to `Perfil` for the respective user clicked, only supervisors are allowed to do see other profiles and use them to make modification as stated before.
+
+Besides the search bar in `Buscar` a plus icon is shown, clicking on it will redirect the supervisor and it will give the option to set up a new user into the database.
 
 
 
