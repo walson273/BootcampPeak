@@ -15,6 +15,7 @@ export const router = createBrowserRouter(
 
 
     [
+
         {
             path: '/menu',
             element: <Menu />,
@@ -57,13 +58,11 @@ export const router = createBrowserRouter(
                     loader: getLoaderRegistro
                 }
             ]
-
         },
-        {
-            path: '/login',
-            element: <Login />,
-            
-
-        },
+            {
+                path: '/',
+                element: <Login />,    
+    
+            }
     ]
 )
