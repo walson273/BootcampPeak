@@ -135,9 +135,11 @@ Lastly, `Cerrar Sesion` will log out the user from the page and it will lock any
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Carlos Villa - carloscofdi@gmail.com
+Oscar Cruz - oscarcruz744@gmail.com
+Wilson Herrera - wch273@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [Proyecto Nominas](https://github.com/walson273/BootcampPeak)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
