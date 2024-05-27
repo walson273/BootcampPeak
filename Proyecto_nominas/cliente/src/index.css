@@ -4,72 +4,48 @@
 @tailwind utilities;
 
 .btEnviar{
-
-
   position: absolute;
   top: 3rem;
   right: -12rem;
   width: 18rem;
   height: 3rem;
-
 }
 
 .btModificar{
-
   position: absolute;
   top: 3rem;
   right: -32rem;
   width: 18rem;
   height: 3rem;
-  
-
 }
 .btVolPer{
-
   position: absolute;
   top: 3rem;
   right: -44rem;
   width: 18rem;
   height: 3rem;
-
 }
 
 .btVolBus{
-
   position: absolute;
   top: 3rem;
   right: -40rem;
   width: 18rem;
   height: 3rem;
-
-
 }
 
 .cajaTexto{
-
-    
-
     width: 16rem;
-   
     .MuiInputLabel-outlined{
-
         color: rgb(0, 0, 0);
         border-color: aqua;
-
     }
      .Mui-readOnly {
-
         color: rgb(231, 17, 185);
-
      }
-
      .MuiInputBase-formControl{
-
-
       color: rgb(226, 22, 73);
      }
-    
-
 }
 .PFoto{
   grid-area:foto;
@@ -91,7 +67,6 @@
 .Pcorreo{grid-area: correo; width: 40rem;}
 
 .perfil , .modificarPerfil{
-  
   position: relative;
   background-image:  linear-gradient(rgba(255, 255, 255, 0.432), rgba(211, 212, 228, 0.5)), url('/public/texturaPerfil.png');
   width: 97rem;
@@ -105,47 +80,29 @@
   align-items: center;
   justify-items: center;}
 
-
   .perfil{
-
   display: grid;
-
   background-color: rgba(252, 252, 252, 0.774);
-
   grid-template-areas:
-
- 
-
   "foto nombre apellido id"
   "foto equipo sede supervisor"
   "cargo numero correo correo";
   ;
-
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  
 }
 
 .modificarPerfil{
-
   display: grid;
-
   background-color: rgba(252, 252, 252, 0.774);
-
   grid-template-areas:
-
-
-
   "nombre apellido id"
   "sede supervisor nada"
   "form form form"
   "form form form";
   ;
-
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-
-
 }
 
 .Mnombre{ grid-area: nombre;}
@@ -162,149 +119,93 @@
       grid-template-rows: 1fr 1fr;}
 .Mequipo{ width: 16rem;}
 .Mcargo{ width: 16rem;}
-.Mnumero{}
 .Mcorreo{ width: 40rem;}
 
 
 
 .Bcargo{
-
   grid-area: cargo;}
-
 #container {
   max-width: 100%;
   margin: 0 auto;
 }
 
 .BFoto{
-
-  
-
     grid-area: logo;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-  
-  
-
 }
 
 .Bnombre{
-
   grid-area: nombre;
   font-weight: 800;
   font-size: 3.6rem;
 }
 
 .Bcedula{
-
   grid-area: cedula;
   span{
-
     font-weight: 700;
-
   }
 }
 
 .Bboton{grid-area: boton;}
 
-
-
 .contenedor {
-
   display: grid;
   width: 87%;
   grid-template-areas:
-
     "logo nombre nombre boton"
     "logo cargo cedula boton";
   ;
-
   grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
   grid-template-rows: 1fr 1fr;
-
- 
   margin: 1rem 2rem;
   padding: 1rem;
   height: 10rem;
   border-radius: 0.5rem;
-
-
   border-color: lightgray;
   border-style: solid;
   border-width: 0.1rem;
   background-color: white;
   align-items: center;
-
-
 }
 
 .Bboton{
-
   height: 4rem;
   width: 8rem;
-
 }
 .ListaEntera {
-
   background-color: #eef1f3;
   padding: 1rem;
   top: 1rem;
   margin-left: 5.625rem;
-
   section:hover {
-
     background-color: rgb(4, 142, 255);
     -webkit-box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
     -moz-box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
     box-shadow: 0px 0.8rem 0.8rem 0.4rem rgba(28, 60, 243, 0.36);
-
     cursor: pointer;
-
     .BFoto, .Bcargo, .Bnombre, .Bcedula{
-
       color: aliceblue;
-
     }
-    .Bboton{
 
+    .Bboton{
       background-color:  rgb(44, 151, 44);
       color: darkslategrey;
-      
     }
-
-
   }
-
 }
 
-
-/* Menu - css */
-
-
-/* .slidebar {
-
-  float: left;
-  width: 90px;
-  height: 100vh;
-  justify-content: center;
-  border-radius: 5px;
-  padding: 0.313rem;
-  background-color: white;
-  background-position: top;
-  border-radius: 0px 15px 15px 0px;
-  box-shadow: 98px 39px 158px -41px rgba(112,112,112,0.45);
-} */
 .slidebar {
   float: left;
   height: 200vh;
   margin-right: 2rem;  
-  /* display: flex; */
   justify-content: center;
   border-radius: 5px;
   padding: 0.313rem;
   background-color: white;
-  /* margin-top: -4.375rem; */
   background-position: top;
   border-radius: 0px 15px 15px 0px;
   box-shadow: 98px 39px 158px -41px rgba(189, 189, 189, 0.45);
@@ -352,19 +253,10 @@
 
 .cont_items {
   width: 80px;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-
-
 }
 
 .cont_items.active {
   width: 260px;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-
 }
 
 .box_items {
@@ -403,8 +295,8 @@
   position: absolute;
   visibility: hidden;
   transition: all 1s;
-
 }
+
 .nombres.active{ 
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -431,7 +323,6 @@
   cursor: pointer;
 }
 
-/* Login css */
 .l_colum{
   columns: 2;
 }

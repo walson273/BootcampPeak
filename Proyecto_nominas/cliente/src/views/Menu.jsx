@@ -12,29 +12,20 @@ import ACCESO_DENEGADO from '../components/ACCESO_DENEGADO.jsx';
 export async function type_username(info) {
   const type_u = await type_user(info);
   const h = type_u.data.id_cargo;
-  // console.log(h);
   return h;
 }
 
 export default function menu() {
-
-
   const usuarioID = localStorage.getItem('IDUsuario')
-
-
-  const [h, setH] = useState(null); // Initialize h with null for safety
-
-
-
+  const [h, setH] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const dato_r = { "id": usuarioID }; //si pongo 1 debe aparecer el menu extra para el admin  se demora basrtante jajajaja
-      const userRole = await type_username(dato_r); // Assuming info needs an id
-      // console.log(userRole)
+      const dato_r = { "id": usuarioID };
+      const userRole = await type_username(dato_r);
       setH(userRole);
     };
     fetchData();
-  }, []); // Empty dependency array ensures data is fetched only once
+  }, []);
 
   if (usuarioID) {
     return (
@@ -49,24 +40,18 @@ export default function menu() {
   else {
 
     return (
-
       <>
         {
           <ACCESO_DENEGADO ></ACCESO_DENEGADO>
         }
       </>
-
-
     )
   }
 }
 
 const BSlide = (prop) => {
-
   const navigate = useNavigate()
-
   function cerrarSesion() {
-
     navigate(`/login`)
     localStorage.removeItem('IDEquipo')
     localStorage.removeItem('IDUsuario')
@@ -75,10 +60,9 @@ const BSlide = (prop) => {
   }
   const [open, setOpen] = useState(true);
   const calculateMarginTop = () => {
-    // Adjust the base margin based on your needs (e.g., 30rem)
     const b_marginTop_adm = "35rem";
     const b_marginTop = "39.3rem";
-    return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop; // Add or subtract for different lengths
+    return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop;
   };
   return (
     <React.Fragment>
@@ -130,9 +114,4 @@ const BSlide = (prop) => {
       </div>
     </React.Fragment>
   );
-
-
-
-
-
 }

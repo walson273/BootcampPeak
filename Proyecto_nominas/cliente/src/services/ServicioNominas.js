@@ -18,13 +18,13 @@ export async function mostrar_nominas() {
 export async function getNominas(info) {
     try {
         const url = `${import.meta.env.VITE_URL_POST}/nominas/getNomina`
-       
+
         const { data } = await axios.post(url, info)
         // const { data } = await axios.put(url)
         // const { data } = await axios.delete(url)
         return data
     } catch (error) {
         console.log(error);
-        return error; 
-    } 
+        return error;
+    }
 }
