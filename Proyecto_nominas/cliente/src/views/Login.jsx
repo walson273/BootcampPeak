@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 import { CgProfile } from "react-icons/cg";
+import Swal from 'sweetalert2'
 
 export async function loader(info) {
   const usuarios = await login_usuarios(info)
@@ -37,6 +38,22 @@ export async function user_correo(info) {
 }
 
 export default function Login() {
+
+  function cambioClave() {
+    Swal.fire({
+      title: "COMUNIQUESE CON UN SUPERVISOR",
+      width: 600,
+      padding: "3em",
+      color: "#716add",
+      background: "#fff url(/images/trees.png)",
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("/public/nya_cat.gif")
+        left top
+        no-repeat
+      `
+    });
+  }
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
   const enviar = async (e) => {
@@ -87,7 +104,7 @@ export default function Login() {
                       <div className="flex items-center justify-between">
                         <label for="password" className="block text-sm font-medium leading-6 text-white">Contraseña<a href=""></a></label>
                         <div className="text-sm">
-                          <a href="#" className="font-semibold text-[#000000] hover:text-[#048EFF]">Has olvidado tu contraseña?</a>
+                          <a className="font-semibold text-[#000000] hover:text-[#048EFF]"  onClick={() => { cambioClave() }} >Has olvidado tu contraseña?</a>
                         </div>
                       </div>
                       <div className="mt-2">
