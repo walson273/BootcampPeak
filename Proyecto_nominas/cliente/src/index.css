@@ -200,7 +200,7 @@
 
 .slidebar {
   float: left;
-  height: 300vh;
+  height: 200vh;
   margin-right: 2rem;  
   justify-content: center;
   border-radius: 5px;
@@ -211,10 +211,7 @@
   box-shadow: 98px 39px 158px -41px rgba(189, 189, 189, 0.45);
 }
 
-#imagencita {
-  text-align: center;
-  display: flex;
-  justify-content: center;
+#cont_tittle {
   height: 2.5rem;
   margin-left: 0.1rem;
 }
@@ -227,9 +224,9 @@
   margin-left: .75rem;
 }
 
-.letrita {
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 100;
+.tittle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 0rem;
   text-align: center;
   display: flex;
@@ -240,10 +237,10 @@
   opacity: 0%;
   transition: all 1s;
 }
-.letrita.active {
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 100;
-  font-size: 1rem;
+.tittle.active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -285,14 +282,11 @@
 .iconitos{
   margin-left: 1.1rem;
 }
-.palabrita{
-  display: flex;
-  justify-content: start;
-}
+
 
 .nombres{ 
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 0rem;
   opacity: 0%;
   margin-left: 3rem;
@@ -305,9 +299,9 @@
 }
 
 .nombres.active{ 
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 100;
-    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
     margin-left: 4rem;
     opacity: 100%;
     display: flex;
@@ -316,14 +310,14 @@
     visibility: visible;
 }
 
-.columnitas{
+.colum_opc{
   width: 100%;
   column-count: 2;
   column-width: 50%;
   
 }
 
-#flechita {
+#arrow {
   position: fixed;
   font-size: 25px;
   color: #048EFF;
