@@ -126,7 +126,6 @@ const BSlide = (prop) => {
                   </div>
                 </Link>
               </div>
-
             </div>
           </div>
       </div>
