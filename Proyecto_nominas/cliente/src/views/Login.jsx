@@ -41,7 +41,8 @@ export default function Login() {
 
   function cambioClave() {
     Swal.fire({
-      title: "COMUNIQUESE CON UN SUPERVISOR",
+      title: "POR FAVOR",
+      text: "COMUNIQUESE CON UN SUPERVISOR",
       width: 600,
       padding: "3em",
       color: "#716add",
@@ -104,7 +105,7 @@ export default function Login() {
                       <div className="flex items-center justify-between">
                         <label for="password" className="block text-sm font-medium leading-6 text-white">Contraseña<a href=""></a></label>
                         <div className="text-sm">
-                          <a className="font-semibold text-[#000000] hover:text-[#048EFF]"  onClick={() => { cambioClave() }} >Has olvidado tu contraseña?</a>
+                          <a className="font-semibold text-[#000000] hover:text-[#048EFF] cursor-pointer"  onClick={() => { cambioClave() }} >Has olvidado tu contraseña?</a>
                         </div>
                       </div>
                       <div className="mt-2">
