@@ -333,3 +333,20 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+#registrico{
+  background:transparent;
+  border:2px solid rgba(255, 255, 255, .2);
+  backdrop-filter:blur(30000px);
+}
+
+#bodyy{
+  background-color: #eef1f3;
+}
+
+#nominaTabla{
+  background:transparent;
+  border:2px solid rgba(255, 255, 255, .2);
+  backdrop-filter:blur(30000px);
+  background-color: white;
+}
