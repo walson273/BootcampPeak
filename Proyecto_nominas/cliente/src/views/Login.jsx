@@ -89,7 +89,7 @@ export default function Login() {
           </div>
 
 
-          <div className="w-1/2 h-full  flex flex-col p-20 justify-center items-center border">
+          <div className="w-1/2 h-full  flex flex-col p-20 justify-center items-center ">
             <div className="bg-black rounded-lg bg-opacity-25">
               <div className="flex w-[32rem] h-[40rem] flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">

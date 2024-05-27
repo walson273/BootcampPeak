@@ -437,7 +437,7 @@
 }
 
 .l_cont{
-  background-image: url("../public/bg-login.png");
+  background-image: url("/bg-login.png");
   background-size: cover;  
   background-repeat: no-repeat;
   height: 100vh;

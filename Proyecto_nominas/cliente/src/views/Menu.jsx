@@ -85,6 +85,7 @@ const BSlide = (prop) => {
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
         <IoIosArrowDroprightCircle id='arrow' className={`${!open && "rotate-180"}`} style={{ margin: open ? '0.9rem 4.5rem' : '0.9rem 16.3rem', transition: open ? 'margin 1s' : 'margin 1s' }} onClick={() => setOpen(!open)} />
           <div className='col '>
+            <Link to={'http://localhost:5173/menu'} >
             <img src="/Imagen_1.png" id='tele' alt="Logo" />
             <div className='row-3  ' style={{ height: "4rem", borderBottom: "0.5px solid #E7E7E7" }}>
               {/* <div className="row d-flex justify-content-center align-items-center"> */}
@@ -95,6 +96,8 @@ const BSlide = (prop) => {
               </div>
 
             </div>
+            </Link>
+
             <div className='row-6 mt-3 '>
               <nav>
                 <ul >
