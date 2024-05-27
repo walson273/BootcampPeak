@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { login_usuarios, userByEmail } from "../services/ServicioUsuarios";
 import { CgProfile } from "react-icons/cg";
-import Swal from 'sweetalert2'
+
 
 export async function loader(info) {
   const usuarios = await login_usuarios(info)
