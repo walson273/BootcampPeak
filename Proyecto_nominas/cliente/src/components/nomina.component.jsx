@@ -144,12 +144,12 @@ const Nominad = () => {
                           </tr>
                           <tr>
                             <td className="border border-zinc-500 p-2">Dias trabajados</td>
-                            <td className="border border-zinc-500 px-4">{item.dias_trabajados.toLocaleString("es")}</td>
-                            <td className="border border-zinc-500 px-3">1,2M</td>
+                            <td className="border border-zinc-500 px-4">{item.dias_trabajados}</td>
+                            <td className="border border-zinc-500 px-3">${item.salario_dias.toLocaleString("es")}</td>
                           </tr>
                           <tr>
                             <td className="border border-zinc-500 p-2">Bonos</td>
-                            <td className="border border-zinc-500 px-4">2</td>
+                            <td className="border border-zinc-500 px-4">1</td>
                             <td className="border border-zinc-500 px-3">${item.bonos.toLocaleString("es")}</td>
                           </tr>
                         </tbody>
