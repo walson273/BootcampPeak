@@ -73,7 +73,6 @@ export default function Login() {
               <div className="flex w-[32rem] h-[40rem] flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                   <CgProfile className="mx-auto h-14 w-auto text-white" />
-                  <CgProfile className="mx-auto h-14 w-auto text-white" />
                   <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Iniciar sesión en su cuenta</h2>
                 </div>
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
