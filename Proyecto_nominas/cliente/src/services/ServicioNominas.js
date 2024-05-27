@@ -25,6 +25,6 @@ export async function getNominas(info) {
         return data
     } catch (error) {
         console.log(error);
-        return error;
-    }
+        return error; 
+    } 
 }
