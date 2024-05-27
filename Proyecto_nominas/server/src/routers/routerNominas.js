@@ -5,9 +5,9 @@ import { Errores } from "../middleware/index.js";
 
 
 const routerNominas = Router();
-
+ 
 routerNominas.get('/', consultar_todo);
-routerNominas.post('/', nomina_user);
+routerNominas.post('/getNomina', nomina_user);
 
 routerNominas.post('/',
     body('dias_trabajados').notEmpty().withMessage('El nombre del empleado es obligatorio'),
