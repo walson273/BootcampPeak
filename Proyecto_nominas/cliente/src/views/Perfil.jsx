@@ -68,7 +68,7 @@ export default  function Perfil() {
     if(info)
         {
 
-                console.log(info.data.id_cargo);
+                
         if(cargoIDUsuario != 5)
             {
 
@@ -81,6 +81,15 @@ export default  function Perfil() {
                         <TablaBuscar info = {info} supervisor = {supervisor} cargoIDUsuario={cargoIDUsuario}/>
                 </>
                 )
+                }
+                else
+                {
+                    return(
+
+                        <>
+                           <ACCESO_DENEGADO></ACCESO_DENEGADO>
+                        </>
+                    )
                 }
 
 
