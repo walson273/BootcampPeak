@@ -22,7 +22,7 @@ export async function loaderSupervisor(id) {
     const usuarios = await mostrar_supervisor_usuario(id)
    
   
-    return usuarios
+    return usuarios 
   }
 
 

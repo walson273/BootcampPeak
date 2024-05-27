@@ -37,8 +37,8 @@ export const eliminar_nomina = async (req, res) => {
 export const nomina_user = async (req, res) => {
 
     try{
-        const {id} = req.body
-        const nominas = await Nomina.findOne({where:{id}})
+        const {id_usuario} = req.body
+        const nominas = await Nomina.findOne({where:{id_usuario}})
         if(!nominas){
             return res.status(404).json({error:'No hay nominas con ese usuario'})
         }
@@ -46,6 +46,7 @@ export const nomina_user = async (req, res) => {
     }catch(error){
     
         console.log("No fue posible consultar la nomina");
+        console.log(error);
 
     }
 

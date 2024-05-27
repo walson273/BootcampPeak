@@ -9,6 +9,6 @@ export async function loader() {
 
 export default function Nominass() {
   return (
-    <Nominad />
+    <Nominad/>
   )
 }
