@@ -1,14 +1,15 @@
 import Nominad from "../components/nomina.component";
-import { mostrar_nominas } from "../services/ServicioNominas";
+import { getNominas, mostrar_nominas } from "../services/ServicioNominas";
+const USERACTUAL = localStorage.getItem('IDUsuario')
 
 export async function loader() {
-  const nominas = await mostrar_nominas()
+  const nominas = await getNominas({ "id_usuario": USERACTUAL })
 
   return nominas
 }
 
 export default function Nominass() {
   return (
-    <Nominad/>
+    <Nominad />
   )
 }

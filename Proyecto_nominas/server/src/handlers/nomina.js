@@ -38,7 +38,7 @@ export const nomina_user = async (req, res) => {
 
     try{
         const {id_usuario} = req.body
-        const nominas = await Nomina.findOne({where:{id_usuario}})
+        const nominas = await Nomina.findAll({where:{id_usuario}})
         if(!nominas){
             return res.status(404).json({error:'No hay nominas con ese usuario'})
         }
