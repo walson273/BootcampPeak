@@ -3,13 +3,13 @@ import React from "react";
 
 
 
-export default function ACCESO_DENEGADO(){
+export default function ACCESO_DENEGADO() {
 
-  
-    return(
+
+    return (
         <Alert variant="filled" severity="error">
-        A C C E S S   D E N I ED
+            A C C E S S   D E N I ED
         </Alert>
-        
+
     )
 }

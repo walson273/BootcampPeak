@@ -14,140 +14,77 @@ import AddIcon from '@mui/icons-material/Add';
 import ACCESO_DENEGADO from "../components/ACCESO_DENEGADO";
 
 
-
 export async function loader() {
   const usuarios = await mostrar_usuarios()
 
   return usuarios
 }
-
-
-
-
 export default function Buscar() {
-
-  
   const navigate = useNavigate();
-  const cargoIDUsuario = localStorage.getItem('CargoUsuario') 
- 
+  const cargoIDUsuario = localStorage.getItem('CargoUsuario')
   const info = useLoaderData();
- const IrAPerfil = (userID) => {
+  const IrAPerfil = (userID) => {
+    navigate(`/menu/perfil/${userID}`);
+  }
+  const [USERID, setUSERID] = useState('')
 
-
-  navigate(`/menu/perfil/${userID}`);
-
-}
-
-const [USERID, setUSERID] = useState('')
-
- useEffect (()=>{
+  useEffect(() => {
 
     const equipoID = localStorage.getItem('IDEquipo')
-  
-    
-    if(equipoID){
-    setUSERID({equipoID})
+
+    if (equipoID) {
+      setUSERID({ equipoID })
     }
-    
-
- },[])
-
- 
-
- const usuarios = info.data?.filter(function (dato){  
-  return dato.id_equipo == USERID.equipoID;
- })
 
 
-   const [busqueda, setSearch] = useState("");
+  }, [])
 
+  const usuarios = info.data?.filter(function (dato) {
+    return dato.id_equipo == USERID.equipoID;
+  })
+  const [busqueda, setSearch] = useState("");
   const buscador = (evento) => {
 
     setSearch(evento.target.value)
 
   }
 
-
-
   const resultados = !busqueda ? usuarios : usuarios?.filter((dato) => dato.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
 
-
-
-
-    if(cargoIDUsuario==5)
-      {
-
-        return (
-
-          <>
-            <div className="ListaEntera">
-      
-            
-      
-              <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
-                noValidate
-                autoComplete="off"
-              >
-                <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
-                <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/menu/registrar_empleado">
-                  <AddIcon />
-                </Fab>
-              </Box>
-      
-      
-      
-              {
-      
-                resultados?.map((usuario) => (
-      
-                  
-      
-                  <section className='contenedor'>
-      
-                    <>
-      
-                      <B_foto foto={usuario.logo} />
-                      <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
-                      <B_cargo cargo={usuario.cargo?.nombre_puesto} />
-                      <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
-                      
-                      <Button variant="contained" className="Bboton" onClick={()=>{ IrAPerfil(usuario.id) }}
-                      
-                      
-                      >Modificar</Button>
-      
-      
-                    </>
-      
-                  </section>
-      
-      
-                ))
-              }
-            </div>
-          </>
-      
-      
-        )
-
-      }
-      else{
-
-        return(
-
-          <ACCESO_DENEGADO> </ACCESO_DENEGADO>
-        )
-
-      }
-  
-
-    
-
-  
-
-
-
-
-
-
+  if (cargoIDUsuario == 5) {
+    return (
+      <>
+        <div className="ListaEntera">
+          <Box sx={{ '& > :not(style)': { m: 1, width: '80ch' }, }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField id="outlined-basic" label="Buscar empleado" variant="outlined" value={busqueda} onChange={buscador} />
+            <Fab style={{ width: "3rem", height: "3rem" }} color="primary" aria-label="add" href="http://localhost:5173/menu/registrar_empleado">
+              <AddIcon />
+            </Fab>
+          </Box>
+          {
+            resultados?.map((usuario) => (
+              <section className='contenedor'>
+                <>
+                  <B_foto foto={usuario.logo} />
+                  <B_nombre nombre={usuario.nombre + ' ' + usuario.apellido} />
+                  <B_cargo cargo={usuario.cargo?.nombre_puesto} />
+                  <B_cedula cedula={usuario.cedula} tipo={usuario.tipo_documento} />
+                  <Button variant="contained" className="Bboton" onClick={() => { IrAPerfil(usuario.id) }}
+                  >Modificar</Button>
+                </>
+              </section>
+            ))
+          }
+        </div>
+      </>
+    )
+  }
+  else {
+    return (
+      <ACCESO_DENEGADO> </ACCESO_DENEGADO>
+    )
+  }
 }

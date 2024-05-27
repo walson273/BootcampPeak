@@ -6,12 +6,8 @@ import { router } from './router'
 import  UsuarioProvider from './usuarioContexto'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
     <UsuarioProvider>
         <RouterProvider router={router}/>
     </UsuarioProvider>
-      
-
-  
     ,
 )

@@ -100,8 +100,8 @@ const Nominad = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
   return (
-    <div className="  rounded-lg" style={{ marginLeft: "5.625rem" }}>
-      <input className="border p-2 mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} />
+    <div className="  rounded-lg" style={{ marginLeft: "5.625rem"}}>
+      <input className="border p-2 mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} style={{marginTop:"2rem"}} />
       <div className="">
         <table className=" text-left border-collapse" style={{ width: "85%" }}>
           <thead>
@@ -198,7 +198,7 @@ const Nominad = () => {
             ])}
             {filteredAndSortedData.length === 0 && (
               <tr>
-                <td colSpan="5" className="p-4 text-center">No results found</td>
+                <td colSpan="5" className="p-4 text-center">No se encuentran resultados</td>
               </tr>
             )}
           </tbody>
