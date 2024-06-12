@@ -77,7 +77,7 @@ const BSlide = (prop) => {
 
               <div className='d-flex justify-content-center align-items-center ' id='cont_tittle' >
 
-                <h3 className={open ? 'tittle' : 'tittle active'} >TELEPERFUMES.</h3>
+                <h3 className={open ? 'tittle' : 'tittle active'} >TELEPERFUMES</h3>
               </div>
 
             </div>
