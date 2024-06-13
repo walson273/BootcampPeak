@@ -22,6 +22,11 @@
 * Wilson Herrera	
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Video explicativo
+
+ [Ver video en Youtube](https://youtu.be/sI9hzJl07uU)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -93,7 +98,7 @@ Login is the first page loaded using the path `/`. Email and password are asked 
 For test purposes you can try this two users
 
 	1. This user is a supervisor. Email: oscarSupervisor@teleperfumes.com Password: Siuuuun't
- 	2. This user is a regular employee. Email: uanitaUser@teleperfumes.com Password: finofinofilipino 
+ 	2. This user is a regular employee. Email: JuanitaUser@teleperfumes.com Password: finofinofilipino 
 
 Register IS not available in the login page, this option is restricted for users with supervisor status reviewed later on.
 
@@ -135,9 +140,11 @@ Lastly, `Cerrar Sesion` will log out the user from the page and it will lock any
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Carlos Villa - carloscofdi@gmail.com
+Oscar Cruz - oscarcruz744@gmail.com
+Wilson Herrera - wch273@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [Proyecto Nominas](https://github.com/walson273/BootcampPeak)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
