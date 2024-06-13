@@ -61,29 +61,28 @@ const BSlide = (prop) => {
   }
   const [open, setOpen] = useState(true);
   const calculateMarginTop = () => {
-    const b_marginTop_adm = "25rem";
-    const b_marginTop = "29.3rem";
+    const b_marginTop_adm = "35rem";
+    const b_marginTop = "39.3rem";
     return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop;
   };
   return (
     <React.Fragment>
       <div className='slidebar border' style={{ width: open ? '90px' : '280px', transition: open ? 'width 1s' : 'width 1s' }}>
         <IoIosArrowDroprightCircle id='arrow' className={`${!open && "rotate-180"}`} style={{ margin: open ? '0.9rem 4.5rem' : '0.9rem 16.3rem', transition: open ? 'margin 1s' : 'margin 1s' }} onClick={() => setOpen(!open)} />
-          <div className='col '>
+          <div className='col' >
             <Link to={'http://localhost:5173/menu'} >
-            <img src="/Imagen_1.png" id='tele' alt="Logo" />
+            <img src="/Imagen_1.png" id='tele' alt="Logo" style={{position: 'fixed'}} />
             <div className='row-3  ' style={{ height: "4rem", borderBottom: "0.5px solid #E7E7E7" }}>
               {/* <div className="row d-flex justify-content-center align-items-center"> */}
 
               <div className='d-flex justify-content-center align-items-center ' id='cont_tittle' >
 
-                <h3 className={open ? 'tittle' : 'tittle active'} >TELEPERFUMES</h3>
+                <h3 className={open ? 'tittle' : 'tittle active'} style={{position: 'fixed'}}>TELEPERFUMES</h3>
               </div>
-
             </div>
             </Link>
 
-            <div className='row-6 mt-3 '>
+            <div className='row-6 mt-3'style={{position: 'fixed'}}>
               <nav>
                 <ul >
                   {prop.dat.map((iter) => (
@@ -101,7 +100,7 @@ const BSlide = (prop) => {
                 </ul>
               </nav>
             </div>
-            <div className='row-2' style={{ marginTop: calculateMarginTop() }}>
+            <div className='row-2' style={{ marginTop: calculateMarginTop(), position: 'fixed' }}>
               <div className={open ? 'cont_items' : 'cont_items active'} >
                 <Link className='btn btn-outline-primary iconsize' onClick={() => { cerrarSesion() }}>
                   <div className='colum_opc'>

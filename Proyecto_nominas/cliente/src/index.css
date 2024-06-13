@@ -14,14 +14,14 @@
 .btModificar{
   position: absolute;
   top: 3rem;
-  right: -32rem;
+  right: -26rem;
   width: 18rem;
   height: 3rem;
 }
 .btVolPer{
   position: absolute;
   top: 3rem;
-  right: -44rem;
+  right: -36rem;
   width: 18rem;
   height: 3rem;
 }
@@ -29,7 +29,7 @@
 .btVolBus{
   position: absolute;
   top: 3rem;
-  right: -40rem;
+  right: -30rem;
   width: 18rem;
   height: 3rem;
 }
