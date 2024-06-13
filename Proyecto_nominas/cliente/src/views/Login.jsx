@@ -43,7 +43,7 @@ export default function Login() {
     Swal.fire({
       title: "POR FAVOR",
       text: "COMUNIQUESE CON UN SUPERVISOR",
-      width: 600,
+      width: 600, 
       padding: "3em",
       color: "#716add",
       background: "#fff url(/images/trees.png)",
