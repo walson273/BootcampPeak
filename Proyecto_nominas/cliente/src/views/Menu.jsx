@@ -33,7 +33,9 @@ export default function menu() {
       <>
         <div className='contenedorMenu'>
           <BSlide dat={h === 5 ? data.slideBar_adm : data.slideBar} id={usuarioID} />
+          <div style={{maxWidth: '200rem'}}>
           <Outlet />
+          </div>
         </div>
       </>
     );
@@ -61,8 +63,8 @@ const BSlide = (prop) => {
   }
   const [open, setOpen] = useState(true);
   const calculateMarginTop = () => {
-    const b_marginTop_adm = "35rem";
-    const b_marginTop = "39.3rem";
+    const b_marginTop_adm = "25rem";
+    const b_marginTop = "29.3rem";
     return prop.dat.length === 3 ? b_marginTop_adm : b_marginTop;
   };
   return (

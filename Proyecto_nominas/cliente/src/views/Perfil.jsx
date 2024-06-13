@@ -86,8 +86,9 @@ const TablaBuscar = ({ info, supervisor, cargoIDUsuario }) => {
         <>
             {
                 <div>
-                    {cargoIDUsuario == 5 && <><Button variant="contained" color="success" className="btModificar" onClick={() => { Modificar(info.data?.id) }}> Modificar Perfil</Button>
-                        <Button variant="contained" className="btVolBus" onClick={() => { Buscar() }}> Volver a buscar</Button></>}
+                    {cargoIDUsuario == 5 ? <><Button variant="contained" color="success" className="btModificar" onClick={() => { Modificar(info.data?.id) }}> Modificar Perfil</Button>
+                        <Button variant="contained" className="btVolBus" onClick={() => { Buscar() }}> Volver a buscar</Button></>
+                        : <><div style={{height: '0.2rem'}}></div></>}
                     <section className="perfil">
                         <div className='PFoto'>
                             <img src={'/public/avatar_' + info.data.logo + '.png'} alt='logo' />

@@ -16,7 +16,7 @@ export default function P_info(info) {
         }}
         id="outlined-read-only-input"
         label={info.label}
-
+        style={{width: 'auto',marginRight: '0.5rem'}}
         defaultValue={info.valor}
         inputProps={{ style: { fontSize: 32 } }} // font size of input text
         InputLabelProps={{ style: { fontSize: 26 } }} // font size of input label

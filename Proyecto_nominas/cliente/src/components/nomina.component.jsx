@@ -100,10 +100,10 @@ const Nominad = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
   return (
-    <div className="  rounded-lg" style={{ marginLeft: "5.625rem"}}>
+    <div className="rounded-lg" style={{ marginLeft: "5.625rem"}}>
       <input className="border p-2 mb-3 w-25" type="text" placeholder="Buscar por mes" onChange={(e) => setSearchTerm(e.target.value)} style={{marginTop:"2rem"}} />
       <div className="">
-        <table id="nominaTabla" className=" text-left border-collapse" style={{ width: "85%" }}>
+        <table id="nominaTabla" className=" text-left border-collapse" style={{ width: "82%" }}>
           <thead>
             <tr className="bg-gray-100">
               <th className="border-b p-4"> </th>
@@ -203,7 +203,7 @@ const Nominad = () => {
             )}
           </tbody>
         </table>
-        <div className="mt-4 flex justify-between items-center" style={{ width: "85%" }}>
+        <div className="mt-4 flex justify-between items-center" style={{ width: "82%" }}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={prevPage}>Anterior</button>
           <div>
             <span>Registros por pagina</span>

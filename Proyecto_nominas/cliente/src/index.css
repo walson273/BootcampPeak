@@ -64,19 +64,19 @@
 .Pcargo{grid-area:cargo}
 .Psede{grid-area:sede}
 .Pnumero{grid-area: numero;}
-.Pcorreo{grid-area: correo; width: 40rem;}
+.Pcorreo{grid-area: correo;}
 
 .perfil , .modificarPerfil{
   position: relative;
   background-image:  linear-gradient(rgba(255, 255, 255, 0.432), rgba(211, 212, 228, 0.5)), url('/public/texturaPerfil.png');
-  width: 97rem;
+  width: auto;
   margin: 5rem 2rem;
   border-style: solid;
   border-color: rgb(75, 85, 85);
   border-width: 0.2rem;
   border-radius: 6rem;
   row-gap: 5rem;
-  padding: 10rem;
+  padding: 5rem;
   align-items: center;
   justify-items: center;}
 
@@ -154,7 +154,7 @@
 
 .contenedor {
   display: grid;
-  width: 87%;
+  width: auto;
   grid-template-areas:
     "logo nombre nombre boton"
     "logo cargo cedula boton";
