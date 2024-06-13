@@ -33,9 +33,7 @@ export default function menu() {
       <>
         <div className='contenedorMenu'>
           <BSlide dat={h === 5 ? data.slideBar_adm : data.slideBar} id={usuarioID} />
-          <div style={{maxWidth: '200rem'}}>
           <Outlet />
-          </div>
         </div>
       </>
     );
